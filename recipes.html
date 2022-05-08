@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- Mihir Lele, 5/8/2022
+
+This is meant to be an online cookbook of sorts for all the recipes I have
+-->
+<html>
+
+<!-- Put Mihir's Recipes as the title, both in the tab and on the page -->
+<head>
+<!-- Internal CSS goes here. I don't really need to use an external file since it's just one page -->
+<style>
+/* Default font set to Arial */
+* {font-family: Arial, Sans-serif;}
+
+/* Tab button styling */
+.tab button{
+	padding: 8px 32px;
+	background-color: #EEEEEE;
+}
+
+/* Change text/background color and cursor when hovering over tab */
+.tab button:hover {
+	background-color: #CCCCCC;
+	color: white;
+	cursor: pointer;
+}
+
+/* if tab is active, change color */
+.tab button.active {
+	background-color: #AAAAAA;
+}
+
+/* keep tabs hidden except home */
+.tabcontent {
+	display: none;
+}
+#home {
+	display: block;
+}
+
+</style>
+	
+<!-- Website title -->
+<title>Mihir's Recipes</title>
+
+<!-- Heading -->
+<h1><center><u style="font-family:Copperplate Gothic Light, Serif;">Mihir's Recipes</u></center></h1>
+</head>
+
+<body>
+<!-- Tabs for recipe categories -->
+<div class="tab">
+	<button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
+	<button class="tablinks" onclick="openTab(event, 'breakfast')">Breakfast</button>
+	<button class="tablinks" onclick="openTab(event, 'soup')">Soups, Stews, & Sauces</button>
+	<button class="tablinks" onclick="openTab(event, 'sandwiches')">Sandwiches</button>
+	<button class="tablinks" onclick="openTab(event, 'rice')">Rice & Pasta</button>
+	<button class="tablinks" onclick="openTab(event, 'desserts')">Desserts</button>
+	<button class="tablinks" onclick="openTab(event, 'lab')">The Laboratory</button>
+	<button class="tablinks" onclick="openTab(event, 'misc')">Misc.</button>
+</div>
+
+<!-- Display of things under each tab -->
+<div id = "breakfast" class="tabcontent">
+	<h4><u>Pancakes</u></h4>
+	<p>Don't make pancakes yourself. Go to IHOP. Be a man.</p>
+</div>
+
+<div id = "soup" class="tabcontent">
+	<h4><u>Tomato Soup</u></h4>
+	<p>I have no idea how to make soup. Is ketchup a soup?</p>
+</div>
+
+<div id = "sandwiches" class="tabcontent">
+	<h4><u>Literally Any Sandwich</u></h4>
+	<p>Take whatever you want and put it in 2 slices of bread.</p>
+	<p>It isn't rocket surgery.</p>
+</div>
+
+<div id = "rice" class="tabcontent">
+	<h4><u>Rice</u></h4>
+	<p>Put it in a rice cooker. Follow directions. Trust the process.</p>
+</div>
+
+<div id = "desserts" class="tabcontent">
+	<h4><u>Beans</u></h4>
+	<p>Not really a dessert. It's just beans.</p>
+</div>
+
+<div id = "lab" class="tabcontent">
+	<h4><u>Pineapple Upside-Down Deep-Dish Pizza</u></h4>
+	<p>Honestly you don't wanna know.</p>
+</div>
+
+<div id = "misc" class="tabcontent">
+	<h4><u>Leftovers</u></h4>
+	<p>Eat whatever you left in the fridge.</p>
+</div>
+
+<!-- Homepage message -->
+<div id="home" class="tabcontent">
+	<h4></h4>
+	<p>This is still a work in progress. Check back in soon!</p>
+</div>
+
+<!-- Here comes the JS. Oh boy -->
+<script>
+	function openTab(evt, name) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(name).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+</script>
+</body>
+</html>

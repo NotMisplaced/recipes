@@ -1,0 +1,15 @@
+Recipes Project v1.0 - Collection of recipes curated by Mihir Lele
+
+===== v1.0 =====
+New Additions:
+- Website title
+- Heading
+- Tabs: Home, Breakfast, Soups/Stews/Sauces, Sandwiches, Rice & Pasta, Desserts, The Lab, Misc. 
+- Tabs now change background and text colors when hovering over them
+- Tabs change color when active
+- Content available for each tab (only jokes, no recipes yet).
+- Tab links now change content on screen
+- Font standardized to Arial
+- Heading font set to Copperplate Gothic Light and underlined
+- README.txt
+- changelog.txt
