@@ -14,4 +14,4 @@ My remaining goals for this project:
 2. Actually upload the recipes with a blurb about what each recipe means to me, in the style of a cookbook
 3. Implement a search bar system to find recipes by name or tag
 4. Implement aesthetic changes so the website has a professional feel to it
-5. Create more goals along the way. Never stop improving.
+5. Create more goals along the way. There's always something to improve!
