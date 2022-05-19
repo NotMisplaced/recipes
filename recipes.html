@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<!-- Mihir Lele, 5/8/2022
+<!-- 
+Mihir Lele, 5/18/2022
 
 This is meant to be an online cookbook of sorts for all the recipes I have
 -->
@@ -7,44 +8,13 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 
 <!-- Put Mihir's Recipes as the title, both in the tab and on the page -->
 <head>
-<!-- Internal CSS goes here. I don't really need to use an external file since it's just one page -->
-<style>
-/* Default font set to Arial */
-* {font-family: Arial, Sans-serif;}
-
-/* Tab button styling */
-.tab button{
-	padding: 8px 32px;
-	background-color: #EEEEEE;
-}
-
-/* Change text/background color and cursor when hovering over tab */
-.tab button:hover {
-	background-color: #CCCCCC;
-	color: white;
-	cursor: pointer;
-}
-
-/* if tab is active, change color */
-.tab button.active {
-	background-color: #AAAAAA;
-}
-
-/* keep tabs hidden except home */
-.tabcontent {
-	display: none;
-}
-#home {
-	display: block;
-}
-
-</style>
-	
+<!-- External CSS goes here. This makes it easier to link to other recipes -->
+	<link href="recipes_style.css" rel="stylesheet" type="text/css">
 <!-- Website title -->
 <title>Mihir's Recipes</title>
 
 <!-- Heading -->
-<h1><center><u style="font-family:Copperplate Gothic Light, Serif;">Mihir's Recipes</u></center></h1>
+<center><h1 style="font-size:36px">Mihir's Recipes</h1></center>
 </head>
 
 <body>
@@ -60,10 +30,17 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 	<button class="tablinks" onclick="openTab(event, 'misc')">Misc.</button>
 </div>
 
+<!-- Homepage message -->
+<div id="home" class="tabcontent"> 
+	<p style="text-indent: 110px">This is still a work in progress. Check back in soon!</p>
+</div>
+
 <!-- Display of things under each tab -->
 <div id = "breakfast" class="tabcontent">
-	<h4><u>Pancakes</u></h4>
-	<p>Don't make pancakes yourself. Go to IHOP. Be a man.</p>
+	<div class="recipetab">
+		<button class="tablinks" onclick="openTab(event, 'pancakes')">Pancakes</button>
+		<button class="tablinks" onclick="openTab(event, 'frenchtoast')">French Toast</button>
+	</div>
 </div>
 
 <div id = "soup" class="tabcontent">
@@ -97,27 +74,98 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 	<p>Eat whatever you left in the fridge.</p>
 </div>
 
-<!-- Homepage message -->
-<div id="home" class="tabcontent">
-	<h4></h4>
-	<p>This is still a work in progress. Check back in soon!</p>
+<!-- Pancake recipe -->
+<div id="pancakes" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Here's my recipe for pancakes. And when I say pancakes, I mean pan CAKES. These are some thicc boys.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>Dry Ingredients</li>
+		<ul>
+			<li>1 cup all purpose flour</li>
+			<li>1.5 tsp baking powder</li>
+			<li>0.5 tsp baking soda</li>
+			<li>Pinch salt</li>
+		</ul>
+		<li>Wet Ingredients</li>
+		<ul>
+			<li>3 tbsp sugar</li>
+			<li>1 cup buttermilk *</li>
+			<li>1 egg</li>
+			<li>2 tbsp melted butter **</li>
+			<li>0.5 tsp vanilla extract</li>
+		</ul>
+	</ul>
+	<p style="margin-left: 24px">* Buttermilk can be made at home by thoroughly mixing equal parts yogurt and water</p>
+	<p style="margin-left: 24px">** Can be substituted for coconut oil to add subtle coconut flavor if desired</p>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Sift and combine dry ingredients in large bowl.</li>
+		<li>Separate egg whites and yolk into separate bowls.</li>
+		<li>Whisk egg whites until they form soft peaks. It is not necessary to go quite this far, but it does make a difference.</li>
+		<li>Stir sugar into yolks until fully combined and color lightens slightly.</li>
+		<li>Add butter to yolk mixture and stir until homogenous.</li>
+		<li>Stream buttermilk into yolk, whisking constantly to combine.</li>
+		<li>Gently fold egg whites with a spatula into buttermilk mixture, taking care not to deflate the whites.</li>
+		<li>Add wet mixture gently into dry ingredients, fold together until just barely combined.</li>
+		<li>Chill batter in fridge for 30-60 minutes.</li>
+		<li>Ladle batter into a pan lubricated with butter over medium heat. Do not disturb it after pouring.</li>
+		<li>Add whatever other ingredients you want to flavor the pancake (blueberries, chocolate chips, cooked bacon, etc.</li>
+		<li>Flip when bubbles begin to pop in the middle of the pancake.</li>
+		<li>Cook on the other side for 30-60 seconds until no raw batter is visible.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<!--
+	<u><h4>Story Time</h4></u>
+	<p></p>
+	-->
+</div>
+
+<!-- French Toast recipe -->
+<div id="frenchtoast" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Nothing particularly French about it, but it tastes good so who cares?</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>3 thick slices brioche *</li>
+		<li>2 eggs</li>
+		<li>0.5 cups whole milk</li>
+		<li>2 tbsp sugar</li>
+		<li>0.5 tsp cinnamon</li>
+		<li>Pinch salt</li>
+		<li>Powdered Sugar</li>
+	</ul>
+	<p style="margin-left: 24px">* Challah can also be used here. Other breads can work, but are not as good</p>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Leave bread on wire rack overnight to let it become stale.</li>
+		<li>Crack eggs into casserole dish or any dish deep enough to hold the dipping liquid but wide enough to fit a slice of the bread.</li>
+		<li>Whisk cinnamon, sugar, and salt until fully and evenly combined.</li>
+		<li>Slowly stream in milk and continue whisking.</li>
+		<li>Soak a slice of stale bread in dipping liquid until saturated. This should take no more than a couple of minutes.</li>
+		<li>Flip bread to soak other side and warm up a skillet over medium heat.</li>
+		<li>Once pan is heated, grease it with butter and toast the soaked bread.</li>
+		<li>While cooking one slice, place the next slice into the liquid.</li>
+		<li>Once browned on bottom, flip toast and cook on the other side until it's browned as well.</li>
+		<li>Serve on a plate with a generous dusting of powdered sugar. Using a sifter ensures even, gentle coverage</li>
+		<li>Top with anything you want: fresh berries, maple syrup, honey, nutella, pistachios, sour cream, guacamole, you name it.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<!--
+	<u><h4>Story Time</h4></u>
+	<p></p>
+	-->
 </div>
 
 <!-- Here comes the JS. Oh boy -->
-<script>
-	function openTab(evt, name) {
-		var i, tabcontent, tablinks;
-		tabcontent = document.getElementsByClassName("tabcontent");
-		for (i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-		}
-		tablinks = document.getElementsByClassName("tablinks");
-		for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
-		}
-		document.getElementById(name).style.display = "block";
-		evt.currentTarget.className += " active";
-	}
-</script>
+<script src="script.js"></script>
 </body>
 </html>
