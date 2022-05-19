@@ -1,4 +1,14 @@
-Recipes Project v1.0 - Collection of recipes curated by Mihir Lele
+Recipes Project v1.1 - Collection of recipes curated by Mihir Lele
+
+===== v1.1 =====
+New Additions:
+- Recipe links
+- Uploaded breakfast recipes
+Changes:
+- Improved time complexity of openTab function from O(2n) to O(n)
+- Heading font set to Arial, underline removed
+- Indented text on home page
+- Placed CSS and Javascript into their own separate files
 
 ===== v1.0 =====
 New Additions:
@@ -11,5 +21,5 @@ New Additions:
 - Tab links now change content on screen
 - Font standardized to Arial
 - Heading font set to Copperplate Gothic Light and underlined
-- README.txt
+- README.md
 - changelog.txt
