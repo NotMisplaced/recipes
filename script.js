@@ -1,5 +1,5 @@
 /*
-Mihir Lele, 5/18/2022
+Mihir Lele, 7/29/2022
 
 JS file for recipes.html
 */
@@ -17,10 +17,15 @@ function openTab(evt, name) {
 
 	// removes active status of the active tab link
 	tablinks = document.getElementsByClassName("active");
-	tablinks[0].className = tablinks[0].className.replace(" active", "");
+	tablinks[0].classList.remove("active");
 	
 	// display the content of the name parameter
 	document.getElementById(name).style.display = "block";
 	// add active status to the current target of the event
-	evt.currentTarget.className += " active";
+	evt.currentTarget.classList.add("active");
+}
+
+// opens a link to the Dominos website as the recipe for No-Bake Pizza
+function dominos() {
+	window.open("https://www.dominos.com", "_blank");
 }
