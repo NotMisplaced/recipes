@@ -10,7 +10,6 @@ I originally kept all my recipes in a notes app on my phone, but I was frustrate
 The cookbook is divided into sections: Breakfast, Soups/Stews/Sauces, Sandwiches, Rice & Pasta, Desserts, The Laboratory (experimental recipes), and Miscellaneous. Each section is denoted by a tab at the top of the page.
 
 My remaining goals for this project:
-1. Finish uploading the recipes with a blurb about what each recipe means to me, in the style of a cookbook
-2. Implement a search bar system to find recipes by name or tag
-3. Implement aesthetic changes so the website has a professional feel to it
-4. Create more goals along the way. There's always something to improve!
+1. Implement a search system to find recipes by name or tag
+2. Implement aesthetic changes so the website has a professional feel to it
+3. Create more goals along the way. There's always something to improve!
