@@ -1,4 +1,4 @@
-Recipes Project v1.1 - Collection of recipes curated by Mihir Lele
+Recipes Project v1.2 - Collection of recipes curated by Mihir Lele
 
 ===== v1.2 =====
 New Additions:
