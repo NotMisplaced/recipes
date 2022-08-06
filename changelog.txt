@@ -1,5 +1,14 @@
 Recipes Project v1.1 - Collection of recipes curated by Mihir Lele
 
+===== v1.2 =====
+New Additions:
+- Finished uploading recipes
+- Added recipe descriptions (Story Time)
+- Added message to home page
+Changes
+- Color of recipe links is now red
+- Recipe links no longer change size
+
 ===== v1.1 =====
 New Additions:
 - Recipe links
