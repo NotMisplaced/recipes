@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- 
-Mihir Lele, 5/18/2022
+Mihir Lele, 7/29/2022
 
 This is meant to be an online cookbook of sorts for all the recipes I have
 -->
@@ -12,12 +12,13 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 	<link href="recipes_style.css" rel="stylesheet" type="text/css">
 <!-- Website title -->
 <title>Mihir's Recipes</title>
-
-<!-- Heading -->
-<center><h1 style="font-size:36px">Mihir's Recipes</h1></center>
 </head>
 
 <body>
+<div class = "sticky">
+<!-- Heading -->
+<center><h1 style="font-size:36px">Mihir's Recipes</h1></center>
+
 <!-- Tabs for recipe categories -->
 <div class="tab">
 	<button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
@@ -29,10 +30,31 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 	<button class="tablinks" onclick="openTab(event, 'lab')">The Laboratory</button>
 	<button class="tablinks" onclick="openTab(event, 'misc')">Misc.</button>
 </div>
-
+</div>
 <!-- Homepage message -->
-<div id="home" class="tabcontent"> 
-	<p style="text-indent: 110px">This is still a work in progress. Check back in soon!</p>
+<div id="home" class="tabcontent recipe"> 
+	<p class="story">
+	Hi! I’m Mihir Lele, and this website is a compilation of recipes I’ve either created or collected from others. Cooking is a huge passion of mine, so I made this website to share 
+	that with you! Below I’ve included some helpful reminders about how this site is laid out.
+	</p>
+	<p class="story">
+	Basically, each recipe has 3 sections: Ingredients (what goes in it and how much), Instructions (the basic and necessary steps), and Story Time (an explanation of what the recipe 
+	means to me, my journey in making it, and some helpful tips). Often it is best to read the Story Time explanation if you’re making this recipe for the first time, since it is far 
+	more detailed than the instructions section and lets you know why I included certain steps. If it’s a simple recipe or you’ve made it before, you don’t have to read any further 
+	than the Instructions section.
+	</p>
+	<p class="story">
+	The recipes are split under 7 categories which you can see on the bar at the top. The names are mostly self-explanatory, but you may be confused by The Laboratory. That’s the 
+	section for highly experimental recipes that I’ve created. Things that make you stop and think if such foods should ever have been created. But I had fun making them, so I’m sure 
+	you will too.
+	</p>
+	<p class="story">
+	You might notice that sometimes (a lot of times) I don’t include ingredient amounts. In these cases, you have to rely on your taste, your instincts, and/or learn the right 
+	amounts through trial-and-error. This particularly applies to measuring herbs and spices. Always measure seasonings with the heart, not with a spoon. If you get the measurements 
+	wrong, that’s okay, you can always try again. It’ll make you better at cooking. That’s what I love most about cooking: experimenting! The kitchen is like my laboratory. I like 
+	finding out what works and what doesn’t and why. Don’t be afraid to take risks in the kitchen either. The recipes here aren’t strict rules. It’s your kitchen, they’re your taste 
+	buds, so do whatever you want.
+	</p>
 </div>
 
 <!-- Display of things under each tab -->
@@ -44,36 +66,68 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <div id = "soup" class="tabcontent">
-	<h4><u>Tomato Soup</u></h4>
-	<p>I have no idea how to make soup. Is ketchup a soup?</p>
+	<div class="recipetab">
+		<button class="tablinks" onclick="openTab(event, 'tomatosauce')">Tomato Sauce</button>
+		<button class="tablinks" onclick="openTab(event, 'gumbo')">Gumbo</button>
+		<button class="tablinks" onclick="openTab(event, 'tikka')">Chicken Tikka Masala</button>
+		<button class="tablinks" onclick="openTab(event, 'rajma')">Rajma</button>
+		<button class="tablinks" onclick="openTab(event, 'noodlesoup')">Noodle Soup</button>
+		<button class="tablinks" onclick="openTab(event, 'canes')">Cane's Sauce</button>
+		<button class="tablinks" onclick="openTab(event, 'chutney')">Green Chutney</button>
+		<button class="tablinks" onclick="openTab(event, 'gastrique')">Apple Cider Gastrique</button>
+		<button class="tablinks" onclick="openTab(event, 'cranberry')">Cranberry Sauce</button>
+	</div>
 </div>
 
 <div id = "sandwiches" class="tabcontent">
-	<h4><u>Literally Any Sandwich</u></h4>
-	<p>Take whatever you want and put it in 2 slices of bread.</p>
-	<p>It isn't rocket surgery.</p>
+	<div class="recipetab">
+		<button class="tablinks" onclick="openTab(event, 'tomatomelt')">Tomato Melt</button>
+		<button class="tablinks" onclick="openTab(event, 'eggsandwich')">Fried Egg Sandwich</button>
+	</div>
 </div>
 
 <div id = "rice" class="tabcontent">
-	<h4><u>Rice</u></h4>
-	<p>Put it in a rice cooker. Follow directions. Trust the process.</p>
+	<div class="recipetab">
+		<button class="tablinks" onclick="openTab(event, 'sporice')">SausagePeppers&amp;Onions</button>
+		<button class="tablinks" onclick="openTab(event, 'gnocchi')">Gnocchi</button>
+		<button class="tablinks" onclick="openTab(event, 'turkeyrice')">Turkey Rice</button>
+	</div>
 </div>
 
 <div id = "desserts" class="tabcontent">
-	<h4><u>Beans</u></h4>
-	<p>Not really a dessert. It's just beans.</p>
+	<div class="recipetab">
+		<button class="tablinks" onclick="openTab(event, 'lemonmeringue')">Lemon Meringue Pie</button>
+		<button class="tablinks" onclick="openTab(event, 'applefilling')">Apple Filling</button>
+		<button class="tablinks" onclick="openTab(event, 'bananacaramel')">Banana Caramel</button>
+		<button class="tablinks" onclick="openTab(event, 'gajarhalwa')">Gajar Halwa</button>
+		<button class="tablinks" onclick="openTab(event, 'zabaglione')">Orange Zabaglione</button>
+		<button class="tablinks" onclick="openTab(event, 'suzette')">Crepes Suzette</button>
+		<button class="tablinks" onclick="openTab(event, 'potatopie')">Sweet Potato Pie</button>
+		<button class="tablinks" onclick="openTab(event, 'mugcake')">Mug Cake</button>
+	</div>
 </div>
 
 <div id = "lab" class="tabcontent">
-	<h4><u>Pineapple Upside-Down Deep-Dish Pizza</u></h4>
-	<p>Honestly you don't wanna know.</p>
+	<div class="recipetab">
+		<button class="tablinks" onclick="openTab(event, 'cursed')">Cursed Sandwich</button>
+		<button class="tablinks" onclick="openTab(event, 'thanksgivingpie')">Thanksgiving Cottage Pie</button>
+		<button class="tablinks" onclick="openTab(event, 'pineapplepizza')">Pineapple Upside-Down Deep-Dish Pizza</button>
+	</div>
 </div>
 
 <div id = "misc" class="tabcontent">
-	<h4><u>Leftovers</u></h4>
-	<p>Eat whatever you left in the fridge.</p>
+	<div class="recipetab">
+		<button class="tablinks" onclick="openTab(event, 'popcornchicken')">Makeshift Popcorn Chicken</button>
+		<button class="tablinks" onclick="openTab(event, 'meatballs')">Meatballs</button>
+		<button class="tablinks" onclick="openTab(event, 'deviledeggs')">Deviled Eggs</button>
+		<button class="tablinks" onclick="openTab(event, 'pizza')">Pizza</button>
+		<button class="tablinks" onclick="openTab(event, 'coffee')">Cold Brew Coffee</button>
+		<button class="tablinks" onclick="dominos()">No-Bake Pizza</button>
+		<button class="tablinks" onclick="openTab(event, 'ricotta')">Ricotta</button>
+	</div>
 </div>
 
+<!-- Breakfast -->
 <!-- Pancake recipe -->
 <div id="pancakes" class="recipe tabcontent">
 	<!-- Introduction -->
@@ -107,22 +161,77 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		<li>Separate egg whites and yolk into separate bowls.</li>
 		<li>Whisk egg whites until they form soft peaks. It is not necessary to go quite this far, but it does make a difference.</li>
 		<li>Stir sugar into yolks until fully combined and color lightens slightly.</li>
-		<li>Add butter to yolk mixture and stir until homogenous.</li>
+		<li>Add butter and vanilla to yolk mixture and stir until homogenous.</li>
 		<li>Stream buttermilk into yolk, whisking constantly to combine.</li>
 		<li>Gently fold egg whites with a spatula into buttermilk mixture, taking care not to deflate the whites.</li>
 		<li>Add wet mixture gently into dry ingredients, fold together until just barely combined.</li>
 		<li>Chill batter in fridge for 30-60 minutes.</li>
 		<li>Ladle batter into a pan lubricated with butter over medium heat. Do not disturb it after pouring.</li>
-		<li>Add whatever other ingredients you want to flavor the pancake (blueberries, chocolate chips, cooked bacon, etc.</li>
+		<li>Add whatever other ingredients you want to flavor the pancake (blueberries, chocolate chips, cooked bacon, etc.)</li>
 		<li>Flip when bubbles begin to pop in the middle of the pancake.</li>
-		<li>Cook on the other side for 30-60 seconds until no raw batter is visible.</li>
+		<li>Cook on the other side for 30-60 seconds until browned.</li>
 	</ol>
 	
 	<!-- About the recipe -->
-	<!--
 	<u><h4>Story Time</h4></u>
-	<p></p>
-	-->
+	<p class="story">
+	I feel like it’s important for everyone to know a few basic recipes, and one recipe everyone should know is buttermilk pancakes. 
+	Pancakes are a staple breakfast food in the US and if you ever have guests over in the morning, you can wow them easily by serving them up a homemade short stack. 
+	It’s fun and delicious too! I wanted to be able to make the perfect thick & fluffy buttermilk pancakes from scratch, so I looked up a few recipes and tried them out. 
+	The first was fine, but not thick enough. The second was certainly fluffy enough, but was lacking in sweetness and flavor. 
+	By combining elements of both recipes, as well as experimenting with different ingredient amounts, I was able to create my very own recipe! 
+	I encourage you to do the same in your cooking endeavors. Find what works and what doesn’t, and roll with the changes.
+	</p>
+	<p class="story">
+	We start this recipe by sorting out our dry ingredients. Sift a cup of all-purpose flour, 1.5 tsp of baking powder, 0.5 tsp of baking soda, and a pinch of salt into a 
+	large mixing bowl. You’ll notice that I use both baking powder and baking soda in this recipe. Both serve the purpose of leavening, which will create bubbles inside the batter 
+	to help the pancakes rise. Baking powder contains some baking soda along with some acidic ingredients which react with the soda to release gas which creates bubbles 
+	on the inside of the batter when cooking. But why use baking soda when you’re already using baking powder? Baking soda has a very high pH which will neutralize some of 
+	the acidity from the buttermilk and improve the browning as well as the rise of the pancake. However, baking soda’s weaknesses are that it needs the buttermilk to activate, 
+	and adding too much can change the taste for the worse (it’s very strong!). But baking powder only needs liquid and heat (not acidity) to activate its leavening properties, 
+	which means it’s doing the bulk of the leavening here without changing the taste of the batter too much. Salt is added to bring out the flavor of the other ingredients, 
+	and it always helps to add it to sweet dishes, even though it’s just a pinch. Truth be told, I can’t always be bothered to sift my dry ingredients, but it does make it 
+	easier to avoid lumpy pancakes.
+	</p>
+	<p class="story">
+	Then you want to separate your whites and yolks of your egg. As always, if you leave a little white in the yolk, you’re fine. But yolk in the white is a no-no. 
+	The reason is because we want to whip air into the egg whites, almost until it becomes a meringue. This is a very delicate process; you want to make sure your hands are 
+	clean and dry. Always keep your whites in a clean, dry, cool, glass or metal bowl. Things like plastic, moisture, grease, soap, and dirt may interfere with the whipping 
+	process if they make contact with the whites, causing them to not inflate properly. That being said, whip the separated whites into soft peaks with a whisk. 
+	If you can’t be bothered to put that much effort into making pancakes it is totally understandable, as long as you work in plenty of air you should be fine. 
+	Now pour the sugar over the yolks. I don’t know why, but I love the look of sugar poured on top of an intact egg yolk. Whisk it together, then stream in your choice of fat here. 
+	I tend to go for melted butter, but if you want a slight coconut flavor, you can use coconut oil too. I’ve done it and it tastes great! 
+	Be careful using different oils though, as when I was experimenting with this recipe I tried using olive oil. Big mistake. The texture was fine, 
+	but you can really taste the choice of fat you use at this stage, and the flavor of olive oil belongs nowhere near pancakes. The point of adding the fat and sugar to the 
+	yolks is to help dissolve them in the wet mixture, so when you add the buttermilk, you’re not left with any loose bits of sugar or butter floating around. 
+	Now add in the vanilla extract. Even though it isn’t much, it has a huge impact on the flavor to the pancake. If you’re trying to make a holiday version of this recipe, 
+	you can try adding a teaspoon of cinnamon and a quarter teaspoon each nutmeg and allspice at this stage as well. Don’t be afraid to experiment with the flavorings! 
+	Now it’s finally time for the buttermilk. I tend to use my mother’s recipe for making buttermilk at home which is mixing equal parts yogurt and water until fully homogenous. 
+	Buttermilk is like regular milk but far more acidic, which will help activate the baking powder, giving you a taller, fluffier pancake. Gently stream buttermilk into the yolk 
+	mixture, whisking constantly until fully combined.
+	</p>
+	<p class="story">
+	Now you have 3 bowls of stuff: your dry mixture, your wet mixture, and your airy egg whites. Despite all the leavening agents, one of the best ways to get air into the 
+	pancakes is through the egg whites, which is why it’s important to whip them until either very frothy or developing soft peaks. That is also why it’s important to be careful 
+	when you mix your ingredients together. You don’t want to deflate those egg whites and knock out the bubbles. So fold in the whites with a rubber spatula into the wet mixture, 
+	adding in one half of the egg at a time until just barely incorporated. Then add that mixture to your dry ingredients in the same manner, gently folding in one half of the wet 
+	mixture at a time. Do not overmix here! By adding moisture to the flour, it encourages gluten development, which is necessary to hold the pancake together, but overmixing can 
+	cause too much gluten development, which makes the batter very tight and the end product very chewy. Because I enjoy a tender texture to my pancakes, I recommend folding the 
+	batter together until just combined. It’s okay if the mixture isn’t very smooth, as long as there are no big chunks of flour left. Leave the batter to rest in the fridge for 
+	30-60 minutes. Resting will allow the gluten to relax and the flour to hydrate properly, which will improve the texture of the batter. I know it’s hard to wait, but you can 
+	use this time to put away the ingredients you don’t need anymore, and you’ll still have spare time to clean up the flour you spilled everywhere as well. 
+	</p>
+	<p class="story">
+	Once ready, scoop a half-ladle of batter (adjust amount to your liking) onto a pan heated over medium heat and greased with butter. Do NOT touch that batter once it’s on there. 
+	Don’t try and make the edges perfectly round, don’t try and peek underneath it or jiggle it around. Just let it cook. Let those bubbles do their job undisturbed. 
+	Bubbles really are the key to this whole recipe. They’re the reason we added buttermilk, baking soda, and baking powder, and the reason we so meticulously fold in those 
+	egg whites that took so much effort to whisk. Now watch as bubbles begin to form and burst slowly on the surface of the pancake. Now is the time to add your blueberries, 
+	chocolate chips, or whatever topping you want Once you see bubbles begin to pop in the middle of the pancake, it’s time to gently flip it over with your most trusted spatula. 
+	Cook on the other side for 30-60 seconds until the bottom is browned and you can’t see any raw batter from the sides. Don’t get discouraged if the first pancake isn’t great. 
+	It might be a little underdone in the middle, in which case you should let the next one cook longer. It might not brown properly or rise evenly. Whatever the case is, it’s 
+	really good for learning what you need to adjust for the following pancakes, so just remember the Golden Rule of Pancakes: the first pancake is always sacrificial. 
+	This rule applies to crepes, dosas, and other similar dishes as well. Enjoy your pancakes with syrup and any other toppings you might like.
+	</p>
 </div>
 
 <!-- French Toast recipe -->
@@ -154,15 +263,2112 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		<li>Once pan is heated, grease it with butter and toast the soaked bread.</li>
 		<li>While cooking one slice, place the next slice into the liquid.</li>
 		<li>Once browned on bottom, flip toast and cook on the other side until it's browned as well.</li>
-		<li>Serve on a plate with a generous dusting of powdered sugar. Using a sifter ensures even, gentle coverage</li>
-		<li>Top with anything you want: fresh berries, maple syrup, honey, nutella, pistachios, sour cream, guacamole, you name it.</li>
+		<li>Serve on a plate with a generous dusting of powdered sugar. Using a sifter ensures even, gentle coverage.</li>
+		<li>Top with anything your heart desires.</li>
 	</ol>
 	
 	<!-- About the recipe -->
-	<!--
 	<u><h4>Story Time</h4></u>
-	<p></p>
-	-->
+	<p class="story">
+	In English, we call it French toast, but the French  call it “pain perdu” (lost bread). The recipe itself actually originates in the Roman Empire, 
+	as detailed in the <em>Apicius</em>, a cookbook compiled by the Romans sometime around 400 AD. What?? Ancient Romans, making French toast? It sounds 
+	so weird until you realize it’s just bread soaked in milk and eggs and fried. Pretty simple, but the name we’ve given it in English makes it sound so fancy. 
+	I started this recipe by looking up a basic recipe for French toast. Mix milk, eggs, cinnamon, and sugar, then dip some stale, thick-sliced bread in it and fry. 
+	Sounds easy enough (and it really is) but there’s a few tips and tricks I’ve picked up that might help you make your best French toast.
+	</p>
+	<p class="story">
+	First we start with the bread. I’ve made this several times with just regular whole-wheat bread, and I must say, it really is subpar. 
+	Your choice in bread really matters here, so opt for a brioche, challah, or similar bread here. If you can’t get your hands on a bread like that, 
+	you can use regular sliced bread as well and it’ll be fine, but as I mentioned, it isn’t nearly as delicious. I once went to the farmer’s market with my roommate 
+	and saw one stand selling loaves of chocolate chip challah bread. I knew right away I had to make this recipe with it, and I must say, it was the best French toast I ever made. 
+	Cutting the bread into thick slices (about an inch thick at least) will allow it to develop the soft, custardy inside you expect from a classic French toast. 
+	In order to absorb the liquid properly, it’s important to use stale bread. After all, this recipe is a popular way to reconstitute old, dry bread. 
+	The quickest way to get your bread stale is to spread out the slices on a wire rack overnight and let it dry out. That way, when you wake up, you’re ready to make that 
+	sweet, sweet toast.
+	</p>
+	<p class="story">
+	For the dipping liquid, it is best to start by mixing the cinnamon, sugar, and salt into the eggs first, then add the milk after the other ingredients are evenly combined. 
+	The order is important, because those who make French toast know adding cinnamon to a milk mixture leads to unevenly dispersed swirls of cinnamon. 
+	However, when combined with the eggs alone, the cinnamon disperses evenly, and streaming in the milk slowly will lead to a dipping liquid that holds the cinnamon much better 
+	than if the milk had gone beforehand. This liquid should be mixed and contained in a Tupperware or pie dish, whatever is wide enough to hold a slice of bread but deep enough 
+	to soak the slice through (it doesn’t need to be fully submerged). I’ve found that 3 thick brioche slices are enough to soak up the amount of liquid used in this recipe, 
+	but you’d need to double the number of slices if using regular sliced bread. Remember that it’s far better to have too much liquid than too much bread. 
+	If you’re like me and you don’t like wasting any leftover liquid, mix some flour into it after you’re done cooking and make a pancake or two for yourself. 
+	They’re not going to be great, but at least they’re not going to waste.
+	</p>
+	<p class="story">
+	French toast tastes fine on its own, but the toppings will elevate your breakfast to another level. I consider powdered sugar to be a necessity on French toast, 
+	since it looks pretty and it adds a very delicate sweetness to the dish. Do not assume granulated sugar to ever be an acceptable substitute where powdered sugar is required. 
+	Trust me, I once accidentally made a frosting recipe using regular sugar and it felt like I was chewing on candied sand. So take some powdered sugar and sift a little snowfall 
+	onto your perfectly plated French toast. I like doing the powdered sugar after all the other toppings, but the order is up to you and it really depends on what toppings you use. 
+	Maple syrup is a classic, but the possibilities are endless. You can slap some peanut butter and jelly on there and make a French toast PB&J. Or you could throw down a little 
+	sriracha and mayo on there to make all your friends gag at brunch. Or maybe slather on some peanut butter and top with bananas and bacon bits for an Elvis-inspired take on it. 
+	Cream cheese and basil? Sure! Greek yogurt with honey and chopped pistachios? Go right ahead! Condensed milk with fresh berries? Yes, as long as you save me a slice. 
+	You can even take a look at some of my other recipes like my banana caramel or apple filling (both of which I made to eat with French toast). It’s all up to you.
+	</p>
+</div>
+
+<!-- Soups, Stews, & Sauces -->
+<!-- Tomato Sauce recipe -->
+<div id="tomatosauce" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Goes great with pasta, gnocchi, or even works as a dipping sauce.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>2 cloves garlic</li>
+		<li>0.25 yellow onion</li>
+		<li>3 Roma tomatoes, or 1 can whole, peeled San Marzano tomatoes</li>
+		<li>Basil</li>
+		<li>Oregano</li>
+		<li>Red pepper flakes</li>
+		<li>Olive oil</li>
+		<li>Salt</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<p style="margin-left: 24px"><u>NOTE:</u> If using San Marzano tomatoes, ignore steps 1-3.</p>
+	<ol>
+		<li>Score an X on the end of the tomatoes.</li>
+		<li>Blanch for 30-60 seconds and place them in cold water.</li>
+		<li>Peel tomatoes and dice them (or blend them after peeling).</li>
+		<li>Mince the onion very finely and cook with basil, oregano, and red pepper flakes in enough olive oil to coat the bottom of the pan. Cook until the onions brown.</li>
+		<li>Thinly slice the garlic and cook in the oil until blond.</li>
+		<li>Flip bread to soak other side and warm up a skillet over medium heat.</li>
+		<li>Add the tomatoes.</li>
+		<li>Simmer over high heat, smashing tomatoes against side of pot. Reduce until it holds a line through the middle of the sauce.</li>
+		<li>Adjust seasoning as necessary.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	Making your own tomato sauce at home is one of those little things that makes a big difference. You can control the flavors, the ingredients, 
+	the texture, even the moisture level of the sauce for various applications. And believe me, there are so many applications for this recipe. 
+	You can have this with pasta, gnocchi, meatballs, lasagna, pizza, sandwiches, or even drink it out of a vase to freak people out on the subway. 
+	In any case, it’s fun, rewarding, and kind of a big flex to be able to whip up fresh tomato sauce in 30 minutes for dinner.
+	</p>
+	<p class="story">
+	The recipe starts with tomatoes. I recommend using a large can of whole, peeled San Marzano tomatoes. These are really good quality and absolutely worth it. 
+	The reason why I prefer them whole is so I can control the texture of the sauce a little better. If you don’t have these, or don’t want to spring for them, 
+	that’s totally fine, I’ve got you covered. Just use 3 Roma tomatoes and you should be fine (though keep in mind that the texture and taste are going to be very different, 
+	but still good). If you’re using the fresh tomatoes, you don’t want the skin on there, so use a knife to make an X on one end of each tomato and let them sit in boiling 
+	water for about a minute. Fish out the tomatoes and cool off in cold water. This process allows the skin to come off easily without overcooking the tomato. 
+	Once you peel them, dice them up into small cubes. You could blend them, but that incorporates a lot of air into the tomatoes, changing the color and texture, which is fine, 
+	but I personally prefer the dicing method.
+	</p>
+	<p class="story">
+	Now that the tomatoes are prepared, mince the onion as finely as you possibly can and cook with basil, dried oregano, and red pepper flakes in olive oil over medium heat. 
+	You can use fresh basil or even fresh oregano if you want, but you don’t have to. Keep in mind that overcooking fresh basil makes it bitter, so you want to keep this mixture 
+	moving. Using a lot of olive oil (enough to coat the bottom of the pan) is important, because it’s going to pick up all the little flavors from the aromatics and seasonings 
+	make the sauce very flavorful. In the meantime, chop the garlic into paper-thin slices. I saw it in a scene in Goodfellas while they were making sauce, and that’s how I cut 
+	garlic for my sauces ever since. It’s not just to try to look cool, the thin slices have a high surface area to volume ratio, making the shape ideal for leaching out the 
+	aromatic compounds of the garlic into the sauce. Mincing them has a similar effect, but slicing allows you to see the garlic in the final product, and until you’ve had a 
+	slice of garlic melt in your mouth, you haven’t lived. Okay fine, maybe I just do it so I can pretend to be a cool Italian mobster, but the other stuff is still true. 
+	You’ll notice I limit myself to 2 cloves of garlic in this recipe. You can add more if you want, but if you’re making Italian food, just remember that Italians don’t 
+	actually add that much garlic to their dishes at all, as that’s more of an Italian-American thing. Add the garlic to the pan when the onions begin to brown. 
+	If they seem a little too dark, that’s okay too. The point of cutting them that finely is to get them to caramelize. The onion doesn’t add a lot of onion flavor 
+	because of this, but it does add a gentle sweetness which is good to balance the acidity of the tomatoes. Once the garlic goes from a stark white to a gentler blond color, 
+	it’s tomato time.
+	</p>
+	<p class="story">
+	Add the tomatoes to the pan and crush them with a wooden spoon, simmering on high heat. The wooden spoon is non-negotiable when making this dish. 
+	Every grandma knows that the wooden spoon picks up character over time with every dish you make and that all the love and experience that it accumulates will transfer 
+	into your food. The first time I made this sauce, my spoon was new. I oversalted the sauce, didn’t mash the tomatoes well, and the whole thing turned out a bit of a mess. 
+	I must’ve made this recipe a hundred times since then, and now my spoon and I both know exactly how to make the perfect tomato sauce.
+	</p>
+	<p class="story">
+	In addition to becoming smoother from crushing the tomatoes, the sauce should reduce and concentrate in flavor over time. While you’re stirring it constantly, 
+	it’s important to let a little sauce accumulate on the edges or walls of the pan, as those bits will darken and deepen in flavor, essentially turning into tomato paste. 
+	Once the little bits around the edges look like that, go ahead and mix them into your sauce. When the sauce thickens enough that you can draw a line in it with the spoon 
+	and it doesn’t flow back together, you’re done. I call this point the Moses Stage, because you know you’ve reached it when you can part the Red Sea. Taste a little, adjust 
+	seasoning, and store in a container that can’t be stained by tomatoes.
+	</p>
+	<p class="story">
+	If you need this sauce for pasta, warm some up in a pan, then when the pasta is cooked, dump the pasta plus a little pasta cooking liquid into the pan with the sauce. 
+	The reason you use the pasta water is so you can reconstitute the concentrated sauce and make it more liquid again, and also because pasta water is seasoned well with salt 
+	(or at least it should be if you want your pasta to taste good) and is high in starch that it picked up from the pasta. The starch allows for thickening, making a smooth, 
+	creamy sauce. Toss the pasta, sauce, and water over a medium heat until the sauce becomes fully reconstituted by the water and the starch allows it to thicken slightly into 
+	a cohesive sauce.
+	</p>
+	<p class="story">
+	That’s just one way to use this recipe. Like I said, there are many applications for tomato sauce. Feel free to make it your own as well. If you want to add a splash of 
+	vodka or red wine, I’ve tried the latter and it’s very good. Just make sure not to overdo it and to cook out as much alcohol as possible. If you want to add parmesan, 
+	throw some in towards the end. This is your chance to make it your own. Put a lot of love and care into this one and the results will astound you.
+	</p>
+</div>
+
+<!-- Gumbo recipe -->
+<div id="gumbo" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>I got this recipe for Chicken and Sausage Gumbo from Binging With Babish. Credits are owed to Isaac Toups and Andrew Rea.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>1 lb boneless, skinless chicken thighs</li>
+		<li>0.5 cup AP flour</li>
+		<li>0.5 cup vegetable oil</li>
+		<li>6 garlic cloves, minced</li>
+		<li>2 stalks celery, diced</li>
+		<li>1 small green bell pepper, diced</li>
+		<li>1 small white onion, diced</li>
+		<li>8 oz beer (a flavorful one)</li>
+		<li>4 cups chicken stock</li>
+		<li>2 bay leaves</li>
+		<li>1 lb andouille sausage</li>
+		<li>0.5 tbsp cayenne pepper</li>
+		<li>1 tbsp smoked paprika</li>
+		<li>Scallions</li>
+		<li>Salt</li>
+		<li>Pepper</li>
+		<li>Cooked white rice (optional)</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>First you make a roux: heat the oil on medium until shimmering and add the flour.</li>
+		<li>Constantly whisk roux over medium to medium high heat, taking care not to burn it until it becomes the color of dark chocolate.</li>
+		<li>Add the onion, celery, bell pepper, a pinch of salt, and bay leaves and cook until fragrant, then add the garlic.</li>
+		<li>Deglaze with beer, adding it in slowly.</li>
+		<li>Once homogenous, stream in the chicken stock.</li>
+		<li>While gumbo comes to a simmer, cut sausage into coins and pan sear the chicken with salt and pepper on high heat until a brown crust forms.</li>
+		<li>Add the meat to the simmering pot along with the spices and an aggressive amount of pepper.</li>
+		<li>Simmer with lid on for an hour.</li>
+		<li>Adjust seasoning as necessary and serve, preferably over white rice. Garnish with sliced scallion.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	Full disclosure, this chicken and sausage gumbo is the best thing I have ever cooked in my life. And while we’re in the spirit of full disclosure, 
+	I must admit I did not write this recipe. This was taken from famous Cajun chef Isaac Toups when he made a guest appearance on Binging with Babish. 
+	I haven’t made much Cajun cooking, and really, I have no exposure to southern cooking or soul food at all, having grown up on the west coast. 
+	But as always, the recipes you find here are in the spirit of trying new things, so I figured, why not give it a go? If you’re like me and you’ve never had Cajun cuisine before, 
+	let me take you on my journey of discovery and share some tips I picked up from the Cajun cooking community.
+	</p>
+	<p class="story">
+	“First, you make a roux.” An introductory sentence that is the hallmark of most Cajun recipes. Roux is added to thicken liquid-based dishes like soups, stews, and sauces. 
+	The thickening properties of roux come from flour, which has starch molecules that absorb water and swell up, causing an ordinarily thin liquid to become far richer in texture. 
+	Of course, raw flour tastes like absolute cheeks, which can be mitigated by cooking it in fat. Keep in mind when cooking roux that thickness and flavor are inversely proportional. 
+	A lightly cooked roux (white roux) will contribute no flavor, but is the best for thickening. This type of roux is used in bechamel sauce. A deeply toasted roux 
+	(chocolate/dark-brown roux) has a far more complex flavor with nutty, earthy elements to it, but doesn’t produce nearly as thick of a stew. This is the roux that is used in gumbo. 
+	Start by getting your oil smoking hot in a pan and add an equal amount of flour. Whisk constantly to combine and keep whisking until you get the right color. 
+	Patience is key, as you really want your roux to get to that dark chocolate stage. It’s important to never stop whisking, as the roux is on such high heat that it will burn 
+	if left alone. If you burn it, that’s okay, just start over. It happens to everyone (not me though, because I’m perfect). The trick is to pay attention to the edges and 
+	corners of the pot, and adjust the heat if you feel like it’s darkening too quickly. The darker it gets, the more you have to whisk it to prevent burning. 
+	The entire process takes me under 40 minutes, but you should be willing to spend well over an hour on this stage if you feel like you might burn it.
+	</p>
+	<p class="story">
+	Once the roux looks like the color of dark chocolate, immediately add your trinity. Trinity in Cajun cooking refers to a combination of onion, celery, and green bell pepper. 
+	This works much the same as a mirepoix (or sofrito, if you prefer the Italian term), but the sweetness of the carrot is replaced by that of the bell pepper. 
+	I like to have these all diced up before even making the roux, as you can’t really prepare the roux and the trinity at the same time. Once in the roux, 
+	season lightly with salt to draw out some moisture and add the bay leaves for flavor. Bay leaves add a very subtle flavor. You don’t always know they’re there, 
+	but they definitely add that extra oomph that kicks any stew up a notch. Once the vegetables cook down a little and release their fragrance 
+	(it shouldn’t take long, since they’re practically flash-frying in the roux), add the minced garlic. It is important to add the garlic later because the vegetables cool down 
+	the pot and add moisture which prevents the garlic from instantly burning.
+	</p>
+	<p class="story">
+	Now you’re ready to add the beer. Be sure to use a flavorful beer here, as it will enhance the taste of the gumbo. If you can’t have beer for religious or health reasons, 
+	I’m sure water will work fine as well. But if you’re thinking about skimping out on beer because you dislike beer, please don’t skip this step. 
+	I served this recipe to a friend who detests the taste of beer and she loved it. Not only does most of the alcohol (over 75%) cook off, the beer flavor is more of a 
+	background player that enhances the dish. The only way you would be able to tell the beer was there is if you were looking for it. Beer also serves the purpose of deglazing, 
+	so you pick up any errant bits of flour or vegetables that stuck themselves to the bottom of the pot. Make sure the beer is cold, so it combines better with the roux. 
+	In the words of Chef John of Food Wishes, “hot roux, cold milk, no lumps.” There’s no milk in this recipe, but the principle stands. Whisk in the beer gradually. 
+	If you bought a can bigger than 8 oz, feel free to take a couple sips as well. Have fun with it. Once all the beer is mixed in, stream in the chicken stock. 
+	Keep whisking until it's all one big soup. This is going to cool down the pot quite a bit, and you need to wait for it to come back up to a simmer before adding other ingredients. 
+	So let’s go prepare those in the meantime.
+	</p>
+	<p class="story">
+	The meat is the key to this whole thing. After all, it is called “chicken and sausage gumbo”. For the chicken, you want to use boneless, skinless thighs. 
+	Thighs tend to be more flavorful and juicier than breasts, which is why we use them here. Get a pan smoking hot and add a little oil, like you’re about to cook a steak. 
+	Season the chicken with salt and pepper and lay onto the pan. When frying, always lay the food away from you to prevent oil splashing on you. Let the chicken sit for a minute 
+	until it develops a beautiful brown crust. Flip and get a similar crust on the other side. This crust is caused by the Maillard reaction. Basically, a lot of complex chemical 
+	processes occur with amino acids when proteins are broken down by excessive heat, adding a depth of color and flavor that turns any meat-based dish from good to great. 
+	In order to get Maillard browning, the surface of the food must reach around 300 degrees Fahrenheit, which is why keeping your pan on very high heat is important. 
+	You definitely don’t want to burn or char the chicken so do be wary not to let it sit too long. By the time you take it off, the chicken should be a nice medium-rare. 
+	Beautiful. Don’t worry though, by the time the gumbo is done, that chicken will be so tender it’ll fall apart in your mouth. As for the sausage, I highly recommend andouille, 
+	but any smoked sausage will do. The sausage lends a wonderful, warm, smoky flavor that really ties the whole dish together. Slice the sausages into coins, about half-inch thick, 
+	and add it to the pot along with the chicken thighs after the pot reaches a simmer.
+	</p>
+	<p class="story">
+	Now for the seasoning. Add some cayenne and smoked paprika. Do not fear the cayenne, it won’t make the gumbo too spicy. It’s more of a gentle warmth that resonates 
+	through your entire body, like being given a hug from the inside out. I never happen to have smoked paprika on hand, so I just use regular paprika and that works fine. 
+	I usually just add paprika for color, as it doesn’t taste like much, but I have recently found that, like the bay leaf, it adds a certain oomph to the dish that takes 
+	it to the next level. At this point, I’m realizing this recipe takes so many things to the next level, it’s no wonder it tastes this good. For the pepper, you’re going to 
+	want to trust me on this one. Crank freshly ground pepper into the pot until you feel discomfort in your wrist. Yes, I understand that’s like over 30 cranks of pepper. 
+	Yes, I know that’s a lot. But that’s what I heard from Isaac Toups, and he does this professionally, so take his word for it if not mine. This dish has a long time to cook, 
+	and pepper mellows out pretty easily. If I want that pepper flavor to be very pronounced when I’m cooking, I usually add it closer to the end. But if I want it to be more 
+	subtle and well-blended, like in gumbo, I add it while it still has plenty of time to simmer. Give the pot a quick stir and put a lid on it. Leave it to simmer for a full hour. 
+	Yes, I understand you’ve been cooking a while already. Yes, I know that’s a lot. But you want those sausages to plump up and release their flavor. You want that chicken 
+	to become tender. You want that roux to cook all the way through (even though it’s toasted, the flour will still taste chalky unless cooked for a long time).
+	</p>
+	<p class="story">
+	After it’s done cooking, give it a little stir. Break up the chicken a little into more manageable pieces using the whisk. Taste for seasoning, adjusting as necessary, 
+	then slice up some scallions. You can eat this either as a stew on a bed of white rice or as a soup on its own. Either way, once it’s in the bowl, top with the sliced 
+	scallions and enjoy. Make this recipe and I defy you not to smile after the first bite.
+	</p>
+</div>
+
+<!-- Chicken Tikka Masala recipe -->
+<div id="tikka" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>The national dish of England, created by South Asian immigrants. You love to see it.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>For the Chicken Marinade:</li>
+		<ul>
+			<li>2 chicken thighs</li>
+			<li>Lemon</li>
+			<li>Salt</li>
+			<li>Pepper</li>
+			<li><b>Cinnamon</b></li>
+			<li><b>Cloves</b></li>
+			<li><b>Allspice</b></li>
+			<li>Cayenne pepper</li>
+			<li>Paprika</li>
+			<li><b>Ground coriander</b></li>
+			<li><b>Ground cumin</b></li>
+			<li><b>Ground fennel</b></li>
+			<li>Ground ginger</li>
+			<li>Garlic powder</li>
+			<li>Yogurt</li>
+		</ul>
+		<li>For the Gravy:</li>
+		<ul>
+			<li>1 tomato</li>
+			<li>0.5 onions</li>
+			<li>3 cloves garlic</li>
+			<li>0.25 green bell pepper</li>
+			<li>Turmeric</li>
+			<li>Cumin seeds</li>
+			<li>Vegetable oil</li>
+			<li>Cilantro</li>
+		</ul>
+	</ul>
+	<p style="margin-left: 24px"><u>NOTE:</u> Ingredients that are in <b>bold</b> can ALL be replaced by just using a heavy amount of garam masala.</p>
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Cut chicken into 1 inch cubes.</li>
+		<li>Let sit in lemon juice and salt marinade for 20 mins.</li>
+		<li>Add ground spices to chicken (spices in each bullet point are listed from most used to least)</li>
+		<ul>
+			<li>Go heavy on: Ginger, garlic, paprika</li>
+			<li>Go medium on: Black pepper, ground coriander, ground cumin, cayenne</li>
+			<li>Go light on: Fennel, allspice, cloves, cinnamon</li>
+		</ul>
+		<li>Cover chicken with a few spoonfuls of yogurt, fully combining the yogurt with the spices and massaging it all over the chicken to cover every crevice.</li>
+		<li>Marinate chicken in yogurt mixture for at least 3 hours.</li>
+		<li>Sear chicken on high heat with some vegetable oil until a charred crust forms on each side.</li>
+		<li>Set chicken aside and add thinly sliced onion and cumin seeds, picking up the fond and charred marinade on the pan.</li>
+		<li>Once sweated, add turmeric, minced garlic, ground ginger, and diced bell pepper.</li>
+		<li>When onion cooks through, add finely diced tomato, ground coriander, and ground cumin.</li>
+		<li>Mash tomato as it cooks, and when spices cook through, add water.</li>
+		<li>Wait until sauce reaches a simmer to add cayenne pepper and paprika.</li>
+		<li>Add chicken and simmer covered for 10-15 minutes.</li>
+		<li>In the meantime, separate cilantro leaves from stems and chop up the stems.</li>
+		<li>Add cilantro stems, then add salt and pepper to taste.</li>
+		<li>Stir in leftover marinade (or a couple spoons of yogurt) one spoonful at a time.</li>
+		<li>Serve topped with cilantro leaves beside naan or rice.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	People think of chicken tikka masala as a stereotypical Indian food, but really it’s thought to have originated from Indian immigrants living in Scotland. 
+	It has become a fan favorite all across the UK, and some even consider it their national dish. Despite the complexity of flavors, the dish itself is quite simple, 
+	though it does require some preparation in advance.
+	</p>
+	<p class="story">
+	The recipe begins with a double marinade, a trick I picked up from Madhur Jaffrey’s take on this recipe. First, cut your boneless, skinless chicken thighs into 1 inch cubes, 
+	then put them in a bowl. You could do this with breasts, but thighs work better because they’re more flavorful. Season with salt and about half a lemon’s juice. 
+	You only need enough juice to coat the chicken, you don’t want them to be swimming in a pool of lemonade. Massage the salt and lemon juice into the chicken with your hands, 
+	making sure each piece is coated evenly. Let sit covered at room temperature for 20 minutes. The reason we do this part of the marinade is to let the salt and acidity 
+	flavor the meat while breaking down the proteins, resulting in tender, juicy chicken.
+	</p>
+	<p class="story">
+	Now comes the tricky part: the yogurt marinade. Start by adding the spices to your chicken. Ginger and garlic should be the main flavors used, so either using a couple tablespoons 
+	of homemade ginger-garlic paste or using a lot of ground ginger and garlic powder works here. I also recommend adding a heavy amount of paprika as well, 
+	as it adds a very subtle warmth and works better in larger quantities. I recommend going a bit lighter on spices like black pepper, coriander seed, cumin, and cayenne. 
+	They add warmth and strong flavor, but are not the star flavors of this dish, so use them in moderation. I recommend using even less on fennel, allspice, cloves, and cinnamon. 
+	With fennel it’s fine to add a bit more, but the other three are very strong and you don’t want them to take over the flavor profile. We want the warmth and some of the flavor 
+	of spices like cinnamon, but be a little more stingy unless you want your chicken to taste like French toast. Of course, the ratios of the spices and flavorings become far 
+	simpler if you have premade garam masala powder, so you can replace the cinnamon, cloves, allspice, coriander, cumin, and fennel with the same amount of garam masala. 
+	“Garam masala” is Hindi for “hot spice” and contains a lot of warm flavors that are fundamental to a fair amount of Indian cuisine, as the name suggests. 
+	But why add yogurt to the marinade? Are the spices not enough? Yogurt is not only acidic, adding to the tenderizing capabilities of the lemon, it also has a thick consistency 
+	that allows it to coat the meat better, which allows for even distribution of spices. In addition, when we sear the chicken, the proteins and sugars in yogurt caramelize and 
+	provide a beautiful, flavorful crust that is the star of this dish. Add the yogurt and mix it with the spices to form a marinade that fully coats the chicken, 
+	and do not leave any crevice uncovered. I like using a few heaped spoonfuls of Greek yogurt, but any plain yogurt will do, preferably full-fat yogurt. 
+	It’s okay to use a little more yogurt than necessary, as that can be added back into the gravy later. Let sit covered in the fridge for at least 3 hours.
+	</p>
+	<p class="story">
+	Add some vegetable oil to a pan and get it smoking hot. I like using a pan with higher walls or a dutch oven-like pot to do this, since we’re going to be making the gravy 
+	in the same pan. Add the chicken and sear one side for about 1-2 minutes before flipping and doing the same on the other side. It should be blackened somewhat on both sides. 
+	Don’t worry, it isn’t ruined, charring the meat will add a tremendous amount of flavor. Also, by heating it that quickly, you don’t cook it all the way through, so don’t go 
+	for a taste test just yet. The chicken will finish cooking in the gravy which will impart a tremendous amount of flavor and ensure that the chicken retains a juicy, tender inside. 
+	Make sure to sear the chicken in batches so you don’t overcrowd the pan. Giving the chicken pieces some room to breathe ensures that each piece has a chance to fully touch the 
+	pan’s surface and the excess water that evaporates off the chicken won’t interfere with developing that charred crust on the meat either.
+	</p>
+	<p class="story">
+	Once your chicken is ready, place it on the side. Look inside the pan. You’ll notice little charred bits stuck to the bottom swimming in some flavored oil and grease. 
+	Do not clean that out. That is going to contribute so much flavor to the gravy, you don’t want to waste a drop. To ensure you pick up all that flavor, add the sliced onions 
+	with a couple tablespoons of oil and fry on medium high heat with a touch of salt to draw out some moisture and a generous pinch of whole cumin seeds. 
+	The reason we fry them with the cumin is to wake up the flavor in those seeds by lightly toasting them so they contribute maximum flavor to the rest of the dish. 
+	Use the onions to pick up all the fond and charred bits and cook until sweated through. Now add a pinch of turmeric, minced garlic, ground ginger (or fresh grated), 
+	and green bell pepper. When cooking things like this with a lot of vegetables, it’s important to take stock of how long each ingredient needs to cook. For instance, 
+	it’s okay to cook the onion for a little longer, but adding the garlic too soon would risk burning it. You can time when you need to add the next ingredients that way as well, 
+	the way you know to add the bell pepper when the onion begins to sweat out. When the onion becomes more translucent and you can smell the bell pepper cooking, 
+	it’s a good time to add the next ingredients. Put in the tomato along with a tablespoon or two of ground coriander and a third as much of ground cumin 
+	(tip: a teaspoon is a third of a tablespoon). You might be asking, “But why add ground cumin when you already have the whole cumin seeds from before?” To that I say, shut up. 
+	Cumin tastes good. Adding ground spices in high quantities also allows the gravy to thicken and provides a lot of substance. This is the trickiest part of the dish. 
+	Fry the vegetables together on medium-high heat, mashing the tomato as it cooks. That’s why the tomato had to be diced so finely before adding it, so that it would become 
+	paste-like in the pan when mushed together. Once it reaches a consistency resembling a paste with chunks of onion and bell pepper, it will eventually start leaking a bit of oil. 
+	The oil will begin to slightly pool around the outside of the paste and sizzle. That’s the indicator that you’ve cooked the mixture long enough to fully cook the spices. 
+	It takes a bit of practice to identify this stage, but when you can, you’ll be able to make a perfect curry every time.
+	</p>
+	<p class="story">
+	Now add in water. Not too much, but enough so that if you added the chicken, it would be just fully submerged in the gravy. Stir until the gravy is homogenous. Of course, 
+	this will cool down the pan quite a bit, so it may take a while for it to reheat. Once it reaches a simmer, add a hefty shake of paprika and a pinch or two of cayenne. 
+	Ordinarily, one would add the cayenne closer to the beginning with the onion and bell pepper, but I was taught the fundamentals of Indian cooking by my mother. 
+	Indian cuisine is incredibly diverse and uses a lot of different practices. According to my mom, a hallmark of Marathi cooking is adding the chili powder closer to the end 
+	of the dish after the water. Because my family is from the state of Maharashtra, those cooking traditions were passed on to me. Once the paprika and cayenne are incorporated, 
+	add the chicken and cover with a lid, simmering on low for 10-15 minutes. The longer you let the chicken stew, the more tender it will be, but it’s hard to wait any longer than 
+	10 minutes for such a delicious dish.
+	</p>
+	<p class="story">
+	While that’s cooking, take some time to clean the mess you made in the kitchen and prepare your cilantro by separating the leaves and stems. 
+	I can understand omitting the cilantro if you have the gene that makes it taste soapy, but a few sprigs of fresh cilantro make such a huge difference. 
+	The reason we take apart the cilantro like this is because the leaves work better as a garnish and the stems provide flavor to the gravy when stewed for a bit. 
+	Before adding in the stems, get the bowl with the leftover yogurt marinade. If you have no leftover marinade, just use a couple small spoonfuls of yogurt. 
+	Adding in a bit of yogurt to the gravy one spoon at a time and stirring it until it becomes homogenous mellows out the curry and gives it a creamier texture. 
+	Once you stir in all the leftover yogurt, chop up the cilantro stems and add to the curry. Cover the pot and let sit on low for 2-5 minutes. Serve over rice with chopped cilantro 
+	leaves as a garnish and enjoy. This is a delicious dish, but just think about the principles you’ve learned from this one recipe: making a yogurt marinade, searing and stewing meat, 
+	and the basic technique to make a perfect curry with whatever meats or vegetables you want.
+	</p>
+</div>
+
+<!-- Rajma recipe -->
+<div id="rajma" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>My personal favorite food. I wish I could make it as well as my mom.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>1.5 cup dry kidney beans (2 cups canned)</li>
+		<li>1 yellow onion</li>
+		<li>2 bay leaves</li>
+		<li>0.5 tbsp cumin seeds</li>
+		<li>3 tbsp vegetable oil</li>
+		<li>0.5 inch fresh ginger (or 1 tbsp ground ginger)</li>
+		<li>2 tomatoes</li>
+		<li>3 tbsp coriander powder</li>
+		<li>1 tbsp ground cumin</li>
+		<li>1 tsp fennel powder</li>
+		<li>1 tbsp tomato paste (optional)</li>
+		<li>0.5 tsp cayenne</li>
+		<li>0.5 tsp turmeric</li>
+		<li>Cilantro</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Soak the kidney beans in water for 10 hours. Skip this step if using canned beans.</li>
+		<li>Put bay leaves and cumin seeds in hot oil.</li>
+		<li>Finely dice onion and add it to the pot, then add ginger (grate it if using fresh ginger).</li>
+		<li>Finely dice 2 tomatoes.</li>
+		<li>When onion is sweated, add tomato, 3 tbsp coriander powder, 1 tbsp cumin powder, 1 tsp fennel, and salt.</li>
+		<li>Add 1 tbsp tomato paste (optional), turmeric, and cayenne once flavors are combined.</li>
+		<li>Cook down until paste-like and shiny, making sure to break down the tomato.</li>
+		<li>Add beans and half as much water. Add more water if necessary. Beans should be fully submerged.</li>
+		<li>Put on the lid and cook until everything comes together, about 5-10 minutes.</li>
+		<li>Chop up cilantro and stir it in.</li>
+		<li>Serve over rice with ghee.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	If you could choose your last meal, what would you have? I know mine would be my mom’s rajma, no contest. Rich, spicy gravy with ruby-red kidney beans poured lovingly over a bed 
+	of basmati rice. That’s the good stuff. It’s nutritious, delicious, and incredibly filling. If my mom makes it, I just know I’m going to be eating rajma and rice for lunch for 
+	the next 3 days. I’m sorry to say that you’ll never make it as good as my mom. I can’t do it either, that’s for sure. But that shouldn’t stop you from trying, because even if 
+	you mess it up, it’s hard to beat a dish that’s this good.
+	</p>
+	<p class="story">
+	Start by preparing your kidney beans. After all, that’s what “rajma” means in Hindi: kidney beans. If you’re doing this the right way, you’ll use a cup and a half of dry kidney 
+	beans. You’ll soak them in cold water overnight for about 10 hours before cooking with them. You’ll begin boiling them in a separate pot while you prepare the rest of the curry, 
+	since they’ll need to boil at least an hour to cook through. Of course, if you’re not fond of using more than 1 pot or if you’re lazy like me, you’ll just use 2 cups of canned, 
+	pre-cooked kidney beans. You will, of course, save hours of time, but the trade-off is a major reduction in the quality of the flavor.
+	</p>
+	<p class="story">
+	While your soaked beans are boiling (or your canned beans are sitting in their can), begin heating up 3 tablespoons of vegetable oil on medium high heat. When shimmering, 
+	add bay leaves and half a tablespoon of cumin seeds. While that toasts, chop up 1 medium onion finely and add it to the pot along with the ginger. Let the onion sweat out 
+	and move it occasionally. In the meantime, finely dice 2 tomatoes and add them once the onion is translucent along with 3 tablespoons coriander powder, 1 tablespoon cumin powder, 
+	1 teaspoon of fennel, and a pinch of salt. Do not skip any of these spices, omitting a single one will change the flavor completely, trust me. Once you mix everything together, 
+	add turmeric and cayenne powder along with a spoonful of tomato paste. The tomato paste isn’t necessary, but it does add flavor, richness, and speeds up the cooking process a bit, 
+	since you don’t have to cook the tomatoes as much. Stir as you cook, mashing the tomatoes until a paste-like consistency is achieved. Once the paste begins releasing little pools 
+	of sizzling oil, that means the spices are cooked through.
+	</p>
+	<p class="story">
+	Next, add the beans to the mix and add enough water to just barely cover them. The soaked beans should have been going for about half an hour at least, 
+	so now they’ll only need another half-hour to fully cook through. The canned beans are pre-cooked, so they’ll only need another 10 minutes to assimilate with the flavors 
+	of the dish. Once you add the beans and their water, bring to a simmer, turn down the heat, cover with a lid and continue to let it simmer for 30 or 10 minutes, depending 
+	on whether you used soaked or canned beans respectively.
+	</p>
+	<p class="story">
+	While the beans are cooking, separate the stems from the leaves of the cilantro and roughly chop them up. When the beans are about 5 minutes away from being done, uncover the lid 
+	and check the beans. If they are soft and mash easily, they’re ready. If not, put the lid back on and continue cooking until they are. When ready, smash at least a quarter 
+	of the beans against the sides of the pot. This will release the paste inside the beans which will add body and flavor to the gravy. Add the cilantro stems and stir well. 
+	Cover with a lid for another 5 minutes and then taste for seasoning, adjusting salt as necessary.
+	</p>
+	<p class="story">
+	Serve the rajma over rice and top with cilantro leaves, ghee, and some slices of raw red onion if you’re feeling fancy. The ghee really makes the biggest difference here, 
+	it’s just not the same without a spoonful of it melting over the top. You might notice that you’ve made way too much, as it’s a very filling dish. That’s okay, it’s one of 
+	those special foods like lasagna that taste just as good when reheated the next day. Packed with iron, fiber, protein, and most of all, flavor, rajma is a wonderful weeknight 
+	meal to add to your repertoire.
+	</p>
+</div>
+
+<!-- Noodle Soup recipe -->
+<div id="noodlesoup" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Here's a good starting point for a basic noodle soup you can make from scratch right at home.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>For the Noodles:</li>
+		<ul>
+			<li>2 eggs</li>
+			<li>Flour</li>
+			<li>Olive oil</li>
+			<li>Salt</li>
+		</ul>
+		<li>For the Soup:</li>
+		<ul>
+			<li>1 tbsp flour</li>
+			<li>2 tbsp butter</li>
+			<li>0.5 onions</li>
+			<li>2 carrots</li>
+			<li>2 stalks celery</li>
+			<li>2 cloves garlic</li>
+			<li>Pepper</li>
+			<li>Salt</li>
+			<li>Cayenne</li>
+			<li>Thyme</li>
+			<li>Olive oil</li>
+		</ul>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Create a well of flour and add beaten eggs and oil. Season lightly with salt.</li>
+		<li>Stir flour into eggs with a fork until it becomes kneadable.</li>
+		<li>Knead dough for 7-10 mins until smooth and elastic.</li>
+		<li>Let rest 30 mins at room temp covered in plastic wrap.</li>
+		<li>Cut into manageable pieces and roll out.</li>
+		<li>Laminate the dough and roll it out into a translucent rectangle.</li>
+		<li>Cut into preferred pasta shape.</li>
+		<li>Dice mirepoix (onion, garlic, celery), mince garlic. Cut any other vegetables you might want to add.</li>
+		<li>Melt butter in pot and add mirepoix over medium heat.</li>
+		<li>Once the vegetables become fragrant, sprinkle in flour and season with cayenne and thyme.</li>
+		<li>Cook down the flour until blond in color, about 5 mins.</li>
+		<li>Stream in cold water slowly in batches, constantly stirring to make sure the roux dissolves. Fill to desired level.</li>
+		<li>Bring to a boil, turn down heat, cover, and let simmer for 10-15 mins.</li>
+		<li>Add pasta and garlic and boil for about 1-2 minutes until pasta is cooked.</li>
+		<li>Season to taste with salt and pepper. Serve and finish with a glug of olive oil.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	Sometimes I have trouble falling asleep at night. When that happens, I get bored. Usually I just watch YouTube until I get tired, but one night, for whatever reason, 
+	I stayed up and wrote a recipe for vegetable noodle soup from scratch. I just wrote it for kicks, it wasn’t until months later that I found it in my notes and decided to make it. 
+	And somehow, without ever needing to tweak the recipe through trial and error, I managed to write a perfect soup recipe in that one sleepless night. Soup is an incredibly 
+	versatile group of dishes, so this recipe will show you not only the technique for making a good soup base that can be used for chicken noodle or veggie noodle soup, 
+	but also how to make fresh pasta in your kitchen from scratch.
+	</p>
+	<p class="story">
+	Start by making the noodles. This recipe doesn’t use many measurements, because this is something that is best learned with practice and made with instinct. 
+	Dump out some all-purpose (or 00 flour if you can find it) onto a clean, dry countertop. Make a crater in the middle of the flour mound you’ve created to make a well just 
+	big enough to hold 2 eggs. Crack the aforementioned eggs into a bowl, whisk together and pour them into the well. This dough dries out very quickly, so add a drizzle of olive oil 
+	over the top and sprinkle a little salt for seasoning. Using a fork, start bringing clumps of flour into the egg mixture and whisking to combine. Continue until a moist dough 
+	forms. It’s okay (it’s actually preferable) if you don’t use all of the flour on the counter. Use your hands to start kneading the dough. If there are still wet portions of the 
+	dough, roll it in some flour and continue to knead. The flour on the counter is now acting as a non-stick coating and preventing the tacky dough from gluing itself to the table.
+	</p>
+	<p class="story">
+	Knead it for about 10 minutes until the dough becomes smooth. When poked, it should start to spring back due to the gluten development. Form into a ball, cover tightly on all 
+	sides with plastic wrap, and let rest for 30 minutes at room temperature. As I mentioned before, all that kneading has caused gluten to develop. Gluten is a protein that becomes 
+	increasingly complex the more you mix flour with water. This will keep the dough held together and give it a nice chew, but that tightness also makes it more difficult 
+	to roll out, as it tries to retain its shape like a rubber band. Resting the dough, even for half an hour, will let the dough finish hydrating slowly and allow the gluten to 
+	relax, which will make all the difference in the world.
+	</p>
+	<p class="story">
+	Once your dough wakes up from its little power nap, cut it into quarters. Rolling out the dough one quarter at a time will make it easier to work with, but the tradeoff is that 
+	some pieces of dough may dry out sooner than others, so you’ll have to work quickly. Sprinkle down some bench flour (that’s the fancy term for putting flour on a surface so the 
+	dough doesn’t stick) and put some flour on your rolling pin as well. Roll out slightly and fold the dough lengthwise in thirds. This is known as laminating the dough and it 
+	creates layers in the dough which give it a better texture. Roll out the folded rectangle, making sure it’s as even as possible, until it’s so thin that it becomes translucent. 
+	They say you should “be able to read a love letter through it”, but since nobody writes me those, I roll it out until I can see my fingers through it when I hold the dough under 
+	the light. At this stage, the pasta is ready to cut. Fold it gently, so as not to crease it, then cut thin strips. Unfold the strips and dust with some extra flour. 
+	Bunch them in a nest and make strips out of the rest of the dough and let them dry out on the counter. The advantage to making noodles from scratch is not only flavor, 
+	but you could theoretically make whatever shape you wanted, not just noodles. Try mixing it up by cutting the sheets of dough into small rectangles and pinching the middle to 
+	create little bowties!
+	</p>
+	<p class="story">
+	Now that the noodles are taken care of, only one part of Noodle Soup remains. Dice up onion, carrot, and celery into similar sized pieces in roughly equal amounts. 
+	This trio of vegetables is called a <em>mirepoix</em> in French (or <em>sofrito</em> in Italian). They act as aromatics, lending a tremendous amount of well-balanced flavor to 
+	virtually any dish. At this stage, you can also mince the garlic and chop up any other vegetables you might want to add.
+	</p>
+	<p class="story">
+	If you plan on using meat, cut it on a separate cutting board with a clean knife, season the meat with salt and pepper, and turn your pot onto high heat. Add a small amount of 
+	a neutral oil such as vegetable oil and sear the meat. It is not important to cook the meat all the way through at this stage, the whole point of this is to develop a brown 
+	crust on the outside of the meat as fast as possible. This is known as the Maillard reaction, and the caramelized proteins that result from it provide an incredible depth of 
+	flavor that takes your dish from okay to mind-blowing. Take out the meat when the crust forms and you’ll see some rendered fat and brown residue in the pan. Do not clean that out. 
+	The fat contains flavor, and the brown stuff, called “fond”, is going to give the soup that depth of flavor that was mentioned earlier.
+	</p>
+	<p class="story">
+	Whether or not you are using meat, the next steps are the same. Melt the butter in the pot over medium heat and add the mirepoix. Use the vegetables to try and pick up the fond 
+	from the bottom of the pot if you seared meat in it earlier. Once the vegetables become fragrant, sprinkle in a spoonful of flour and season with cayenne powder and thyme. 
+	When mixed with butter, the flour will become a roux. This paste-like substance is often used to thicken soups and sauces. The more flour, the more starch, the thicker the soup. 
+	Roux must be cooked through unless you want your soup tasting like raw flour. For this recipe, let the roux come to a blond color. The darker the roux gets, the less thick the 
+	soup, but the more flavor it adds. In Cajun cooking, it is common to cook roux until it reaches the color of peanut butter or even chocolate to add an earthy, nutty flavor. 
+	However, when making bechamel sauce, the roux should remain white in order to keep the sauce as thick and creamy as possible. For a soup, you want it thicker than water but 
+	thinner than a sauce. Because we want to get some of that nutty flavor, we slightly toast the roux until it becomes blond. but we don’t go further, since we want to retain its 
+	thickening power when using such a small amount of flour.
+	</p>
+	<p class="story">
+	Once the roux is blond and has taken on a toasted smell, the thyme should be fragrant and the mirepoix should be cooked properly. That’s the time to add the water. 
+	There’s a saying I heard from Chef John from Food Wishes: hot roux, cold milk, no lumps. Of course, in this case, we’re using water instead of milk, but the principle stands. 
+	To avoid your soup from becoming lumpy, stream in cold water slowly, stirring as you go to dissolve the roux. The amount of water depends entirely on how much soup you want. 
+	If any fond still remains on the pot, take this opportunity to make sure it gets dissolved into the soup. Bring it to a boil and add the meat or other vegetables you wanted to 
+	add. Cover, turn down the heat, and simmer for about 10-15 minutes to cook the newly added ingredients. Go at least 15 minutes if using meat to ensure it cooks fully. 
+	This will also allow the starch molecules in the roux to take on the water and thicken the soup.
+	</p>
+	<p class="story">
+	 At this point, uncover the soup and bring back up to a boil. Shake off as much excess flour from the noodles as possible and add them to the pot along with the minced garlic. 
+	 I like adding garlic at the end of a soup to get a fresher flavor, but some people like the sauteed garlic flavor better. If that’s the case, add the garlic with the mirepoix 
+	 instead. Or if you’re a serious garlic-head, double the amount of garlic and add one half at the beginning and one at the end. Boil for 1-2 minutes until the pasta comes to 
+	 an al dente stage. Because the pasta is fresh, it won’t need to cook longer. Taste the soup, season with salt and pepper to taste, and turn off the heat. Keep in mind that 
+	 you’ll need a lot of salt, since we didn’t use any thus far. Soup is often best seasoned closer to the end to get the amount of salt just right.
+	</p>
+	<p class="story">
+	Serve the soup, making sure to get a little bit of everything in each bowl. Drizzle a glug of olive oil over the top and enjoy. The only ingredients I listed are a mirepoix, roux, 
+	garlic, a couple basic seasonings, olive oil, noodles, and water. Very simple, but this is just the bare essentials. In the past, I’ve added things like mushrooms, peas, 
+	ground turkey, chicken breast, and bell peppers, depending on what I had in the kitchen at the time. Feel free to experiment with the ingredients according to your tastes, 
+	including the herbs and spices. Make it your own and make it good.
+	</p>
+</div>
+
+<!-- Cane's Sauce recipe -->
+<div id="canes" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>The sauce from Raising Cane's. It's not their exact recipe, but it circulated on the internet a little while ago.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>0.5 cups mayo</li>
+		<li>0.25 cup ketchup</li>
+		<li>0.5 tsp garlic salt</li>
+		<li>0.25 tsp worcestershire sauce</li>
+		<li>0.5 tsp black pepper</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Mix ingredients and adjust ingredients as necessary.</li>
+		<li>Let rest refrigerated and covered for 24 hours for best results (optional).</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	Despite how much I love to cook, I sometimes give in to the easy way of making dinner by throwing a tray of chicken nuggets in the oven. But even a simple comfort meal can be 
+	enhanced greatly through something like making your own version of Raising Cane’s signature sauce right at home. I found this recipe online, and while it isn’t an exact match, 
+	it’s still just as tangy, creamy, and every bit as rich as the real thing.
+	</p>
+	<p class="story">
+	Mix half a cup of mayo, a quarter cup of ketchup, half a teaspoon of garlic salt, half a teaspoon of black pepper, and a quarter teaspoon of Worcestershire sauce in a bowl. 
+	I like going a little heavy on the garlic and adding a pinch of cayenne. That’s the advantage of making it at home: you get to customize it to your liking. I’ve heard that 
+	leaving it covered and refrigerated for 24 hours gives best results, but I can never wait longer than 10 minutes.
+	</p>
+</div>
+
+<!-- Green Chutney recipe -->
+<div id="chutney" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>A spicy sauce that goes with pretty much anything.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>6-8 bird's eye chilis</li>
+		<li>Big handful of cilantro</li>
+		<li>1/4 yellow onion</li>
+		<li>4 cloves garlic</li>
+		<li>2 tsp salt</li>
+		<li>Water</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Add ingredients to a blender with just enough water to blend it all together.</li>
+		<li>Blend it until smooth.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	This is my mom’s green chutney recipe. If you are unfamiliar with chutney, just think of it like salsa or pesto, but Indian. There are hundreds of different chutneys, 
+	but this one is very easy, versatile, and is packed with flavor.
+	</p>
+	<p class="story">
+	Put 6-8 bird’s eye chilis (depending on how much spice you like) in a blender along with a big handful of cilantro (make sure to use the leaves and stems), a quarter of a 
+	yellow onion, 4 cloves of garlic, and about 2 teaspoons of salt. Add just enough water to ensure the blender won’t get stuck. Blend it until smooth. That’s it. Easy. 
+	The uses of chutney aren’t limited to Indian food either. It goes great with hotdogs, sandwiches, French fries, nachos, tacos, etc.
+	</p>
+</div>
+
+<!-- Apple Cider Gastrique recipe -->
+<div id="gastrique" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>A sweet and sour sauce. Sounds fancy. And it is.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>0.5 cup sugar</li>
+		<li>0.25 cup water</li>
+		<li>0.5 cup apple cider vinegar</li>
+		<li>Coarsely crushed black peppercorns (optional)</li>
+		<li>Cinnamon stick (optional)</li>
+		<li>Pinch salt</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Pour sugar and water in a small saucepan and bring to a simmer. Do not agitate it.</li>
+		<li>Warm up apple cider vinegar while you wait for the sugar to caramelize.</li>
+		<li>Once the caramel reaches the desired color (I prefer darker), take it off the heat and pour in the vinegar.</li>
+		<li>Put it back onto medium-high heat and stir until the sugar is fully dissolved in the vinegar.</li>
+		<li>Throw in pepper and cinnamon and continue to cook until the gastrique reduces and slightly thickens (should have a syrupy consistency).</li>
+		<li>Turn off the heat, stir in a pinch of salt, and let cool for a few minutes before straining into a container of your choice.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	I’m one of the best cooks my friends know, but I’m the worst cook in my family. That’s why it’s a delight when they let me help out in the kitchen. I remember once, during 
+	Thanksgiving, we split up different tasks. I was in charge of roasted brussels sprouts and cranberry sauce. Of course, I wasn’t planning on serving brussels sprouts alone, 
+	so I had the idea to make an apple cider gastrique. A gastrique is basically a combination of caramel and vinegar of some kind, which creates a sweet and sour sauce that goes 
+	well with scallops, roasted vegetables, and much more. This is based on a couple recipes I found online with some minor modifications.
+	</p>
+	<p class="story">
+	Start by pouring the sugar and water into a small saucepan and bring it to a simmer. It may be tempting to stir, but don’t. It will cause the caramel to harden, and we want it 
+	to remain liquid. In the microwave, heat up the apple cider vinegar. It doesn’t need to be simmering, just make sure it is above room temperature. Caramelizing sugar is 
+	incredibly hot, so if you splash a bunch of cool liquid in it, it’ll start bubbling and splattering boiling sugar everywhere, which will be immensely painful if it gets on you. 
+	Keep a good watch over the caramel. Caramel goes from brown to burnt in a matter of seconds if you’re not careful. Once the desired color is achieved (around a maple syrup 
+	color), turn off the heat.
+	</p>
+	<p class="story">
+	CAREFULLY pour in the hot vinegar. Put it back onto medium-high heat and stir until the sugar is fully dissolved. Throw in peppercorns and cinnamon stick if desired 
+	(along with any other desired whole spices), and reduce the gastrique slightly. It should coat the back of a spoon and should have a slightly syrupy viscosity. Turn off the heat, 
+	stir in a pinch of salt, and let cool for a few minutes. Strain out the spices using a fine mesh sieve. This is why we used a cinnamon stick and coarse pepper, so that the sieve 
+	would be able to separate them, leaving you with a beautiful container of liquid gold. If you are averse to the pungency of apple cider vinegar, any cooking vinegar will do fine, 
+	but you forgo the apple flavor. This was a hit at Thanksgiving and I wouldn’t shut up about how proud I was of making something so fancy, much to my family’s annoyance.
+	</p>
+</div>
+
+<!-- Cranberry Sauce recipe -->
+<div id="cranberry" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Perfect for Thanksgiving, but still good anywhere else.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>12 oz cranberries</li>
+		<li>1 cup sugar</li>
+		<li>1/2 cup water</li>
+		<li>1 orange</li>
+		<li>Cinnamon stick</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Put the cranberries, sugar, cinnamon, and the zest and juice of the orange into a saucepan.</li>
+		<li>Add the water and stir occasionally over medium-high heat until it comes to a boil.</li>
+		<li>Simmer on low heat for 15 minutes or until thickened. Make sure to burst the cooked cranberries.</li>
+		<li>Let cool and serve.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	My family has tried to make cranberry sauce on Thanksgiving many times, and I always found it too sour or too spicy. When I was put in charge of making it, I made sure it was 
+	the perfect recipe. Full disclosure, I don’t remember where I got this recipe from, but I definitely stole it off the internet somewhere for your enjoyment.
+	</p>
+	<p class="story">
+	The best advice I can give is to listen to the Cranberries while making cranberry sauce. I swear it makes the flavor ten times better. Put all the ingredients in a saucepan, 
+	except the orange and the water. For the orange, you’ll want to zest it and then squeeze out all the juice into the saucepan. Then add the water and turn the heat up to medium 
+	high, stirring occasionally until it begins to boil. Then simmer on low for 15 minutes. You’ll know when the cranberries are cooked because they will swell and burst when 
+	pressed with your trusty wooden spoon.
+	</p>
+	<p class="story">
+	Once it cools, serve it with whatever you like. Whether it’s Thanksgiving or National Eat A Cranberry Day (November 23) or you just wanted a nice sweet and sour treat, 
+	this sauce is sure to put a smile on your face.
+	</p>
+</div>
+
+<!-- Sandwiches -->
+<!-- Tomato Melt recipe -->
+<div id="tomatomelt" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>So good it made my friend cry.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>2 slices bread</li>
+		<li>1 Roma tomato</li>
+		<li>Cheddar cheese</li>
+		<li>Monterey jack cheese *</li>
+		<li>Mayo</li>
+		<li>Salt</li>
+		<li>Pepper</li>
+	</ul>
+	<p style="margin-left: 24px">* Any good melting cheese will work here.</p>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Slice tomato and grate copious amounts of cheese on the side (equal parts cheddar and Monterey jack).</li>
+		<li>Spread a thin layer of mayo on one side of each bread slice.</li>
+		<li>Toast mayo-side-down on a skillet over medium-high heat.</li>
+		<li>Toast until golden-brown.</li>
+		<li>Flip and add grated cheese on both slices.</li>
+		<li>Lower the heat to medium-low and wait for cheese to melt. Make sure to move the bread around to pick up those burnt bits of cheese on the sides.</li>
+		<li>Add the tomato slices and season with salt and pepper.</li>
+		<li>Close the sandwich and press down slightly.</li>
+		<li>Continue to toast either side of the sandwich until bread is fully toasted and tomato is warmed through.</li>
+		<li>Cut as desired and serve.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	Perhaps one of the simplest dishes, but a certified crowd-pleaser nonetheless. There’s some little tips and tricks here that will revolutionize your sandwich making skills, 
+	so pay attention and don’t skip a single step.
+	</p>
+	<p class="story">
+	First slice your tomato into even slices, about a centimeter thick. Too thin, and there’s no point in calling it a tomato melt. Too thick, and it’ll slide right out. 
+	Grate the cheese in advance and keep it to the side. I like using a 50-50 blend of sharp cheddar for the flavor, and Monterey jack because it melts very well. 
+	Feel free to use any cheese you like, as long as you can shred it and it will melt. Smoked gouda, pepperjack, or low-moisture mozzarella might be worth a try.
+	</p>
+	<p class="story">
+	When it comes to toasting the bread, most people use butter. Some use olive oil. The true culinary wizards know that mayonnaise is the key to a perfect grilled sandwich. 
+	Before you turn up your nose at the idea of this, think about what mayo is made of. Oil and egg yolk. This fatty mixture with a smoke point higher than butter will allow 
+	you to get the perfect crispy crust on your toast. Furthermore, it is far easier to evenly spread mayo on bread than butter or olive oil. There are also small amounts of 
+	spices and flavorings in mayo that will provide just the lightest oomph of flavor to elevate your sandwich to the next level. If you don’t like the taste or texture of mayo, 
+	don’t worry! It doesn’t even taste like mayo because we use such a small amount and it all gets toasted. So go ahead and spread a thin layer of mayonnaise on one side of each 
+	slice of bread. I like using multigrain whole wheat bread, but any sliced sandwich bread should be fine.
+	</p>
+	<p class="story">
+	Toast the bread mayo-side-down over medium-high heat. Once golden brown, flip over and add the grated cheese to both slices. Always add more cheese than you think you’ll need. 
+	When it melts, it seems like a lot less than what you put down. It’s okay if some strands of cheese spill off the bread and start sizzling. Those will become little brown, 
+	lacy, crunchy, delicious cheese crisps that will add a lot of flavor to the sandwich. Just make sure to move around the bread a little to pick up all of those crunchy bits. 
+	Lower the heat to medium-low to prevent the bread from burning and wait for the cheese to melt. It might help to cover the skillet with a lid to speed up the process.
+	</p>
+	<p class="story">
+	Put a layer of tomatoes on one of the slices, and try to cover as much surface area as possible. You might have to cut up a slice or two of the tomatoes to get it to fit. 
+	Now for the most important part: SEASON YOUR TOMATOES! Nothing crazy, just some salt and pepper, but this makes such a big difference. That’s most likely why so many people 
+	are averse to tomatoes in sandwiches. Without seasoning, they’re bland, moist pucks that take up space in your sandwich. But with just a sprinkle of salt, all the natural 
+	flavors in the tomato are brought to the surface: sweet, sour, and umami, all from one simple ingredient. Don’t ever let me catch you making a sandwich using unseasoned 
+	tomatoes ever again.
+	</p>
+	<p class="story">
+	Close the sandwich and press gently to glue the cheese onto the tomato. Continue to toast either side of the sandwich until the bread is fully toasted. Also, a hot cheese 
+	sandwich with cold tomato is a bit weird, so this will also give time for the tomato to warm through. Cut diagonally (if you cut your sandwich any other way, don’t talk to me) 
+	and serve. I originally made this because I wanted a grilled cheese but I also needed at least one vegetable with my meal. Upon eating this, I felt warmed to my soul, 
+	and it became a staple meal during my college years. It took me 2 years to realize it felt so comforting because it tastes like tomato soup and grilled cheese all in one 
+	sandwich. Such a simple and cheap meal, but so unbelievably good.
+	</p>
+</div>
+
+<!-- Fried Egg Sandwich recipe -->
+<div id="eggsandwich" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>According to my mom, the best sandwich I've made for her.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>2 slices sourdough bread</li>
+		<li>1 egg</li>
+		<li>Baby spinach</li>
+		<li>1 avocado</li>
+		<li>1 lime (lemon works too)</li>
+		<li>Mexican 4-cheese blend *</li>
+		<li>Salt</li>
+		<li>Pepper</li>
+		<li>Garlic powder</li>
+		<li>Red pepper flakes</li>
+		<li>Olive oil</li>
+	</ul>
+	<p style="margin-left: 24px">* Grated low-moisture mozzarella works here as well.</p>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Oil pan and toast bread.</li>
+		<li>Let pan cool while you mash avocado in a bowl.</li>
+		<li>Mix salt, pepper, and a squeeze of lime juice into avocado.</li>
+		<li>Spread onto both slices of bread.</li>
+		<li>Crack egg into pan over medium heat with olive oil.</li>
+		<li>Add salt to the whites and garlic powder over the yolk.</li>
+		<li>Flip over without breaking the yolk. Immediately add cheese over it.</li>
+		<li>Cover with lid until cheese melts and add red pepper flakes.</li>
+		<li>Place egg on one slice of bread and place baby spinach on top.</li>
+		<li>Close the sandwich, slice as desired, and serve.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	My mom was too tired to make dinner one night, so she asked me to do it. I asked if a sandwich was okay and she agreed. I looked in the fridge and improvised. The result was 
+	so good, my mom said it was the best sandwich I ever made.
+	</p>
+	<p class="story">
+	Drizzle olive oil in a hot pan and toast 2 slices of sourdough. Once the bread is toasted, turn off the heat and let cool on a wire rack. While the pan cools off, mash up 
+	an avocado in a bowl along with some salt, pepper, and a squeeze of lime juice. Spread the avocado mixture onto both sides of the bread. If you have guacamole on hand, 
+	that’s an acceptable substitute as well. Add a few tablespoons of olive oil to the pan and heat over medium. Crack an egg into the hot pan and season it by putting salt on the 
+	whites and garlic powder on the yolk. The salt will help the whites set properly, and the garlic will pack the yolk with flavor. Flip over the egg, taking care not to break 
+	the yolk. Immediately add cheese over it to ensure it melts as soon as possible. I like using a pre-shredded Mexican 4 cheese blend, but you can also use shredded low-moisture 
+	mozzarella instead. Cover with a lid until the cheese melts and add some red pepper flakes over the cheese. You can cook your egg to desired doneness, but I prefer over medium. 
+	I like having a runny yolk, but thick enough that it doesn’t feel raw.
+	</p>
+	<p class="story">
+	When the egg is done, place the egg on one slice of bread, top with some leaves of baby spinach, and then close the sandwich. I always slice my sandwich in half before serving. 
+	If you leave your eggs a little runny like me, you'll be fortunate enough to see the yolk oozing out as you cut into it. Marvelous.
+	</p>
+</div>
+
+<!-- Rice & Pasta -->
+<!-- Sausagepeppers&onions over Rice recipe -->
+<div id="sporice" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Sausage. Peppers. Onions. SausagePeppers&amp;Onions.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>1 cup white rice, dry</li>
+		<li>2 sausages</li>
+		<li>0.5 red bell pepper</li>
+		<li>0.25 yellow onion</li>
+		<li>2 cloves garlic</li>
+		<li>Salt</li>
+		<li>Pepper</li>
+		<li>Paprika</li>
+		<li>Oregano</li>
+		<li>Red pepper flakes</li>
+		<li>2 tbsp bacon grease or olive oil</li>
+		<li>Soy sauce</li>
+		<li>2 scallions</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Start by cooking the rice.</li>
+		<li>In the meantime, cut onion into thin slices and stir fry in fat of choice over high heat with red pepper flakes.</li>
+		<li>Cut bell pepper into thin slices as well and mince garlic.</li>
+		<li>Once onion is translucent, add in peppers and garlic. Season with salt and paprika.</li>
+		<li>Cut sausages into coins and add them to the pan once the peppers are cooked through and some browning occurs on the vegetables.</li>
+		<li>Stir fry for 1-2 minutes and then cover with a lid. Cook on low heat for 5 minutes.</li>
+		<li>Uncover and stir in oregano and black pepper, then cook again with lid on for an additional 5 minutes.</li>
+		<li>Stir a splash of soy sauce in the rice. Every grain of rice should have some color on it.</li>
+		<li>When the soy sauce is fully incorporated, turn off the heat and pour the sausagepeppers&onions with all the flavored oil onto the rice.</li>
+		<li>Mix thoroughly and serve with sliced scallions as a garnish.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	Sausage, peppers, and onions. A classic combination in Italian cooking, and for good reason. But stir fried with bacon grease and soy sauce, then served over rice? 
+	A game changer for sure.
+	</p>
+	<p class="story">
+	Start by cooking your rice in a pot. While you’re waiting on the rice, slice up the onion and bell pepper thinly and mince the garlic. Stir fry the onion in a skillet over 
+	high heat with red pepper flakes in bacon grease if you have it. If not, olive oil is fine. The trick to stir fry is stirring it as you fry it. Sounds tautological, sure, 
+	but seriously, stir frying is all about using high heat to cook quickly, so keep it moving so you don’t burn anything. Once the onion becomes translucent, add the peppers and 
+	garlic, along with a sprinkle of salt and a hefty shake or two of paprika. 
+	</p>
+	<p class="story">
+	Slice up the sausages into coins. I prefer using Italian sausage or smoked sausage, but any sausage will do. When the onion and bell pepper both start getting slightly browned, 
+	add the sausage and stir fry for 1-2 minutes to get some color on the sausages. Cover with a lid and cook on low heat for 5 minutes. Uncover, stir in a small amount of oregano 
+	and a large amount of black pepper, then put the lid back on for another 5 minutes.
+	</p>
+	<p class="story">
+	Stir a splash of soy sauce into the rice, which should have finished cooking by now. Make sure every grain of rice has some color on it. Turn off the heat on the skillet and 
+	pour the sausagepeppers&onions onto the rice. Make sure to use a clump of rice to mop up all the oil and stray bits of flavor left in the skillet so everything makes it into 
+	the rice. Mix thoroughly and serve with sliced scallions as a garnish.
+	</p>
+</div>
+
+<!-- Gnocchi recipe -->
+<div id="gnocchi" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Potato dumplings that go great with brown butter and sage or tomato sauce.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>For the Gnocchi:</li>
+		<ul>
+			<li>2 lbs russet potatoes (abt 4-6)</li>
+			<li>1 egg</li>
+			<li>1 cup flour</li>
+		</ul>
+		<li>For the Brown Butter Sage Sauce:</li>
+		<ul>
+			<li>4 tbsp butter</li>
+			<li>Fresh sage leaves</li>
+			<li>Parmesan cheese</li>
+		</ul>
+	</ul>
+	<p style="margin-left: 24px"></p>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Preheat oven to 350F</li>
+		<li>Stab and salt potatoes</li>
+		<li>Bake for 90 mins or until no resistance is met with a knife.</li>
+		<li>Peel potatoes and grate them (best while hot).</li>
+		<li>Fold in beaten egg and a most of the flour.</li>
+		<li>Taking care not to knead it, continue adding flour and gently mixing until a smooth ball forms (soft not sticky).</li>
+		<li>Roll out small portions at a time, spreading your fingers to help stretch the dough until the dough looks like a snake the width of your finger.</li>
+		<li>Cut the rolls into inch-long pieces, then roll into balls.</li>
+		<li>Roll balls over back of a fork to form ridges.</li>
+		<li>Cook butter in a pan on medium-high until toasty, but not burnt.</li>
+		<li>Add sage leaves and turn heat to medium-low. Cook until sage is slightly crispy and turn off heat.</li>
+		<li>Boil gnocchi for a few minutes. They are cooked when they begin to float.</li>
+		<li>Add gnocchi to butter and sage sauce with a splash of the starchy water from the gnocchi pot.</li>
+		<li>Cook gnocchi in sauce on medium-high until sauce reduces and thickens slightly and gnocchi develops a slight browning.</li>
+		<li>Serve topped with grated parmesan.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	There’s only 2 foods I’ve ever cooked that made it impossible for me to stop smiling while eating them. Gumbo and gnocchi. These tender potato dumplings are excellent with 
+	tomato sauce, but the recipe I have here is for a traditional sage and brown butter sauce. This recipe is brought to you by Stephen Cusato of Not Another Cooking Show.
+	</p>
+	<p class="story">
+	First, preheat the oven to 350F. We’re using baked potatoes rather than boiled to avoid excess moisture. Moisture + flour = gluten = chewy. We want soft and tender, not tough 
+	and chewy. Stab your potatoes with a fork so that they can vent steam, and sprinkle them with salt. Bake on a foil-lined baking tray for at least 90 minutes. The potatoes 
+	should meet absolutely no resistance when stabbed with a knife. You can even let them go for a full 2 hours, as long as the potatoes are as soft as possible on the inside. 
+	Take out the potatoes when done, then peel and grate them onto a clean countertop.
+	</p>
+	<p class="story">
+	Fold in a beaten egg and most of the flour using a bench scraper. Gradually fold in flour gently, taking care not to knead it, until a smooth ball can be formed and the dough 
+	is no longer sticky. Remember, the less you work the dough, the more tender the gnocchi will be. Roll out the dough with your fingers into a snake about the width of your 
+	finger. Try spreading your fingers as you roll to help stretch out the dough into the snake shape. Cut the snake into inch-long pieces, and roll the pieces into balls. 
+	Place a fork upside down and coat in flour. Roll the dough balls over the back of the fork. This will curl the dumplings into a pill bug shape and create ridges on the back 
+	which will be great for clinging onto the sauce.
+	</p>
+	<p class="story">
+	Now for the brown butter sage sauce. Start boiling a pot of water and melt some butter in a separate pan. Cook the butter over medium-high until it becomes toasty and browned, 
+	but not burnt. If you blacken it, you need to start the sauce over. Add some fresh sage leaves to the butter and turn down the heat to prevent burning. Cook until sage begins 
+	to become crispy and turn off the heat. By now the pot of water should be boiling. Boil the gnocchi for a few minutes. They’re done cooking when they begin to float. 
+	Add the gnocchi to the brown butter sage sauce along with a splash of the cooking water. That water is now laden with starch, which will thicken the sauce and help it stick to 
+	the gnocchi. Cook gnocchi in the sauce on medium heat until sauce thickens slightly and gnocchi gets a little color. Make sure to keep the contents of the pan moving to 
+	emulsify the sauce with the water. Serve and top with grated parmesan.
+	</p>
+</div>
+
+<!-- Turkey Rice recipe -->
+<div id="turkeyrice" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Very nutritious, flavorful, and high in protein. I ate this a lot while working out.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>1 cup dry rice</li>
+		<li>0.25 yellow onion</li>
+		<li>1 clove garlic</li>
+		<li>0.25 lb ground turkey breast</li>
+		<li>3 crimini mushrooms</li>
+		<li>1 Roma tomato</li>
+		<li>3 eggs</li>
+		<li>Salt</li>
+		<li>Pepper</li>
+		<li>Cayenne</li>
+		<li>Cumin seeds</li>
+		<li>Turmeric</li>
+		<li>Mustard seeds</li>
+		<li>Olive oil</li>
+	</ul>
+	<p style="margin-left: 24px"></p>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Start by cooking the rice.</li>
+		<li>Put olive oil, cayenne, turmeric, cumin, and mustard seed into a pan on medium heat.</li>
+		<li>Mince garlic and dice onion.</li>
+		<li>When mustard seeds begin to pop, turn heat to medium low and add onions and garlic.</li>
+		<li>Add ground turkey when the onions begin to sweat and break turkey into small pieces, mixing with the vegetables.</li>
+		<li>Season with a bit of salt and continue mixing meat and vegetables. Make sure there are no large chunks of turkey.</li>
+		<li>Dice mushrooms and tomato, and add them to the pan.</li>
+		<li>Season with salt and pepper.</li>
+		<li>Let cook until mushrooms shrink and then cover with lid for 2 minutes.</li>
+		<li>Take off lid and mix. Then form 3 empty spaces in pan.</li>
+		<li>Add eggs into the spaces and scramble them into the mix</li>
+		<li>Once the eggs are cooked but a lot of moisture is still left, turn off the heat.</li>
+		<li>Fold everything in the pan into the rice until turmeric has stained the whole dish yellow. You should not see a single grain of rice that is left white.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	I created this dish when I used to work out regularly to help me put on muscle. Heavy on protein, carbs, and fat to help you meet your macros. Heavy on flavor so you could eat 
+	it every day and never tire of it.
+	</p>
+	<p class="story">
+	While you wait for your rice to cook, put some olive oil, cayenne, turmeric, cumin seed, and mustard seed into a pan over medium heat. These are traditional Indian flavors, 
+	and although this dish is not at all Indian, I’m glad I was able to use my knowledge of Indian cuisine to help me in inventing new dishes. Next, mince the garlic and dice the 
+	onion. When the mustard seeds begin popping, that’s when you know the spices are properly toasted. Add the onions and garlic, then turn the heat to medium-low. Once the onions
+	begin to sweat, Add the ground turkey. Break up the turkey as much as possible and season with salt. Most people complain that turkey is too dry, but the little juicy nuggets 
+	of meat in this dish do everything except disappoint. Next, dice up mushroom and tomato, then add them to the mix with some salt and pepper. Once the mushrooms lose some of 
+	their water, cover with a lid for 2 minutes. This will allow the tomatoes to release all their moisture without it all evaporating away. Take off the lid and stir. 
+	</p>
+	<p class="story">
+	Make 3 spaces in the pan and crack eggs into them. Scramble the eggs, mix everything together, and turn off the heat. The eggs should be fully cooked, but there should still 
+	be a lot of liquid in the pan from the tomato. Fold the contents of the pan into the rice until the turmeric stains every grain of rice yellow. I call this process reverse 
+	colonization, because we want to get rid of as much white as possible. Scoop into a plate or bowl and serve. This dish has over 44 grams of protein, making it a great option 
+	for people trying to gain muscle without eating just bland chicken and plain rice. This dish has nutrients. This dish has spices. This dish nourishes. This dish satisfies.
+	</p>
+</div>
+
+<!-- Desserts -->
+<!-- Lemon Meringue Pie recipe -->
+<div id="lemonmeringue" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>The first dessert I learned to make.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>For the Crust:</li>
+		<ul>
+			<li>2.5 cups all-purpose flour</li>
+			<li>1 tsp salt</li>
+			<li>1 cup butter, cold, cubed</li>
+			<li>0.33 cups ice-cold water</li>
+		</ul>
+		<li>For the Lemon Curd:</li>
+		<ul>
+			<li>3 eggs</li>
+			<li>2-3 lemons</li>
+			<li>0.5 cups sugar</li>
+			<li>3 oz butter, cubed</li>
+			<li>1 heaped tsp cornstarch</li>
+		</ul>
+		<li>For the Meringue:</li>
+		<ul>
+			<li>.5 cups sugar</li>
+			<li>White vinegar</li>
+		</ul>
+	</ul>
+	<p style="margin-left: 24px"></p>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Mix salt and flour in a large bowl and refrigerate</li>
+		<li>Cut butter into flour until butter is in pea-sized, flour-coated chunks.</li>
+		<li>Add water little by little until the mixture can be clumped. Use as little water as possible.</li>
+		<li>Form into a ball of dough, wrap, and freeze overnight.</li>
+		<li>Take half of dough, roll out 2 inches wider than pie dish.</li>
+		<li>Butter and flour the pie dish and put in dough. Trim, crimp, dock, and refrigerate for at least 30 minutes.</li>
+		<li>Preheat oven to 350F.</li>
+		<li>Place in pie weights (you can use nuts or dry beans in aluminum foil instead).</li>
+		<li>Bake at 350F for 20 minutes, remove pie weights, then put it back in oven until golden brown.</li>
+		<li>Juice and zest lemons into a bowl.</li>
+		<li>Add 2 yolks and 1 whole egg, store 2 remaining whites at room temperature in a clean, dry, cool, glass or metal bowl.</li>
+		<li>Add cornstarch and sugar to lemon mixture, then whisk over double boiler until smooth.</li>
+		<li>Melt in butter piece by piece. Whisk curd constantly to avoid scrambling the eggs.</li>
+		<li>Keep whisking until the butter is fully incorporated and the curd coats the back of a spoon and a line can be drawn through it.</li>
+		<li>Pour curd onto cooled crust, cover with plastic wrap, let set in fridge for at least 30 mins.</li>
+		<li>Add a tiny splash of vinegar to the egg whites you set aside earlier.</li>
+		<li>Whisk whites until very frothy.</li>
+		<li>Add sugar slowly and keep whisking until stiff peaks form.</li>
+		<li>Gently spread meringue onto pie. Do not disrupt the curd or deflate the meringue.</li>
+		<li>Swirl meringue into preferred pattern and torch until browned. A broiler may be used instead of a pastry torch, but be careful not to burn the meringue.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	I’m not really a baking guy, I’m a cooking guy. Baking requires precision, while cooking is more forgiving with improvisation. Because I tend to favor flexibility in the 
+	kitchen, I’m a decent cook, but a terrible baker. That being said, I wanted to try baking a dessert when I had just started cooking, and I’m the type of person to go big 
+	or go home. So I settled on lemon meringue pie. The first time I made it was horrible. Our springform pan was too big, so I had to triple the recipe, and I ended up forgetting 
+	to triple some of the ingredients. As a result, the meringue wasn’t stiff, the curd hadn’t set, and the graham cracker crust just tasted all wrong. I learned my lesson. 
+	I started by learning to make a pate brisee, none of this graham cracker business. If you’re making a pie, at least use a pie dish and a proper pie crust. Second, people 
+	complained that there was too much meringue, so I had to reduce that. In doing research, I found that the recipe I used called for whole eggs in the curd, while some opted 
+	for just yolks. That’s where I had an idea: Create the perfect lemon meringue pie recipe with no leftover whites or yolks. And that’s exactly what I did. This is one of the 
+	first recipes I engineered on my own and I must say, I’m quite proud of it.
+	</p>
+	<p class="story">
+	There are 3 main components to a lemon meringue pie. Crust, lemon curd, and meringue. The three of these work together in perfect harmony to create a perfect dessert. 
+	It can even show us a lesson in rhetoric, if you replace these components with Ethos, Logos, and Pathos. This rhetorical triangle, proposed by Aristotle, illustrates the 3 main 
+	components of rhetoric. Ethos is authority: to deliver a strong message you must be credible. Logos is logic: to deliver a sound message you must use factual arguments. 
+	Pathos is emotion: to deliver a moving message you must appeal to the emotions of your audience. Many people fail to deliver messages because they leave the rhetorical triangle 
+	incomplete. For instance, scientists can’t convince people of facts because they are trained only to use Ethos and Logos. Without Pathos, who will listen to reason? 
+	All three are equally important in rhetoric, just as crust, curd, and meringue are equally important in a lemon meringue pie.
+	</p>
+	<p class="story">
+	The crust is like Ethos: it provides definition and stability. Without it, the pie wouldn’t hold up and people would question if it even counts as a pie anymore. The lemon curd 
+	is like Logos, because people mistakenly assume it matters more than the other components. But it’s so bright and tart that an audience would find it unpleasant to experience on 
+	its own. That’s why it must be balanced with meringue, which is like Pathos. The swirling, toasted peaks and delicate sweetness make the pie a true work of art and offset the 
+	sourness of the curd. Together, this culinary rhetorical triangle works to create a harmonious, delicious experience. Now, enough about rhetoric, let’s make some pie.
+	</p>
+	<p class="story">
+	Start with the crust. This recipe makes enough dough for 2 pie crusts on a standard 9-inch pie dish. The most important thing when making pie crust is to keep it COLD. 
+	Warmth will melt the butter, which is bad because we want little chunks of butter in the dough to melt in the oven. That way, the water in the butter evaporates and creates 
+	little steam pockets, while the fat in the butter crisps up the edges of those pockets. When you have layers of these little crispy air pockets, that’s called a flaky crust. 
+	It’s a similar principle to making croissants. In addition, by keeping the crust cold, you prevent water in the dough from evaporating too quickly in the oven, which would 
+	otherwise cause the crust to shrink as it bakes. I prefer making my dough the night before I want pie. This allows me to work in a cool environment and give me plenty of time 
+	to rest the dough while I sleep.
+	</p>
+	<p class="story">
+	Because we want everything to be cold, start by refrigerating your flour and salt in a mixing bowl. In the meantime, cube up some cold butter and put it in the freezer. When 
+	everything is cooled down, after about 30 minutes, take out the dry mixture and butter. Put the butter in the flour and begin using your hands to coat the cubes and break them 
+	apart (if you have a handheld pastry blender, refrigerate ahead of time and use that instead). The idea here is not to fully mix the butter and flour together. We want to 
+	instead break the butter up into pea-sized chunks and coat them in the flour. Make sure to use your fingers and not palms, as the warmth of your hands may melt the butter too 
+	much. When the butter is cut into the flour properly, that’s the time to start adding the water.
+	</p>
+	<p class="story">
+	Just like everything else, the water should have ice in it and should be refrigerated ahead of time. Add a small amount of water at a time and mix it into the dough. Avoid 
+	kneading the dough as much as possible, as kneading will develop the gluten and form a chewy crust. Stop adding water when you are able to clump the dough into a shaggy mass. 
+	Use as little water as possible. You may not even need all the water, depending on the moisture in the air. All these steps are to ensure that the dough shrinks as little as 
+	possible and produces a flaky, delicate crust. Work the dough (as little as possible) until you can shape it into a ball. You’ll notice that the dough is dry, held weakly 
+	together, has visible bits of butter streaking through, and it cracks easily when squished. That’s exactly what you want. Cover the dough tightly in plastic wrap and 
+	freeze overnight.
+	</p>
+	<p class="story">
+	The next day, cut the dough in half, wrap up the half you aren’t going to use and place back in the freezer. This should be good for at least another 4 months. It’s an excellent 
+	all-purpose crust dough, you can use it in pies, tarts, quiches, etc. Let the half you are using thaw on a clean work surface. You want it to remain cold, but still be more 
+	workable than a block of ice. Dust the surface and a rolling pin with flour and roll out the dough evenly until it is about 2 inches wider than the outside rim of the pie dish. 
+	Now grease your pie dish with some butter and dust with a thin layer of flour. This will ensure an easy release from the dish every single time without fail. Place the dough in 
+	the dish and gently fit it into all the edges, taking care not to stretch out or squish the dough too much. Trim off any excess hanging off the side and crimp the edges of the 
+	dough so it rests nicely on the rim of the pie dish. Now take a fork and stab a whole bunch of holes all over the sides and bottom of the dough. This is called “docking” and it 
+	will prevent any large air bubbles from puffing up the dough too much. Place the pie dish in the freezer for at least 30 minutes while you heat up the oven to 350F. When the 
+	oven is ready, place pie weights in your pie crust. If you don’t have pie weights, you can just use nuts or dry beans on a layer of tinfoil instead. These will ensure that 
+	the pie doesn’t puff up, in the event that the docking doesn’t do the trick. Place in the center of the oven, take it out after 20 minutes, remove the foil and pie weights, 
+	and resume baking until golden brown (maybe another 15-30 minutes).
+	</p>
+	<p class="story">
+	While you let the finished crust cool off by a windowsill, Juice and zest 2-3 lemons (depending on size) into a mixing bowl (preferably glass or metal). Add 2 egg yolks and 
+	1 whole egg to the bowl. Leave the 2 remaining egg whites at room temperature in a clean, dry, cool, bowl made of metal or glass. These whites will be needed to make the 
+	meringue, and any moisture, dirt, oil, plastic, soap, etc. will prevent the meringue from whipping to stiff peaks. Add cornstarch and sugar to the lemon mixture, then whisk 
+	over a double boiler until smooth. Melt in butter one cube at a time. Adding too many at once will cool down the mixture too fast and make it harder to melt. Make sure to 
+	whisk constantly. Do not stop even for 5 seconds, or else you risk scrambling the eggs in the curd. Once all the butter is fully incorporated, you can test if the curd is 
+	ready by dipping the back of a spoon in it. If it coats the back of a spoon and a clear line can be drawn through it with your finger, it’s ready. Pour it into the crust, 
+	cover with plastic wrap, making sure the plastic makes contact with the surface of the curd, and refrigerate it for 30 minutes. Keeping the plastic wrap in contact with the 
+	curd prevents it from forming a skin on the surface.
+	</p>
+	<p class="story">
+	While waiting for the curd to set, make the meringue using the 2 egg whites from before. Add a splash of white vinegar and whip until very frothy. The vinegar will help to 
+	stabilize the structure of the meringue. Please avoid making a meringue using a handheld whisk. I’ve tried it and it took forever. I thought my wrist would fall off. 
+	Use a stand mixer or an electric mixer if you have it. Once the whites are frothed up, begin gently sprinkling in the sugar. Too fast and it will deflate the meringue. 
+	Too slow and it won’t all dissolve in time. Add it very gradually and always keep whipping. Once all the sugar has been added, continue whipping until it reaches a stiff peaks 
+	stage. This means that if you dip a whisk in the meringue and hold it up, you should see a peak of meringue on the whisk. If the tip of the peak is floppy, it’s soft peaks. 
+	If it points up, then it’s stiff peaks. If it looks puffy, you’ve over-beaten it by shearing the proteins too much and you need to start over.
+	</p>
+	<p class="story">
+	Take the plastic off of your lemon curd and gently place the meringue on top using a spatula. Use a fork to create swirls and peaks, this is the time to really get creative. 
+	Then use a pastry torch to toast the top of the meringue. It should be browned, but not blackened. If you’re like me and you don’t have a pastry torch, set the rack in your 
+	oven to the highest placement and set it to broil. Once it’s preheated, add your pie to the top rack and watch carefully as the meringue toasts. This will take only 
+	30-60 seconds, so keep the oven light on and watch it at all times. Now look upon the culinary beauty you’ve created. Hours of work, philosophical perfection.
+	</p>
+</div>
+
+<!-- Apple Filling recipe -->
+<div id="applefilling" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Apple pie filling without the pie.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>2 apples</li>
+		<li>2-3 spoonfuls of sugar</li>
+		<li>2-3 tbsp butter</li>
+		<li>1 tbsp lemon juice</li>
+		<li>0.25 cup water</li>
+		<li>0.25 tsp vanilla extract</li>
+		<li>1 tsp cinnamon</li>
+		<li>0.5 tsp nutmeg</li>
+		<li>0.5 tsp allspice</li>
+		<li>1 tsp ground ginger</li>
+		<li>Pinch salt</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Peel and cut apples into half-inch pieces.</li>
+		<li>Melt butter in pan over medium heat.</li>
+		<li>Add apples, sugar, and salt.</li>
+		<li>Stir until sugar dissolves.</li>
+		<li>Cook until butter and sugar caramelize.</li>
+		<li>Add water and lemon juice.</li>
+		<li>Cook until slightly thickened, then add vanilla and spices.</li>
+		<li>Continue cooking until reduced to syrupy consistency and apples are soft.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	I originally created this recipe as part of a recipe for apple turnovers, but those turned out horrible. The filling was still good though, so I reworked it to be a stovetop 
+	apple filling that would go great with vanilla ice cream, French toast, etc.
+	</p>
+	<p class="story">
+	Peel and core the apples, then cut them into half-inch cubes. I like using honeycrisp apples for their sweetness, but you can use whatever you want. If you prefer a tart apple, 
+	granny smiths work very well, though you’ll need to add more sugar to your taste. Melt the butter in a pan over medium heat. Make sure to keep the butter moving as you melt it, 
+	so as to avoid breaking the natural emulsion of fat and water in the butter. Add in your apple pieces along with some sugar and a pinch of salt. Stir until the sugar dissolves 
+	and continue to cook until the butter begins to brown and the sugar begins to caramelize.
+	</p>
+	<p class="story">
+	Add the water along with a small squeeze of lemon juice. You can even add a bit of lemon zest if you like, but I find it unnecessary. Adding lemon juice will help the natural 
+	pectin in the apples thicken the liquid to make a gorgeous, golden-brown, syrupy sauce. Once the water comes to a simmer and begins to thicken, add the vanilla extract and 
+	the spices. Cinnamon and ginger, supplemented with a bit of nutmeg and allspice, will bring that classic, warm pumpkin-spice smell we all associate with autumn flavors. 
+	Continue cooking until the sauce becomes syrupy and the apples are softened all the way through. Now you have the essence of an apple pie in your hands. Do with it 
+	what you will, but remember: with great flavor comes great responsibility.
+	</p>
+</div>
+
+<!-- Banana Caramel recipe -->
+<div id="bananacaramel" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Goes great on toast, French or otherwise.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>1 banana (preferably firm)</li>
+		<li>2 tbsp sugar</li>
+		<li>1 tbsp butter</li>
+		<li>0.5 tsp vanilla extract</li>
+		<li>2 tbsp water</li>
+		<li>Pinch salt</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Peel and slice banana on a bias.</li>
+		<li>Put sugar in pan over medium high heat with half a tbsp of water around the outside until caramelized. Do not stir.</li>
+		<li>Right before sugar reaches desired color, turn down heat to low and add the rest of the water.</li>
+		<li>Melt in the butter and combine with the caramel along with a pinch of salt.</li>
+		<li>Add vanilla extract and banana.</li>
+		<li>Turn heat back up to medium high and cook until sauce reduces slightly.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	I originally made this recipe to act as a topping for French toast, but you can use it however you like. This recipe starts with a banana, preferably on the slightly green side, 
+	so that it doesn’t become too mushy. Peel the banana and slice it on a bias. You could slice it straight, but it looks so much cooler when you’ve cut it at an angle.
+	</p>
+	<p class="story">
+	Put some sugar in a dry pan over medium high heat with half a tablespoon of water sprinkled around the outside. It may be tempting to stir, but don’t. You’ll make it into rock 
+	candy and we want caramel. Keep an eye on the sugar as it melts. Not only is it fun to watch, but you need to keep track of the color because sugar can go from caramel to 
+	burnt mess very fast. That’s why the water is on the outside, to prevent the edges from burning too fast. Right before the sugar reaches a dark amber color, turn the heat to 
+	low and add the rest of the water, about a tablespoon and a half. Add the butter and a pinch of salt. Only now begin stirring it to melt in the butter. Add the vanilla extract 
+	and the banana slices. Turn the heat back up to medium high and reduce slightly. Make sure to flip the bananas while cooking to get even covering of caramel. Don’t cook for too 
+	long or the bananas will become mush. Take off the heat and serve on top of the breakfast or dessert of your choice.
+	</p>
+	<p class="story">
+	Truth be told, this recipe hasn’t been perfected yet. I still get hard pieces of caramel in the sauce, but I’m hoping to work it out eventually. Despite that, I put this work 
+	in progress on the website, because it still tastes good regardless. Soft pieces of banana coated in a sweet, slightly banana-flavored caramel sauce. Even if it isn’t perfect, 
+	it’s still pretty great and I stand by that.
+	</p>
+</div>
+
+<!-- Gajar Halwa recipe -->
+<div id="gajarhalwa" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>My mom's recipe for gajar halwa. An Indian dessert made with carrots.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>4 cups coarsely shredded carrots</li>
+		<li>4 spoonfuls of ghee</li>
+		<li>7-8 cashews halved</li>
+		<li>1 handful golden raisins</li>
+		<li>1.5 cup whole milk</li>
+		<li>1.5 cups sugar</li>
+		<li>4 tbsp milk powder</li>
+		<li>5 cardamom pods</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Heat up ghee in pot until melted.</li>
+		<li>Add cashews and raisins into pot until raisins are plumped up and cashews have a little color on them.</li>
+		<li>Remove cashews and raisins, leaving the ghee in the pot.</li>
+		<li>Add carrots to the hot ghee and sauté until they're all coated in ghee, cooking for 4-5 mins on medium heat.</li>
+		<li>Add a cup and a half of whole milk.</li>
+		<li>Let the carrots cook in the milk, stirring occasionally so as not to let the milk burn (don't put a lid on it either).</li>
+		<li>Once all the milk is absorbed by the carrots and the carrots are fully cooked (may take 15-20 mins), stir in the sugar and continue cooking for about another 15 minutes.</li>
+		<li>Stir in milk powder and turn off flame.</li>
+		<li>Crush cardamom pods into a powder and stir it in along with the fried cashews and raisins from before.</li>
+		<li>Refrigerate until you're ready to serve. This recipe is best made the night before you eat it. Serve at room temp.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	This is kind of like an Indian version of carrot cake. I’m not the biggest fan of it, but my friend wanted to know how to make it so I wrote down my mom’s recipe. As you can 
+	see, a lot of the recipe is based on feel rather than exact timings, so without experience, it’s difficult to gauge. I’ve never even made this recipe myself, but it would 
+	still be fun to try.
+	</p>
+	<p class="story">
+	Start by heating up ghee in a large pot. Ghee (also known as clarified butter) is just butter with the milk solids separated out through cooking. It has a slightly nuttier 
+	taste, a more unctuous texture, and is a staple in Indian cooking. Next, add the cashews and raisins and cook until the raisins are plump and the cashews develop a little color. 
+	Remove the cashews and raisins, but keep the ghee in there, because we need to cook down the carrots in it. The name gajar halwa means carrot halwa in Hindi (halwa being a 
+	dessert common in west, central, and south Asia). I’ve opted to call it gajar halwa instead of carrot halwa on this website because it’s my mother’s recipe and that 
+	pronunciation is true to what I called it when I was growing up.
+	</p>
+	<p class="story">
+	Cook the carrots in the ghee on medium heat for 4-5 minutes, coating every piece of carrot in it. Then add a cup and a half of whole milk. Don’t use skim, you need the milkfat 
+	in there. Milk boils over really fast and scorched milk is a big problem, so be sure to occasionally stir it. Eventually, the carrots will absorb the milk after about 
+	15-20 minutes. When this happens, stir in the sugar and keep cooking for another 15 minutes. Stir in some milk powder and turn off the flame. I have no idea why we need 
+	milk powder despite adding over a cup of milk, maybe just to get more milk per unit of milk. I think I’m just milking the joke at this point.
+	</p>
+	<p class="story">
+	Crush up some cardamom pods into a powder and stir it in along with the fried cashews and raisins from the beginning. You didn’t forget about those, did you? Refrigerate the 
+	halwa, preferably overnight. Serve at room temperature and enjoy.
+	</p>
+</div>
+
+<!-- Orange Zabaglione recipe -->
+<div id="zabaglione" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>A non-alcoholic, citrusy take on this custardy Italian dish. Recipe adapted from Food Wishes.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>3 egg yolks</li>
+		<li>2 tbsp sugar</li>
+		<li>1 large orange</li>
+		<li>2 strawberries</li>
+		<li>0.25 tsp vanilla extract (optional)</li>
+	</ul>
+	<p style="margin-left: 24px">You can replace the orange with 0.25 cups of marsala wine or moscato.</p>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Dice strawberries and toss with .5tbsp of sugar. Let sit for 1 hour covered, tossing occasionally.</li>
+		<li>Zest and juice the orange.</li>
+		<li>Whisk yolk, sugar, and juice in a bowl.</li>
+		<li>Set over double boiler and keep whisking until ribbony.</li>
+		<li>Put fruit into a glass, then a bit of zest, then the custard, and more zest on top as a garnish.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	I got this recipe while binging a bunch of Food Wishes videos on YouTube. I decided to make it, since it looked fancy, but I didn’t have any marsala wine. At the time, I was 
+	underage, so I had no way to buy a bottle anyway. Determined to make the dish regardless, I found that citrus juice could be an acceptable substitute. So I made this 
+	non-alcoholic zabaglione, and I must say, it is as wonderful to eat as it is to say.
+	</p>
+	<p class="story">
+	First prepare the strawberries that will sit under your zabaglione by dicing them up and tossing them in a bowl with a bit of sugar. By tossing it in sugar and letting it sit, 
+	you let the strawberries macerate, which means the sugar will break them down a little to release moisture and they will become nice and soft. This process will take an hour. 
+	Just let it sit, but do give it a quick toss every once in a while.
+	</p>
+	<p class="story">
+	Next, zest and juice one whole orange. You’ll need about a quarter cup of juice. Whisk the juice with the egg yolks and sugar in a bowl. Set over a double boiler and continue 
+	to whisk until pale and thickened. Don’t stop whisking, because if the eggs heat up too quick, you’ll get scrambled egg. You know you’re done when you hold up the whisk and the 
+	custard drips down in ribbons.
+	</p>
+	<p class="story">
+	Use a whiskey glass or martini glass to serve. If you don’t have one, a cup will do fine. Start by putting in the strawberries, add a small layer of zest, then the custard over 
+	top. Garnish with the remaining zest and serve. There’s so much sweetness in this dish that the bitterness of the zest does wonders for preventing your palate from being 
+	bombarded with sugar. This dessert is the perfect blend of easy and fancy, and now you have a non-alcoholic version of the dish for those who can’t consume it.
+	</p>
+</div>
+
+<!-- Crepes Suzette recipe -->
+<div id="suzette" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Recipe from Binging with Babish. Eat as dessert. Or as breakfast. I don't care.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>For the Crepes:</li>
+		<ul>	
+			<li>2 eggs</li>
+			<li>0.5 cups water</li>
+			<li>0.75 cups milk</li>
+			<li>3 tbsp melted butter</li>
+			<li>1 cup flour</li>
+			<li>Salt</li>
+		</ul>	
+		<li>For the Sauce:</li>
+		<ul>
+			<li>3 tbsp butter</li>
+			<li>2 tbsp sugar</li>
+			<li>1 orange</li>
+			<li>Grand Marnier</li>
+			<li>1 scoop vanilla ice cream</li>
+		</ul>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Combine eggs, water, milk, butter, and salt.</li>
+		<li>Whisk in flour until smooth.</li>
+		<li>Let rest for 30 mins.</li>
+		<li>Ladle batter onto a skillet on medium heat and spread thin.</li>
+		<li>Cook until slightly browned. Then flip and cook again until slightly browned on other side.</li>
+		<li>Set aside 4 crepes for this recipe, do what you want with the rest.</li>
+		<li>Melt butter and dissolve sugar in pan.</li>
+		<li>Add in zest and juice of orange.</li>
+		<li>Combine and bring to a simmer.</li>
+		<li>Dip half of crepe into the liquid and fold into quarters.</li>
+		<li>Repeat for 3 other crepes until four quarters form a circle, cooking them in the sauce.</li>
+		<li>Flip after 1 min.</li>
+		<li>Cook until bottoms become caramelized.</li>
+		<li>Flambé with Grand Marinier.</li>
+		<li>Once alcohol is cooked off, serve with vanilla ice cream.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	This recipe is directly taken from Binging with Babish. I like making this whenever I have leftover crepes after a big breakfast or brunch. Start by whisking eggs, water, milk, 
+	butter, and salt. Whisk flour into the wet mixture until smooth. Let the batter rest for 30 minutes. This will relax the gluten and allow the flour to finish hydrating properly. 
+	When ready, ladle the batter onto a skillet over medium heat and spread it thin. Cook until slightly browned, then flip and cook again until slightly browned on the other side. 
+	This recipe will make a lot of crepes, but you really only need to save the 4 best ones to make crepes suzette. But what to do with the rest? Eat them, of course. Fill them 
+	with Nutella, strawberries, condensed milk, sauteed mushrooms and cheese, I don’t care.
+	</p>
+	<p class="story">
+	Now that you have your 4 remaining crepes set aside, melt the butter in a pan and dissolve the sugar in it. Mix in the zest and juice of 1 orange. When it comes to a simmer, 
+	dip half a crepe in the sauce and fold it into quarters. Repeat the process with the 3 other crepes and fit them in the pan. Now you see why this recipe accommodates 4 crepes, 
+	because each one is folded into a quarter of the size. Flip them after 1 minute and cook until they’re caramelized on the bottom.
+	</p>
+	<p class="story">
+	Next step is the flambe. Be very careful here. Turn off the heat first, then add a splash of Grand Marnier. While the pan is NOT over the stove, turn the heat back on, 
+	then gently put the pan back over. Alcohol is very flammable, so we want to control precisely when it gets set ablaze. If you have a gas stove, gently tilt the pan to the side 
+	so some of the alcohol fumes catch on fire. Keep the flames away from you and continue gently shaking the pan until the alcohol burns out. If you have an electric stove, 
+	try using a lighter, but still be incredibly cautious. If you’re too nervous about doing this, that’s totally okay, flambe is just for show. You can just cook out the alcohol 
+	over the stove without setting the contents of the pan on fire. If you don’t consume alcohol, skip that step entirely. Serve on a plate with some vanilla ice cream and enjoy.
+	</p>
+</div>
+
+<!-- Sweet Potato Pie recipe -->
+<div id="potatopie" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Recipe courtesy of my friend's mom.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>1 pound sweet potato</li>
+		<li>0.5 cup butter, softened</li>
+		<li>1 cup sugar</li>
+		<li>0.5 cup milk</li>
+		<li>2 eggs</li>
+		<li>0.5 tsp nutmeg</li>
+		<li>.5 tsp cinnamon</li>
+		<li>1 tsp vanilla extract</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Boil sweet potato until tender and remove skin.</li>
+		<li>Add sweet potato to a bowl and mash slightly.</li>
+		<li>Add butter and mix well.</li>
+		<li>Stir in sugar, eggs, milk, nutmeg, cinnamon, and vanilla.</li>
+		<li>Beat on medium speed until smooth.</li>
+		<li>Pour into pie crust.</li>
+		<li>Bake at 350F for an hour or until set.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	I remember telling my friend about how I made a recipe for lemon meringue pie. He wanted to learn to make it, and in exchange for my recipe, he told me his mom’s special recipe 
+	for sweet potato pie. Thank you George, and many thanks to your mom as well.
+	</p>
+	<p class="story">
+	First start by boiling and peeling your sweet potato. You’ll know when it’s done boiling because you’ll be able to insert a fork or paring knife with no resistance. 
+	Add the sweet potato to a bowl and mash slightly. Then add butter and mix well. Once that all comes together, stir in the rest of the ingredients and beat until smooth on 
+	medium speed. Pour it into an unbaked pie crust and bake at 350F in the center of an oven for an hour or until a toothpick comes out clean.
+	</p>
+	<p class="story">
+	I love sweet potato pie. I wish it was more popular, but even on Thanksgiving, most people overlook it in favor of pumpkin pie. Do give this dessert a chance, 
+	it certainly deserves one.
+	</p>
+</div>
+
+<!-- Mug Cake recipe -->
+<div id="mugcake" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Is it fast? Yes. Is it easy? Yes. Is it good? Not really.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>3 tbsp flour</li>
+		<li>2 tbsp sugar</li>
+		<li>2 tbsp vegetable oil</li>
+		<li>3 tbsp milk</li>
+		<li>2 tbsp cocoa powder</li>
+		<li>0.25 tsp baking powder</li>
+		<li>1/2 tsp vanilla extract</li>
+		<li>Pinch salt</li>
+		<li>1 scoop ice cream (your choice of flavor)</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Combine flour, sugar, salt, cocoa powder, and baking powder in a microwave-safe mug.</li>
+		<li>Combine with all the other ingrediends and mix until smooth.</li>
+		<li>Microwave for 1 minute.</li>
+		<li>Serve with a scoop of ice cream</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	I’m gonna be completely honest. This recipe is garbage. If you want a chocolate cake, make a chocolate cake. This is far more dry, lacking in flavor and texture. 
+	It needs a scoop of ice cream to even be palatable. Someday I will make this recipe better, I just need to figure it out. But for now, I’m stuck with this. In any case, 
+	nobody makes mug cakes for taste, it’s all for convenience.
+	</p>
+	<p class="story">
+	Combine flour, sugar, salt, cocoa powder, and baking powder in a microwave-safe mug. Once all your dry ingredients are together, add the milk, oil, and vanilla. 
+	Mix well until smooth, then microwave for a minute. Serve with a scoop of your ice cream of choice. I can promise it’ll be fast, but as of right now, I can’t promise 
+	it’ll be any good.
+	</p>
+</div>
+
+<!-- The Laboratory -->
+<!-- Cursed Sandwich recipe -->
+<div id="cursed" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>I am so sorry.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>2 slices bread</li>
+		<li>Hummus (pref. roasted garlic hummus)</li>
+		<li>Nutella</li>
+		<li>Yellow mustard</li>
+		<li>Strawberry</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Spread hummus on one slice of bread and Nutella on the other slice.</li>
+		<li>Spread a thin layer of mustard over the hummus. Yellow mustard is strong, so use it sparingly.</li>
+		<li>Slice up strawberries and put them on the Nutella.</li>
+		<li>Close the sandwich, cut as desired, and serve.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	Don’t make that face. I know you read the ingredients. I know how you’re feeling. You think I’m crazy. You think I’ve lost it. You may be right. 
+	All I ask is that you let me explain myself.
+	</p>
+	<p class="story">
+	I was bored one day, in the summer of 2015. I went to the kitchen to make lunch and I improvised with whatever I had. I took 2 slices of sandwich bread. I used whole wheat, 
+	but white bread would’ve worked fine. On one slice, I spread a layer of roasted garlic hummus. In a moment of blind curiosity, I spread Nutella on the other slice. 
+	But my chaotic heart remained unsatisfied. It needed to be more cursed. I spread some yellow mustard over the hummus, making sure to use a thin layer, since it could overpower 
+	the hummus in large quantities. I closed the sandwich and ate it. To my surprise, it was actually good. My only qualm was that it was very dry. After all, it was just a sandwich of only condiments. It needed something fresh, something juicy, like maybe… strawberries. The second time I made the sandwich (yes I ate this multiple times), I placed some sliced strawberries between the mustard and the Nutella. I took a bite and knew right away that I had nailed it. I told my family all about my proud invention while they fought the urge to gag.
+	</p>
+	<p class="story">
+	Of course, it <em>sounds</em> bad, but because I’m the only one that has ever actually eaten it, I alone am left with the mystery: why does it taste so good? The ingredients 
+	make no sense but somehow it just works. I think I figured it out. It’s like a cycle. Hummus and Nutella go together, and now many grocery stores actually sell chocolate hummus 
+	as a popular item. Nutella and strawberries need no explanation as they are a classic pairing. Strawberries and mustard, while unconventional together, contain bright, acidic 
+	notes that pair nicely with one another. Yellow mustard and hummus both have slightly bitter, earthy tastes from the turmeric and tahini respectively that make them work well 
+	together, contrary to what one might imagine. This is a tangled web of flavor interactions, but it all somehow works out. I invite you to walk on the wild side and give this 
+	unlikely hero a try.
+	</p>
+</div>
+
+<!-- Thanksgiving Cottage Pie recipe -->
+<div id="thanksgivingpie" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Your favorite Thanksgiving meals in one dish.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>For the Mince:</li>
+		<ul>
+			<li>1 lb ground turkey</li>
+			<li>2 cups chicken stock</li>
+			<li>0.5 onions</li>
+			<li>4 stalks celery</li>
+			<li>1 spoon tomato paste</li>
+			<li>4 cloves garlic</li>
+			<li>4 tbsp butter</li>
+			<li>Salt</li>
+			<li>Pepper</li>
+			<li>Sage</li>
+			<li>Thyme</li>
+			<li>Cayenne</li>
+			<li>1 spoon flour</li>
+			<li>Handful frozen peas</li>
+		</ul>
+		<li>For the Potatoes:</li>
+			<li>2 potatoes</li>
+			<li>2 tbsp butter</li>
+			<li>0.25 cup Milk</li>
+			<li>Cheddar cheese, grated</li>
+			<li>Salt</li>
+			<li>Pepper</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Cook the turkey on high until a sear forms, set aside.</li>
+		<li>Cook onion, garlic, and celery in the fond with 4 tbsp butter.</li>
+		<li>While you let it cook, start boiling the potatoes.</li>
+		<li>Add in a pinch of flour to the vegetables, then put the turkey back in, along with a spoon of tomato paste.</li>
+		<li>Once flour cooks a bit, add in chicken stock, herbs, and cayenne. Let the mixture thicken.</li>
+		<li>Once thickened, take off heat and stir in peas.</li>
+		<li>Remove, peel, and dry the potatoes. In the meantime, let milk and cheese heat up slowly over a double boiler</li>
+		<li>Push potatoes through a strainer or run across a fine grater.</li>
+		<li>Fold and mash potatoes gently into the dairy mixture over the double boiler until appropriate consistency is achieved.</li>
+		<li>Add salt and melt in 2 tbsp cold cubed butter to mashed potatoes.</li>
+		<li>Pour mince into a casserole dish and layer the potato over the top. Create a craggly surface on the top.</li>
+		<li>Add extra cheese on top and bake at 375F on the highest rack until top is browned.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	Are you tired of making a gigantic feast at Thanksgiving? Wouldn’t you rather encapsulate the spirit of Thanksgiving all in one simple dish? What if I told you there was a way 
+	to combine turkey, stuffing, gravy, peas, and mashed potatoes all in one dish? Well, let’s say you used ground turkey instead of whole turkey. Let’s say you cooked it with 
+	aromatics and herbs that would normally go over the bread in stuffing, along with a roux and some chicken stock that would normally make a gravy. If you top it with some cheesy 
+	mashed potatoes, what do you have? A shepherd’s pie! Well, technically there’s no lamb, so it’s a cottage pie, but you get the idea. All the classic smells and ingredients of a 
+	Thanksgiving meal, all tucked into one big casserole dish.
+	</p>
+	<p class="story">
+	That was the idea I had years ago, but unfortunately I never got the chance to make it until much later. I didn’t even make it for Thanksgiving, I just needed an excuse to 
+	finally try it out. And I must say, it’s fantastic. It’s everything I thought it would be. Turkey, potato, gravy, all in one bite, with the rich, savory aromas of classic 
+	Thanksgiving herbs. Delicious. The only problem is that I didn’t make enough of it.
+	</p>
+	<p class="story">
+	Start by cooking the ground turkey on high heat in a pot or high-walled pan. The idea is to sear the meat and break it up, not to cook it all the way through. When you get 
+	that sear and some fond on the bottom of the pan, set the turkey aside. In the same pan over medium-low heat, add a generous amount of butter along with diced onion, 
+	diced celery, and minced garlic. Potatoes take a long time to boil, so while your aromatics are cooking, start boiling those potatoes in a separate pot. I prefer Yukon gold 
+	potatoes, but russets work here too. Sprinkle a big pinch of flour onto the vegetables, then put the turkey back in with a spoonful of tomato paste. The tomato paste, while 
+	it has nothing to do with Thanksgiving, will add a bit of acidity and help pick up any remaining fond from the bottom of the pan. Give the flour a chance to cook for a few 
+	minutes, then slowly stream in your chicken stock, mixing constantly. Add your herbs along with a pinch of cayenne for some heat. You can add more than sage and thyme if you 
+	would like, as long as it’s within the realm of Thanksgiving flavors. Let the mixture come up to a simmer, thicken, then take it off the heat and stir in the frozen peas.
+	</p>
+	<p class="story">
+	By now the potatoes should be done, so remove them from the water, peel them, and let them dry out on some paper towels. Removing some moisture will help them be more fluffy. 
+	Then add the milk and cheese to a bowl. Use however much cheese you prefer in your mashed potatoes, or even none at all if you don’t care for cheese. Put the milk and cheese 
+	over a double boiler. If you didn’t dump out the water from boiling the potatoes, I recommend using that pot to create a double boiler easily. Then rice, grate, or strain out 
+	the potatoes, depending on what utensils you have available. Put the potatoes in the double boiler and gently fold the mixture together with the hot milk and cheese. 
+	Add salt to taste and take off the heat. Melt in 2 tablespoons of cold, cubed butter, using only a couple cubes at a time. Remember: hot milk, cold butter, perfect mashed 
+	potatoes. Be sure not to mix the potatoes too much, as that makes them gluey and not fluffy.
+	</p>
+	<p class="story">
+	Once all the butter is incorporated, put your mince that you set aside earlier into the casserole dish and gently top with a layer of mashed potato. Use a fork to create a 
+	textured, craggy surface, and top with more cheese. Bake at 375F on the top rack of the oven until the cheese melts and the top gets browned. Cut squares using a spatula and 
+	serve. This Thanksgiving-themed cottage pie is the first big experimental recipe I ever wrote. This idea and recipe are both entirely mine and I couldn’t be prouder of this pie. 
+	Come to think of it, I have no idea why this even counts as a pie, but it’s so delicious that I don’t care.
+	</p>
+</div>
+
+<!-- Pineapple Upside-Down Deep-Dish Pizza recipe -->
+<div id="pineapplepizza" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Don’t let Italy find out about this one.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>For the Crust:</li>
+		<ul>
+			<li>250g bread flour (or AP)</li>
+			<li>25g cornmeal</li>
+			<li>75g olive oil</li>
+			<li>100g warm water</li>
+			<li>3g instant yeast</li>
+			<li>5g salt</li>
+		</ul>
+		<li>For the Rest:</li>
+		<ul>
+			<li>Tomato sauce</li>
+			<li>Provolone cheese slices</li>
+			<li>Shredded low-moisture mozzarella</li>
+			<li>Parmesan</li>
+			<li>0.25 cups unsalted butter (melted)</li>
+			<li>Pineapple rings</li>
+			<li>Italian sausage *</li>
+		</ul>
+	</ul>
+	<p style="margin-left: 24px">* Can substitute with whole black olives.</p>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Mix flour, cornmeal, yeast, and salt in a large bowl.</li>
+		<li>Mix in olive oil until crumbly texture forms.</li>
+		<li>Add warm water until shaggy dough forms.</li>
+		<li>Cover w plastic wrap in bowl and let rest for 20 mins.</li>
+		<li>Knead until a smoother dough forms in 4 min intervals, resting between each interval for 4 mins (should take about 2 intervals, i.e. 12 mins).</li>
+		<li>Turn into a ball, return to bowl and cover. Let rest for 2 hrs.</li>
+		<li>Chop up any vegetables you want to add as toppings and set aside.</li>
+		<li>Grease pie dish liberally with butter and sprinkle parmesan on the bottom and sides.</li>
+		<li>Add melted butter to the bottom with pineapple rings, making sure the distribution of butter and parmesan is even on the bottom.</li>
+		<li>Slice sausage into coins and fit them in the pineapple rings to mimic the maraschino cherries on a pineapple upside-down cake. If using olives instead, leave them whole.</li>
+		<li>Once dough is done resting and has doubled in volume, press out on a countertop until about 2 in wider than the top of the pie dish.</li>
+		<li>Cut off any excess dough outside the pie dish and use the excess dough to form a ring around the inner wall of the pie dish.</li>
+		<li>Fill with sauce until you can't see the pineapple or sausage anymore, and then add the toppings.</li>
+		<li>Add at least 0.5 lb mozzarella and top with slices of provolone cheese, taking care to make sure the final product is relatively flat (not domed) on top.</li>
+		<li>Put remaining circle of crust dough on top of the cheese and pinch it to the dough on the walls to properly attach it.</li>
+		<li>Sprinkle some extra parmesan on top and cut a few slits to vent steam.</li>
+		<li>Bake at 425F for 30-45 mins.</li>
+		<li>Let rest outside of the oven for 10 minutes.</li>
+		<li>Invert onto a cutting board, cake stand, or whatever heat-safe platform you want.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	One time, I was asking my friends their opinion about pineapple on pizza. But in a weird game of word association, my brain combined the words “pineapple upside-down cake” with 
+	“pineapple on pizza” and I ended up saying, “What do you think about pineapple upside-down pizza?” My friends were confused by this, but it got me thinking. What is an 
+	upside-down pizza? If you think about it, pizza normally has sauce with cheese and toppings above it, whereas in deep-dish pizza, the cheese and toppings are under the sauce. 
+	Even though the crust is always on the bottom, deep-dish pie is really the closest mainstream variant of pizza that could be considered “upside-down”. So what if you made a 
+	pineapple upside-down cake, but instead of cake it was a deep-dish pizza? After hours of research, diagramming, and writing, I settled on a recipe for the first ever 
+	Pineapple Upside-Down Deep-Dish Pizza.
+	</p>
+	<p class="story">
+	Basically, you take a pie dish (if you want straight edges on the crust, you should use a cake pan) and put down some pineapple rings in some melted butter with coins of 
+	Italian sausage in the holes. Take deep-dish crust dough and line the edges, then fill up the pie dish with tomato sauce, then a layer of toppings, and cheese on top. 
+	Cover the pie with a circle of dough and crimp the dough onto the dough around the sides to seal it. Create a couple steam vents on the top and bake it in the oven. The best 
+	part is, while in the oven, because there’s crust on the top and sides of a pie dish, it looks like an ordinary pie to the casual observer. Wouldn’t they be shocked to see 
+	that when you take it out of the oven and invert it, it was a deep-dish pizza all along! I know you’re asking, why even bake it upside down at all? It seems much simpler to 
+	do it right side up. You’re right, but where’s the fun in that? Where’s the adventure? The childlike whimsy that comes with making a cake that’s actually a pizza that’s 
+	actually a pie?
+	</p>
+	<p class="story">
+	I already described more or less how to make it, but let’s get more into specifics. Start by making the dough. Special thanks to Omnivorous Adam for his deep-dish pizza crust 
+	recipe. Mix the dry ingredients in a large bowl. Then mix in the olive oil until it becomes crumbly. Similar to a pie crust, it’s important to add the moisture last in as small 
+	a quantity as possible. Add warm water (about body temperature) into the dough little by little until a shaggy dough forms. Cover the bowl with plastic wrap and let rest for 
+	20 minutes. The yeast will begin feeding on the sugars in the flour and farting up a storm of carbon dioxide, which will cause the dough to rise. Knead the dough in 4 minute 
+	intervals, resting for 4 minutes between intervals. By the end of 2 kneading intervals (12 mins) you should have a smooth dough. Turn it into a ball, return it to the bowl 
+	and let it rest for another 2 hours.
+	</p>
+	<p class="story">
+	While that’s rising, chop up your vegetables. I used onion, green bell pepper, and baby bella mushrooms. You can use more vegetables or none at all, it’s up to you. 
+	Then grease the pie dish liberally with butter and sprinkle parmesan on the bottom and sides. Add melted butter to the bottom with some canned pineapple rings. Cut some 
+	Italian sausage into coins and fit them into the pineapple rings to mimic the maraschino cherries on a pineapple upside-down cake. If you’re vegetarian, use whole black olives 
+	instead, and if you’re vegan, don’t make this recipe. 
+	</p>
+	<p class="story">
+	Once the dough has finished resting, it should have doubled in volume. Press it out (don’t roll it) on a clean countertop until about 2 inches wider than the outer rim of the 
+	pie dish. Cut off any excess dough that would hang over the pie dish and use the excess dough to form a ring that goes around the inner walls of the pie dish. Fill up with 
+	tomato sauce until you no longer see any pineapple or sausage, then add the toppings of your choice. If you want a recipe for homemade tomato sauce, I have one on this site. 
+	The advantage to homemade is that you can control the moisture level. When I made this recipe, I reduced the sauce until most of the moisture was evaporated out to avoid steam 
+	buildup in the pie. After putting in the sauce, add at least half a pound of low-moisture mozzarella (yes, that sounds like a lot. No, it is not too much cheese) and then a 
+	layer of provolone slices. Make sure the cheese is flat on top, and not domed in the middle. Put the remaining circle of dough on top of the cheese and pinch it to the walls of 
+	dough to attach them together. Sprinkle some extra parmesan on top and cut some vents in the top crust to let out steam. I’m not sure if that actually helps, considering the 
+	cheese would  probably just seal it back up, but there’s no harm in doing it. Bake at 425F for 30-45 minutes. For me, the crust was a little burnt on the rim, so I would 
+	recommend not going the full 45 minutes and instead checking the doneness by the color of the top crust. If it’s browned nicely, it should be about done. Let rest outside the 
+	oven for at least 10 minutes before inverting onto a cutting board.
+	</p>
+	<p class ="story">
+	There’s only one thing left to do before cutting a slice and eating. Take a moment to think about what you've done. Seriously, you spent hours on this, and for what? Not only 
+	have you committed the cardinal sin of putting pineapple on pizza, you have also baked a deep dish pizza upside-down for no reason. Is it even a pizza anymore? Is it cake? 
+	Is it pie? Is nothing sacred in the culinary realm? Are the boundaries that we use to define and distinguish food utterly meaningless? Look upon your unholy creation and 
+	realize you have two options. Either allow yourself to well up with regret until you are laden with self-hatred and fear for what you've become... or revel in the delectable 
+	mischief and chaos of your deeds. The forces of darkness have bestowed upon you the power to bend cuisine to your will and who are you to deny it? Be without bounds, shape, 
+	form, or order. Transcend the meaning of creation through deconstruction. You are God now.
+	</p>
+</div>
+
+<!-- Miscellaneous -->
+<!-- Makeshift Popcorn Chicken recipe -->
+<div id="popcornchicken" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>The best way to eat chicken nuggets.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>Chicken nuggets</li>
+		<li>Whole basil leaves *</li>
+		<li>Garlic cloves **</li>
+		<li>Soy sauce</li>
+		<li>Paprika</li>
+		<li>Salt</li>
+		<li>Pepper</li>
+		<li>Onion powder</li>
+		<li>Red pepper flakes</li>
+		<li>Ginger powder</li>
+		<li>Vegetable oil ***</li>
+	</ul>
+	<p style="margin-left: 24px">* number of basil leaves = number of nuggets divided by 5 times 3 rounded up to nearest whole number.</p>
+	<p style="margin-left: 24px">** number of garlic cloves = number of nuggets divided by 5 rounded up to nearest whole number.</p>
+	<p style="margin-left: 24px">*** tablespoons of oil = number of nuggets divided by 10 rounded up to nearest whole number.</p>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Count chicken nuggets and begin baking on a foil-lined tray following specified directions. Counting them will help proportion other ingredients.</li>
+		<li>When about 5 minutes from being done, heat up oil in pan on high until shimmering (use about 1 tbsp for every 10 nuggets).</li>
+		<li>While oil heats up, roughly dice garlic into large chunks (about 1 clove for every 5 nuggets)</li>
+		<li>Once oil is hot, add red pepper flakes and a hefty pinch of ginger powder.</li>
+		<li>Add the basil immediately (about 3 leaves for every 5 nuggets). Take it off the heat after no more than 10 seconds.</li>
+	<p style="line-height: 0"><u>NOTE:</u> This will flash-fry the basil, so be wary of oil spluttering.</p>
+		<li>Add the garlic followed by a heavy shake of paprika and onion powder, then add pepper to taste.</li>
+		<li>Once the flavors come together after a few seconds, cool down the pan with a splash of soy sauce and mix until homogenous.</li>
+		<li>Take nuggets out of oven and put in a mixing bowl, toss with a sprinkle of salt.</li>
+		<li>Pour oil over the nuggets, making sure to get all the little powdery bits out of the pan with a spatula.</li>
+		<li>Toss together and make sure all the nuggets get covered in the oil and serve.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	I love the popcorn chicken a nearby boba place in town. I wanted to know if I could make this Taiwanese street food classic in my own kitchen with less effort than it would 
+	take to go to the shop and buy some. By making chicken nuggets and tossing them in seasoned oil, you can get something that may not be quite as good, but it’s still absolutely 
+	delicious. Whether you want to spice up your chicken nuggets gourmet-style or you want a simplified version of popcorn chicken you can make right at home, this is the recipe for 
+	you. So here’s my take on a makeshift popcorn chicken.
+	</p>
+	<p class="story">
+	The ingredient amounts are mostly in direct proportion to the number of nuggets you have. Follow the instructions for making the nuggets in the oven and count them before they 
+	go in. I’m sorry in advance about all the math you’ll have to do, but I have no idea how else to describe the proportions of these ingredients. When they are about 5 minutes 
+	away from being done, heat up some vegetable oil in a pan on high. Divide the number of nuggets by 10 and round up to get the amount of oil in tablespoons (i.e. for 21 nuggets, 
+	use 3 tbsp oil because 21/10 = 2.1 gets rounded up to 3). While the oil heats up, roughly dice the garlic. Divide the number of nuggets by 5 and round up to get the number of 
+	garlic cloves (i.e. for 21 nuggets, use 5 cloves because 21/5 = 4.1 gets rounded up to 5).
+	</p>
+	<p class="story">
+	Once the oil is hot, add red pepper flakes for some heat along with a hefty amount of ginger powder. Add the basil right away, and be sure to use fresh basil leaves only. 
+	The flavor and texture of fresh, whole basil leaves when fried is inimitable. Divide the number of nuggets by 5, multiply by 3, and round up to get the number of basil leaves 
+	(i.e. for 21 nuggets, use 13 basil leaves because (21/5)*3 = 12.3 rounded up to 13). Be careful when adding in the basil, as it will flash fry and splutter oil everywhere. 
+	Take off the heat after 10 seconds (not a second more) and add the garlic, a heavy shake of paprika, onion powder, and black pepper. If you happen to have white pepper and 
+	ground Szechuan peppercorns, you should use those instead of the black pepper. Once the flavors have a chance to assimilate, cool them off with a glug of soy sauce and mix 
+	until homogenous.
+	</p>
+	<p class="story">
+	By now the nuggets should be done, so take them out of the oven, put them in a large bowl, sprinkle with a bit of salt, and give them a little toss. Pour the seasoned oil over 
+	the nuggets, making sure to use a spatula to get out all the powdery bits and every last drop of oil. Toss together, making sure all the nuggets get covered in oil, and then 
+	serve hot. This may not be the best popcorn chicken you’ll ever have, but I guarantee it’ll be the best chicken nuggets of your life.
+	</p>
+</div>
+
+<!-- Meatballs recipe -->
+<div id="meatballs" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Adapted from Joshua Weissman's recipe.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>1 lb ground beef</li>
+		<li>0.25 cups grated parmesan</li>
+		<li>3 cloves garlic, minced</li>
+		<li>1 egg</li>
+		<li>0.5 cups Italian breadcrumbs</li>
+		<li>1.5 tsp salt</li>
+		<li>Pepper</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Mix it in a bowl until homogenous and shape into balls (approx 15 of equal weight).</li>
+		<li>Fry in hot olive oil until crust forms on outside.</li>
+		<li>Finish by simmering in tomato sauce with lid on for 10 minutes or cooking on low for a similar amount of time until cooked through.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	This recipe is literally just Joshua Weissman’s recipe but missing a few ingredients that I don’t have in my kitchen. They still taste fantastic and go great with spaghetti, 
+	meatball subs, or even just by themselves.
+	</p>
+	<p class="story">
+	Mix 1 pound of ground beef with some parmesan, breadcrumbs, an egg, salt, minced garlic, and pepper in a bowl. The reason we add so much other stuff to the meat is for both 
+	seasoning and also breaking up the meat so that it falls apart in your mouth delicately rather than seizing up and becoming tight. Once homogenous, form it into balls. 
+	I usually end up with 15 if I’m going for bigger meatballs, but if you’re not cooking them in sauce, I recommend going to ping pong ball size. Fry them in batches in a few 
+	tablespoons of shimmering hot olive oil on medium-high until a crust forms on the outside. Make sure to turn the meatballs every once in a while so they get a crust on every 
+	side. If they’re being cooked in sauce, take them out and use the oil to make tomato sauce. If you don’t want to make homemade sauce, discard the oil and put in the store-bought 
+	sauce. In either case, when the sauce is simmering, add the meatballs back in and let simmer covered for a minimum of 10 minutes on low with the lid on.
+	</p>
+	<p class="story">
+	If you don’t want to use sauce at all to simmer them, put all the meatballs back in the pan and cook them on medium-low for 15 minutes with the lid on. You can always check 
+	if they’re done by cutting a sacrificial one open. If it’s still pink, keep going. Medium-rare is unsafe if you’re using ground meat. When they’re ready, eat them however you 
+	prefer, just try not to fit them all in your mouth at once.
+	</p>
+</div>
+
+<!-- Deviled Eggs recipe -->
+<div id="deviledeggs" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Credit to AllRecipes for this recipe.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>6 large eggs</li>
+		<li>0.25 cups mayo</li>
+		<li>2 tsp yellow mustard</li>
+		<li>Salt</li>
+		<li>Pepper</li>
+		<li>Cayenne</li>
+		<li>Parsley</li>
+		<li>Hot sauce (optional)</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Put 6 eggs in a pot of water.</li>
+		<li>Bring up to a boil and turn off the heat.</li>
+		<li>Leave for 10-12 minutes.</li>
+		<li>Remove eggs and cool in ice water.</li>
+		<li>Peel eggs and cut lengthwise.</li>
+		<li>Remove and mash the yolks in a bowl.</li>
+		<li>Add mayo, mustard, salt, pepper, hot sauce, and stir until smooth.</li>
+		<li>Adjust seasoning as necessary.</li>
+		<li>Pipe yolk mixture back into egg whites.</li>
+		<li>Garnish each egg with cayenne and a sprig of parsley.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	I got this recipe from AllRecipes. I made it one time when I was alone in my apartment for Thanksgiving break. Normally, spending Thanksgiving alone is sad, but for me, I got the 
+	chance to make myself a six course feast. Deviled eggs, pasta aglio e olio, turkey and mashed potato sandwiches, fruit salad, tomato soup, and lemon meringue pie. The whole thing 
+	took me 24 hours and I ate it all by myself in 3 days. The dishes were all good, but it all began with those delicious, bite-sized pockets of goodness: deviled eggs.
+	</p>
+	<p class="story">
+	Put 6 eggs in a pot of water, then bring up to a boil. Once it begins boiling, turn off the heat. Let sit for 10-12 minutes. Remove the eggs and put them in a bowl of ice water 
+	to prevent them from overcooking. Peel the eggs and cut lengthwise. If you want to call it quits here and eat hardboiled eggs, I don’t blame you. But if you want to finish the 
+	recipe, the next step is to remove the yolks and mash them in a bowl with a fork. Add mayo, mustard, salt, pepper, and a dash or two of hot sauce. Stir until smooth and creamy. 
+	Taste for seasoning and adjust as necessary. Pipe the yolk mixture back into the egg whites. I like putting the mixture in a plastic baggie, then cutting off a corner and using 
+	that as a makeshift piping bag. Garnish each egg with cayenne pepper and a sprig of parsley. This appetizer is perfect for any party or feast of your choosing. The hardest part 
+	of this recipe is resisting the urge to eat them all before someone else gets a chance to try.
+	</p>
+</div>
+
+<!-- Pizza recipe -->
+<div id="pizza" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Ethan Chlebowski's recipe for quick, weeknight pizza.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>320 mL water (at 105 deg F)
+		<li>8g yeast</li>
+		<li>400g flour</li>
+		<li>8g salt</li></li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Put yeast and a spoonful of flour in the warm water. Stir and let sit for 5 mins until it begins foaming. If the yeast doesn't react, start over with new yeast.</li>
+		<li>Combine salt and flour in a large bowl.</li>
+		<li>Add wet mixture to the bowl and combine by hand until cohesive (about 2 mins).</li>
+		<li>Cover and rest for 15 mins.</li>
+		<li>Dip fingers in cold water and pull one side of dough, folding it over onto itself, repeating around the circumference of the dough.</li>
+		<li>Turn out onto a clean counter and slap and fold dough for 5 mins or until it can hold a translucent window pane.</li>
+		<li>Cover and let rest for 40 mins in a bowl.</li>
+		<li>Drizzle olive oil on it and fold edges onto the top like in step 5.</li>
+		<li>Divide in half and round out on table.</li>
+		<li>Oil up bowl and let dough balls rest for another 30 mins.</li>
+		<li>Make pizza, bake at 450F.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	This recipe is from Ethan Chlebowski’s recipe for spicy garlicky weeknight pizza. I’ve tried making pizza from scratch in the past and it never worked (except for pineapple 
+	upside-down deep-dish pizza, but that’s another story). I have yet to try this one out, but it looks easy to do, and with the right patience, I think I can finally make myself 
+	some good za.
+	</p>
+	<p class="story">
+	Start by putting the yeast in warm water with a spoonful of flour. Stir and let sit for 5 minutes. The warm water will activate the yeast and they will begin feeding on the 
+	flour (if they are alive). If so, the yeast will begin foaming. If not, the yeast is dead. Start over with new yeast. Combine salt and flour in a large bowl, then add the yeasty 
+	water to it. Combine by hand for 2 minutes until cohesive. This dough is very well hydrated, even for pizza, so it will be sticky. Be patient, stay calm, use flour to get excess 
+	dough off your hands. Just trust the process. Cover and let the dough rest for 15 minutes.
+	</p>
+	<p class="story">
+	Dip your fingers in cold water, pull one side of the dough, fold it onto itself, and repeat the process around the circumference of the dough. Turn out onto a clean countertop. 
+	Knead by slapping the dough onto the counter and folding over for about 5 minutes until it passes a windowpane test. The windowpane test is used to check if gluten has developed 
+	enough in a dough. Try stretching out a piece of a dough into a rectangle in your hand, as thin as possible. So thin that light can pass through it. If it can hold as a 
+	rectangle that thin, the gluten is well developed. Cover and let rest for 40 minutes back in the bowl.
+	</p>
+	<p class="story">
+	Drizzle olive oil on it and fold it over on itself like you did before. Divide it in half, since this is enough for 2 pizzas. Form into balls on the counter, drizzle olive oil 
+	into the bowl, and put the dough balls back in. Rest for another 30 minutes. Take out a ball, shape it into a pizza on your pizza cooking surface, top with sauce, cheese, 
+	and whatever else you like. Bake at 450F on the top rack for a few minutes until the crust looks done and the cheese has melted.
+	</p>
+</div>
+
+<!-- Cold Brew Coffee recipe -->
+<div id="coffee" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Recipe for cold brew from NYT Cooking.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>0.33 cups coarse ground coffee</li>
+		<li>2 cups water</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Combine coffee and water.</li>
+		<li>Cover and let rest for 12 hours at room temperature.</li>
+		<li>Filter and serve with ice cubes.</li>
+	</ol>
+	
+	<!-- About the recipe -->
+	<u><h4>Story Time</h4></u>
+	<p class="story">
+	This recipe comes from NYT Cooking. I used to make this every night and drink it first thing the next morning, 30 minutes before my workout, and it really energized me quite a 
+	bit. As someone who hates the taste of coffee, this is as palatable as black coffee gets. If you twist my arm, I might even admit that I enjoy it. When you filter the coffee, 
+	be sure to use a coffee filter, as a strainer will let a few errant grounds make it into the cup. Other than that, this recipe needs no further explanation.
+	</p>
+</div>
+
+<!-- Ricotta Cheese recipe -->
+<div id="ricotta" class="recipe tabcontent">
+	<!-- Introduction -->
+	<p>Recipe from Bon Apetit. Never attempted this recipe, but I saved it just in case I ever needed it.</p>
+	<u><h4>Ingredients</h4></u>
+	<!-- Ingredients -->
+	<ul>
+		<li>7 cups whole milk</li>
+		<li>1 cup heavy cream</li>
+		<li>2 tsp salt</li>
+		<li>5 tbsp white vinegar</li>
+	</ul>
+	
+	<!-- Instructions -->
+	<u><h4>Instructions</h4></u>
+	<ol>
+		<li>Heat the cream and milk until at 200°F, stirring occasionally.</li>
+		<li>Stir in salt and vinegar when the liquid comes up to temp.</li>
+		<li>Allow the curds to form off the heat for 15-20 mins then strain through a cheese cloth.</li>
+		<li>Let it drain without squeezing through the cheese cloth for 30 mins.</li>
+	</ol>
 </div>
 
 <!-- Here comes the JS. Oh boy -->
