@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- 
-Mihir Lele, 7/29/2022
+Mihir Lele, 8/8/2022
 
 This is meant to be an online cookbook of sorts for all the recipes I have
 -->
@@ -8,31 +8,36 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 
 <!-- Put Mihir's Recipes as the title, both in the tab and on the page -->
 <head>
-<!-- External CSS goes here. This makes it easier to link to other recipes -->
-	<link href="recipes_style.css" rel="stylesheet" type="text/css">
-<!-- Website title -->
-<title>Mihir's Recipes</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- External CSS goes here. This makes it easier to link to other recipes -->
+	<link rel="stylesheet" href="bulma.css">
+	<link rel="stylesheet" href="recipes_style.css">
+	
+	<!-- Website title -->
+	<title>Mihir's Recipes</title>
 </head>
 
 <body>
-<div class = "sticky">
+<div class = "sticky has-background-white pb-4">
 <!-- Heading -->
-<center><h1 style="font-size:36px">Mihir's Recipes</h1></center>
-
+	<h1 class="title my-4 pt-4 has-text-centered">Mihir's Recipes</h1>
 <!-- Tabs for recipe categories -->
-<div class="tab">
-	<button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
-	<button class="tablinks" onclick="openTab(event, 'breakfast')">Breakfast</button>
-	<button class="tablinks" onclick="openTab(event, 'soup')">Soups, Stews, & Sauces</button>
-	<button class="tablinks" onclick="openTab(event, 'sandwiches')">Sandwiches</button>
-	<button class="tablinks" onclick="openTab(event, 'rice')">Rice & Pasta</button>
-	<button class="tablinks" onclick="openTab(event, 'desserts')">Desserts</button>
-	<button class="tablinks" onclick="openTab(event, 'lab')">The Laboratory</button>
-	<button class="tablinks" onclick="openTab(event, 'misc')">Misc.</button>
+<div class="tab has-text-centered">
+	<button class="button is-primary tablinks active" onclick="openTab(event, 'home')">Home</button>
+	<button class="button is-primary tablinks" onclick="openTab(event, 'breakfast')">Breakfast</button>
+	<button class="button is-primary tablinks" onclick="openTab(event, 'soup')">Soups, Stews, & Sauces</button>
+	<button class="button is-primary tablinks" onclick="openTab(event, 'sandwiches')">Sandwiches</button>
+	<button class="button is-primary tablinks" onclick="openTab(event, 'rice')">Rice & Pasta</button>
+	<button class="button is-primary tablinks" onclick="openTab(event, 'desserts')">Desserts</button>
+	<button class="button is-primary tablinks" onclick="openTab(event, 'lab')">The Laboratory</button>
+	<button class="button is-primary tablinks" onclick="openTab(event, 'misc')">Misc.</button>
 </div>
 </div>
+
 <!-- Homepage message -->
-<div id="home" class="tabcontent recipe"> 
+<div id="home" class="tabcontent recipe section pt-4"> 
 	<p class="story">
 	Hi! I’m Mihir Lele, and this website is a compilation of recipes I’ve either created or collected from others. Cooking is a huge passion of mine, so I made this website to share 
 	that with you! Below I’ve included some helpful reminders about how this site is laid out.
@@ -50,130 +55,135 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 	</p>
 	<p class="story">
 	You might notice that sometimes (a lot of times) I don’t include ingredient amounts. In these cases, you have to rely on your taste, your instincts, and/or learn the right 
-	amounts through trial-and-error. This particularly applies to measuring herbs and spices. Always measure seasonings with the heart, not with a spoon. If you get the measurements 
-	wrong, that’s okay, you can always try again. It’ll make you better at cooking. That’s what I love most about cooking: experimenting! The kitchen is like my laboratory. I like 
-	finding out what works and what doesn’t and why. Don’t be afraid to take risks in the kitchen either. The recipes here aren’t strict rules. It’s your kitchen, they’re your taste 
-	buds, so do whatever you want.
+	amounts through trial-and-error. If you get the measurements wrong, that’s okay, you can always try again. It’ll make you better at cooking. That’s what I love most about 
+	cooking: experimenting! The kitchen is like my laboratory. I like finding out what works and what doesn’t and why. Don’t be afraid to take risks in the kitchen either. The 
+	recipes here aren’t strict rules. It’s your kitchen and your taste buds, so do whatever you want.
 	</p>
 </div>
 
 <!-- Display of things under each tab -->
-<div id = "breakfast" class="tabcontent">
+<div id = "breakfast" class="section tabcontent has-text-centered">
 	<div class="recipetab">
-		<button class="tablinks" onclick="openTab(event, 'pancakes')">Pancakes</button>
-		<button class="tablinks" onclick="openTab(event, 'frenchtoast')">French Toast</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'pancakes')">Pancakes</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'frenchtoast')">French Toast</button>
 	</div>
 </div>
 
-<div id = "soup" class="tabcontent">
-	<div class="recipetab">
-		<button class="tablinks" onclick="openTab(event, 'tomatosauce')">Tomato Sauce</button>
-		<button class="tablinks" onclick="openTab(event, 'gumbo')">Gumbo</button>
-		<button class="tablinks" onclick="openTab(event, 'tikka')">Chicken Tikka Masala</button>
-		<button class="tablinks" onclick="openTab(event, 'rajma')">Rajma</button>
-		<button class="tablinks" onclick="openTab(event, 'noodlesoup')">Noodle Soup</button>
-		<button class="tablinks" onclick="openTab(event, 'canes')">Cane's Sauce</button>
-		<button class="tablinks" onclick="openTab(event, 'chutney')">Green Chutney</button>
-		<button class="tablinks" onclick="openTab(event, 'gastrique')">Apple Cider Gastrique</button>
-		<button class="tablinks" onclick="openTab(event, 'cranberry')">Cranberry Sauce</button>
+<div id = "soup" class="section tabcontent has-text-centered">
+	<div class="recipetab content">
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'tomatosauce')">Tomato Sauce</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'gumbo')">Gumbo</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'tikka')">Chicken Tikka Masala</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'rajma')">Rajma</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'noodlesoup')">Noodle Soup</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'canes')">Cane's Sauce</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'chutney')">Green Chutney</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'gastrique')">Apple Cider Gastrique</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'cranberry')">Cranberry Sauce</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'chana')">Chana Masala</button>
 	</div>
 </div>
 
-<div id = "sandwiches" class="tabcontent">
+<div id = "sandwiches" class="section tabcontent has-text-centered">
 	<div class="recipetab">
-		<button class="tablinks" onclick="openTab(event, 'tomatomelt')">Tomato Melt</button>
-		<button class="tablinks" onclick="openTab(event, 'eggsandwich')">Fried Egg Sandwich</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'tomatomelt')">Tomato Melt</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'eggsandwich')">Fried Egg Sandwich</button>
 	</div>
 </div>
 
-<div id = "rice" class="tabcontent">
+<div id = "rice" class="section tabcontent has-text-centered">
 	<div class="recipetab">
-		<button class="tablinks" onclick="openTab(event, 'sporice')">SausagePeppers&amp;Onions</button>
-		<button class="tablinks" onclick="openTab(event, 'gnocchi')">Gnocchi</button>
-		<button class="tablinks" onclick="openTab(event, 'turkeyrice')">Turkey Rice</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'sporice')">SausagePeppers&amp;Onions</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'gnocchi')">Gnocchi</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'turkeyrice')">Turkey Rice</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'chickencola')">Chicken and Cola Stir-Fry</button>
 	</div>
 </div>
 
-<div id = "desserts" class="tabcontent">
+<div id = "desserts" class="section tabcontent has-text-centered">
 	<div class="recipetab">
-		<button class="tablinks" onclick="openTab(event, 'lemonmeringue')">Lemon Meringue Pie</button>
-		<button class="tablinks" onclick="openTab(event, 'applefilling')">Apple Filling</button>
-		<button class="tablinks" onclick="openTab(event, 'bananacaramel')">Banana Caramel</button>
-		<button class="tablinks" onclick="openTab(event, 'gajarhalwa')">Gajar Halwa</button>
-		<button class="tablinks" onclick="openTab(event, 'zabaglione')">Orange Zabaglione</button>
-		<button class="tablinks" onclick="openTab(event, 'suzette')">Crepes Suzette</button>
-		<button class="tablinks" onclick="openTab(event, 'potatopie')">Sweet Potato Pie</button>
-		<button class="tablinks" onclick="openTab(event, 'mugcake')">Mug Cake</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'lemonmeringue')">Lemon Meringue Pie</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'applefilling')">Apple Filling</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'bananacaramel')">Banana Caramel</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'gajarhalwa')">Gajar Halwa</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'zabaglione')">Orange Zabaglione</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'suzette')">Crepes Suzette</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'potatopie')">Sweet Potato Pie</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'mugcake')">Mug Cake</button>
 	</div>
 </div>
 
-<div id = "lab" class="tabcontent">
+<div id = "lab" class="section tabcontent has-text-centered">
 	<div class="recipetab">
-		<button class="tablinks" onclick="openTab(event, 'cursed')">Cursed Sandwich</button>
-		<button class="tablinks" onclick="openTab(event, 'thanksgivingpie')">Thanksgiving Cottage Pie</button>
-		<button class="tablinks" onclick="openTab(event, 'pineapplepizza')">Pineapple Upside-Down Deep-Dish Pizza</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'cursed')">Cursed Sandwich</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'thanksgivingpie')">Thanksgiving Cottage Pie</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'pineapplepizza')">Pineapple Upside-Down Deep-Dish Pizza</button>
 	</div>
 </div>
 
-<div id = "misc" class="tabcontent">
+<div id = "misc" class="section tabcontent has-text-centered">
 	<div class="recipetab">
-		<button class="tablinks" onclick="openTab(event, 'popcornchicken')">Makeshift Popcorn Chicken</button>
-		<button class="tablinks" onclick="openTab(event, 'meatballs')">Meatballs</button>
-		<button class="tablinks" onclick="openTab(event, 'deviledeggs')">Deviled Eggs</button>
-		<button class="tablinks" onclick="openTab(event, 'pizza')">Pizza</button>
-		<button class="tablinks" onclick="openTab(event, 'coffee')">Cold Brew Coffee</button>
-		<button class="tablinks" onclick="dominos()">No-Bake Pizza</button>
-		<button class="tablinks" onclick="openTab(event, 'ricotta')">Ricotta</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'popcornchicken')">Makeshift Popcorn Chicken</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'meatballs')">Meatballs</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'deviledeggs')">Deviled Eggs</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'pizza')">Pizza</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'coffee')">Cold Brew Coffee</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="dominos()">No-Bake Pizza</button>
+		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'ricotta')">Ricotta</button>
 	</div>
 </div>
-
 <!-- Breakfast -->
-<!-- Pancake recipe -->
-<div id="pancakes" class="recipe tabcontent">
+<!-- Pancakes -->
+<div id="pancakes" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Here's my recipe for pancakes. And when I say pancakes, I mean pan CAKES. These are some thicc boys.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>Dry Ingredients</li>
-		<ul>
-			<li>1 cup all purpose flour</li>
-			<li>1.5 tsp baking powder</li>
-			<li>0.5 tsp baking soda</li>
-			<li>Pinch salt</li>
-		</ul>
-		<li>Wet Ingredients</li>
-		<ul>
-			<li>3 tbsp sugar</li>
-			<li>1 cup buttermilk *</li>
-			<li>1 egg</li>
-			<li>2 tbsp melted butter **</li>
-			<li>0.5 tsp vanilla extract</li>
-		</ul>
-	</ul>
-	<p style="margin-left: 24px">* Buttermilk can be made at home by thoroughly mixing equal parts yogurt and water</p>
-	<p style="margin-left: 24px">** Can be substituted for coconut oil to add subtle coconut flavor if desired</p>
-	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Sift and combine dry ingredients in large bowl.</li>
-		<li>Separate egg whites and yolk into separate bowls.</li>
-		<li>Whisk egg whites until they form soft peaks. It is not necessary to go quite this far, but it does make a difference.</li>
-		<li>Stir sugar into yolks until fully combined and color lightens slightly.</li>
-		<li>Add butter and vanilla to yolk mixture and stir until homogenous.</li>
-		<li>Stream buttermilk into yolk, whisking constantly to combine.</li>
-		<li>Gently fold egg whites with a spatula into buttermilk mixture, taking care not to deflate the whites.</li>
-		<li>Add wet mixture gently into dry ingredients, fold together until just barely combined.</li>
-		<li>Chill batter in fridge for 30-60 minutes.</li>
-		<li>Ladle batter into a pan lubricated with butter over medium heat. Do not disturb it after pouring.</li>
-		<li>Add whatever other ingredients you want to flavor the pancake (blueberries, chocolate chips, cooked bacon, etc.)</li>
-		<li>Flip when bubbles begin to pop in the middle of the pancake.</li>
-		<li>Cook on the other side for 30-60 seconds until browned.</li>
-	</ol>
-	
+	<p class="mb-5">Here's my recipe for pancakes. And when I say pancakes, I mean pan CAKES. These are some thicc boys.</p>
+	<div class="columns is-8 is-variable mb-6 has-background-light">	
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Sift and combine dry ingredients in large bowl.</li>
+			<li>Separate egg whites and yolk into separate bowls.</li>
+			<li>Whisk egg whites until they form soft peaks. It is not necessary to go quite this far, but it does make a difference.</li>
+			<li>Stir sugar into yolks until fully combined and color lightens slightly.</li>
+			<li>Add butter and vanilla to yolk mixture and stir until homogenous.</li>
+			<li>Stream buttermilk into yolk, whisking constantly to combine.</li>
+			<li>Gently fold egg whites with a spatula into buttermilk mixture, taking care not to deflate the whites.</li>
+			<li>Add wet mixture gently into dry ingredients, fold together until just barely combined.</li>
+			<li>Chill batter in fridge for 30-60 minutes.</li>
+			<li>Ladle batter into a pan lubricated with butter over medium heat. Do not disturb it after pouring.</li>
+			<li>Add whatever other ingredients you want to flavor the pancake (blueberries, chocolate chips, cooked bacon, etc.)</li>
+			<li>Flip when bubbles begin to pop in the middle of the pancake.</li>
+			<li>Cook on the other side for 30-60 seconds until browned.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+			<p>Dry Ingredients</p>
+			<ul>
+				<li>1 cup all purpose flour</li>
+				<li>1.5 tsp baking powder</li>
+				<li>0.5 tsp baking soda</li>
+				<li>Pinch salt</li>
+			</ul>
+			<p>Wet Ingredients</p>
+			<ul>
+				<li>3 tbsp sugar</li>
+				<li>1 cup buttermilk *</li>
+				<li>1 egg</li>
+				<li>2 tbsp melted butter **</li>
+				<li>0.5 tsp vanilla extract</li>
+			</ul>
+		</div>
+		<p>* Buttermilk can be made at home by thoroughly mixing equal parts yogurt and water</p>
+		<p>** Can be substituted for coconut oil to add subtle coconut flavor if desired</p>
+		</div>
+	</div>
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class = "subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	I feel like it’s important for everyone to know a few basic recipes, and one recipe everyone should know is buttermilk pancakes. 
 	Pancakes are a staple breakfast food in the US and if you ever have guests over in the morning, you can wow them easily by serving them up a homemade short stack. 
@@ -235,40 +245,49 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- French Toast recipe -->
-<div id="frenchtoast" class="recipe tabcontent">
+<div id="frenchtoast" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Nothing particularly French about it, but it tastes good so who cares?</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>3 thick slices brioche *</li>
-		<li>2 eggs</li>
-		<li>0.5 cups whole milk</li>
-		<li>2 tbsp sugar</li>
-		<li>0.5 tsp cinnamon</li>
-		<li>Pinch salt</li>
-		<li>Powdered Sugar</li>
-	</ul>
-	<p style="margin-left: 24px">* Challah can also be used here. Other breads can work, but are not as good</p>
+	<p class="mb-5">Nothing particularly French about it, but it tastes good so who cares?</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Leave bread on wire rack overnight to let it become stale.</li>
-		<li>Crack eggs into casserole dish or any dish deep enough to hold the dipping liquid but wide enough to fit a slice of the bread.</li>
-		<li>Whisk cinnamon, sugar, and salt until fully and evenly combined.</li>
-		<li>Slowly stream in milk and continue whisking.</li>
-		<li>Soak a slice of stale bread in dipping liquid until saturated. This should take no more than a couple of minutes.</li>
-		<li>Flip bread to soak other side and warm up a skillet over medium heat.</li>
-		<li>Once pan is heated, grease it with butter and toast the soaked bread.</li>
-		<li>While cooking one slice, place the next slice into the liquid.</li>
-		<li>Once browned on bottom, flip toast and cook on the other side until it's browned as well.</li>
-		<li>Serve on a plate with a generous dusting of powdered sugar. Using a sifter ensures even, gentle coverage.</li>
-		<li>Top with anything your heart desires.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Leave bread on wire rack overnight to let it become stale.</li>
+			<li>Crack eggs into casserole dish or any dish deep enough to hold the dipping liquid but wide enough to fit a slice of the bread.</li>
+			<li>Whisk cinnamon, sugar, and salt until fully and evenly combined.</li>
+			<li>Slowly stream in milk and continue whisking.</li>
+			<li>Soak a slice of stale bread in dipping liquid until saturated. This should take no more than a couple of minutes.</li>
+			<li>Flip bread to soak other side and warm up a skillet over medium heat.</li>
+			<li>Once pan is heated, grease it with butter and toast the soaked bread.</li>
+			<li>While cooking one slice, place the next slice into the liquid.</li>
+			<li>Once browned on bottom, flip toast and cook on the other side until it's browned as well.</li>
+			<li>Serve on a plate with a generous dusting of powdered sugar. Using a sifter ensures even, gentle coverage.</li>
+			<li>Top with anything your heart desires.</li>
+		</ol>
+		</div>
+	
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>3 thick slices brioche *</li>
+			<li>2 eggs</li>
+			<li>0.5 cups whole milk</li>
+			<li>2 tbsp sugar</li>
+			<li>0.5 tsp cinnamon</li>
+			<li>Pinch salt</li>
+			<li>Powdered Sugar</li>
+		</ul>
+		</div>
+		<p>* Challah can also be used here. Other breads can work, but are not as good</p>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	In English, we call it French toast, but the French  call it “pain perdu” (lost bread). The recipe itself actually originates in the Roman Empire, 
 	as detailed in the <em>Apicius</em>, a cookbook compiled by the Romans sometime around 400 AD. What?? Ancient Romans, making French toast? It sounds 
@@ -310,39 +329,47 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 
 <!-- Soups, Stews, & Sauces -->
 <!-- Tomato Sauce recipe -->
-<div id="tomatosauce" class="recipe tabcontent">
+<div id="tomatosauce" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Goes great with pasta, gnocchi, or even works as a dipping sauce.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>2 cloves garlic</li>
-		<li>0.25 yellow onion</li>
-		<li>3 Roma tomatoes, or 1 can whole, peeled San Marzano tomatoes</li>
-		<li>Basil</li>
-		<li>Oregano</li>
-		<li>Red pepper flakes</li>
-		<li>Olive oil</li>
-		<li>Salt</li>
-	</ul>
+	<p class="mb-5">Goes great with pasta, gnocchi, or even works as a dipping sauce.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<p style="margin-left: 24px"><u>NOTE:</u> If using San Marzano tomatoes, ignore steps 1-3.</p>
-	<ol>
-		<li>Score an X on the end of the tomatoes.</li>
-		<li>Blanch for 30-60 seconds and place them in cold water.</li>
-		<li>Peel tomatoes and dice them (or blend them after peeling).</li>
-		<li>Mince the onion very finely and cook with basil, oregano, and red pepper flakes in enough olive oil to coat the bottom of the pan. Cook until the onions brown.</li>
-		<li>Thinly slice the garlic and cook in the oil until blond.</li>
-		<li>Flip bread to soak other side and warm up a skillet over medium heat.</li>
-		<li>Add the tomatoes.</li>
-		<li>Simmer over high heat, smashing tomatoes against side of pot. Reduce until it holds a line through the middle of the sauce.</li>
-		<li>Adjust seasoning as necessary.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<p><u>NOTE:</u> If using San Marzano tomatoes, ignore steps 1-3.</p>
+		<ol>
+			<li>Score an X on the end of the tomatoes.</li>
+			<li>Blanch for 30-60 seconds and place them in cold water.</li>
+			<li>Peel tomatoes and dice them (or blend them after peeling).</li>
+			<li>Mince the onion very finely and cook with basil, oregano, and red pepper flakes in enough olive oil to coat the bottom of the pan. Cook until the onions brown.</li>
+			<li>Thinly slice the garlic and cook in the oil until blond.</li>
+			<li>Flip bread to soak other side and warm up a skillet over medium heat.</li>
+			<li>Add the tomatoes.</li>
+			<li>Simmer over high heat, smashing tomatoes against side of pot. Reduce until it holds a line through the middle of the sauce.</li>
+			<li>Adjust seasoning as necessary.</li>
+		</ol>
+		</div>
 	
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>2 cloves garlic</li>
+			<li>0.25 yellow onion</li>
+			<li>3 Roma tomatoes, or 1 can whole, peeled San Marzano tomatoes</li>
+			<li>Basil</li>
+			<li>Oregano</li>
+			<li>Red pepper flakes</li>
+			<li>Olive oil</li>
+			<li>Salt</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	Making your own tomato sauce at home is one of those little things that makes a big difference. You can control the flavors, the ingredients, 
 	the texture, even the moisture level of the sauce for various applications. And believe me, there are so many applications for this recipe. 
@@ -400,49 +427,57 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Gumbo recipe -->
-<div id="gumbo" class="recipe tabcontent">
+<div id="gumbo" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>I got this recipe for Chicken and Sausage Gumbo from Binging With Babish. Credits are owed to Isaac Toups and Andrew Rea.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>1 lb boneless, skinless chicken thighs</li>
-		<li>0.5 cup AP flour</li>
-		<li>0.5 cup vegetable oil</li>
-		<li>6 garlic cloves, minced</li>
-		<li>2 stalks celery, diced</li>
-		<li>1 small green bell pepper, diced</li>
-		<li>1 small white onion, diced</li>
-		<li>8 oz beer (a flavorful one)</li>
-		<li>4 cups chicken stock</li>
-		<li>2 bay leaves</li>
-		<li>1 lb andouille sausage</li>
-		<li>0.5 tbsp cayenne pepper</li>
-		<li>1 tbsp smoked paprika</li>
-		<li>Scallions</li>
-		<li>Salt</li>
-		<li>Pepper</li>
-		<li>Cooked white rice (optional)</li>
-	</ul>
+	<p class="mb-5">I got this recipe for Chicken and Sausage Gumbo from Binging With Babish. Credits are owed to Isaac Toups and Andrew Rea.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>First you make a roux: heat the oil on medium until shimmering and add the flour.</li>
-		<li>Constantly whisk roux over medium to medium high heat, taking care not to burn it until it becomes the color of dark chocolate.</li>
-		<li>Add the onion, celery, bell pepper, a pinch of salt, and bay leaves and cook until fragrant, then add the garlic.</li>
-		<li>Deglaze with beer, adding it in slowly.</li>
-		<li>Once homogenous, stream in the chicken stock.</li>
-		<li>While gumbo comes to a simmer, cut sausage into coins and pan sear the chicken with salt and pepper on high heat until a brown crust forms.</li>
-		<li>Add the meat to the simmering pot along with the spices and an aggressive amount of pepper.</li>
-		<li>Simmer with lid on for an hour.</li>
-		<li>Adjust seasoning as necessary and serve, preferably over white rice. Garnish with sliced scallion.</li>
-	</ol>
-	
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>First you make a roux: heat the oil on medium until shimmering and add the flour.</li>
+			<li>Constantly whisk roux over medium to medium high heat, taking care not to burn it until it becomes the color of dark chocolate.</li>
+			<li>Add the onion, celery, bell pepper, a pinch of salt, and bay leaves and cook until fragrant, then add the garlic.</li>
+			<li>Deglaze with beer, adding it in slowly.</li>
+			<li>Once homogenous, stream in the chicken stock.</li>
+			<li>While gumbo comes to a simmer, cut sausage into coins and pan sear the chicken with salt and pepper on high heat until a brown crust forms.</li>
+			<li>Add the meat to the simmering pot along with the spices and an aggressive amount of pepper.</li>
+			<li>Simmer with lid on for an hour.</li>
+			<li>Adjust seasoning as necessary and serve, preferably over white rice. Garnish with sliced scallion.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>1 lb boneless, skinless chicken thighs</li>
+			<li>0.5 cup AP flour</li>
+			<li>0.5 cup vegetable oil</li>
+			<li>6 garlic cloves, minced</li>
+			<li>2 stalks celery, diced</li>
+			<li>1 small green bell pepper, diced</li>
+			<li>1 small white onion, diced</li>
+			<li>8 oz beer (a flavorful one)</li>
+			<li>4 cups chicken stock</li>
+			<li>2 bay leaves</li>
+			<li>1 lb andouille sausage</li>
+			<li>0.5 tbsp cayenne pepper</li>
+			<li>1 tbsp smoked paprika</li>
+			<li>Scallions</li>
+			<li>Salt</li>
+			<li>Pepper</li>
+			<li>Cooked white rice (optional)</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
-	Full disclosure, this chicken and sausage gumbo is the best thing I have ever cooked in my life. And while we’re in the spirit of full disclosure, 
+	Full disclosure, this chicken and sausage gumbo is the best thing I have ever cooked in my life. And while we’re in the spirit of disclosure, 
 	I must admit I did not write this recipe. This was taken from famous Cajun chef Isaac Toups when he made a guest appearance on Binging with Babish. 
 	I haven’t made much Cajun cooking, and really, I have no exposure to southern cooking or soul food at all, having grown up on the west coast. 
 	But as always, the recipes you find here are in the spirit of trying new things, so I figured, why not give it a go? If you’re like me and you’ve never had Cajun cuisine before, 
@@ -512,71 +547,80 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Chicken Tikka Masala recipe -->
-<div id="tikka" class="recipe tabcontent">
+<div id="tikka" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>The national dish of England, created by South Asian immigrants. You love to see it.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>For the Chicken Marinade:</li>
-		<ul>
-			<li>2 chicken thighs</li>
-			<li>Lemon</li>
-			<li>Salt</li>
-			<li>Pepper</li>
-			<li><b>Cinnamon</b></li>
-			<li><b>Cloves</b></li>
-			<li><b>Allspice</b></li>
-			<li>Cayenne pepper</li>
-			<li>Paprika</li>
-			<li><b>Ground coriander</b></li>
-			<li><b>Ground cumin</b></li>
-			<li><b>Ground fennel</b></li>
-			<li>Ground ginger</li>
-			<li>Garlic powder</li>
-			<li>Yogurt</li>
-		</ul>
-		<li>For the Gravy:</li>
-		<ul>
-			<li>1 tomato</li>
-			<li>0.5 onions</li>
-			<li>3 cloves garlic</li>
-			<li>0.25 green bell pepper</li>
-			<li>Turmeric</li>
-			<li>Cumin seeds</li>
-			<li>Vegetable oil</li>
-			<li>Cilantro</li>
-		</ul>
-	</ul>
-	<p style="margin-left: 24px"><u>NOTE:</u> Ingredients that are in <b>bold</b> can ALL be replaced by just using a heavy amount of garam masala.</p>
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Cut chicken into 1 inch cubes.</li>
-		<li>Let sit in lemon juice and salt marinade for 20 mins.</li>
-		<li>Add ground spices to chicken (spices in each bullet point are listed from most used to least)</li>
-		<ul>
-			<li>Go heavy on: Ginger, garlic, paprika</li>
-			<li>Go medium on: Black pepper, ground coriander, ground cumin, cayenne</li>
-			<li>Go light on: Fennel, allspice, cloves, cinnamon</li>
-		</ul>
-		<li>Cover chicken with a few spoonfuls of yogurt, fully combining the yogurt with the spices and massaging it all over the chicken to cover every crevice.</li>
-		<li>Marinate chicken in yogurt mixture for at least 3 hours.</li>
-		<li>Sear chicken on high heat with some vegetable oil until a charred crust forms on each side.</li>
-		<li>Set chicken aside and add thinly sliced onion and cumin seeds, picking up the fond and charred marinade on the pan.</li>
-		<li>Once sweated, add turmeric, minced garlic, ground ginger, and diced bell pepper.</li>
-		<li>When onion cooks through, add finely diced tomato, ground coriander, and ground cumin.</li>
-		<li>Mash tomato as it cooks, and when spices cook through, add water.</li>
-		<li>Wait until sauce reaches a simmer to add cayenne pepper and paprika.</li>
-		<li>Add chicken and simmer covered for 10-15 minutes.</li>
-		<li>In the meantime, separate cilantro leaves from stems and chop up the stems.</li>
-		<li>Add cilantro stems, then add salt and pepper to taste.</li>
-		<li>Stir in leftover marinade (or a couple spoons of yogurt) one spoonful at a time.</li>
-		<li>Serve topped with cilantro leaves beside naan or rice.</li>
-	</ol>
+	<p class="mb-5">The national dish of England, created by South Asian immigrants. You love to see it.</p>
 	
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Cut chicken into 1 inch cubes.</li>
+			<li>Let sit in lemon juice and salt marinade for 20 mins.</li>
+			<li>Add ground spices to chicken (spices in each bullet point are listed from most used to least)</li>
+			<div class="content">
+			<ul>
+				<li>Go heavy on: Ginger, garlic, paprika</li>
+				<li>Go medium on: Black pepper, ground coriander, ground cumin, cayenne</li>
+				<li>Go light on: Fennel, allspice, cloves, cinnamon</li>
+			</ul>
+			</div>
+			<li>Cover chicken with a few spoonfuls of yogurt, fully combining the yogurt with the spices and massaging it all over the chicken to cover every crevice.</li>
+			<li>Marinate chicken in yogurt mixture for at least 3 hours.</li>
+			<li>Sear chicken on high heat with some vegetable oil until a charred crust forms on each side.</li>
+			<li>Set chicken aside and add thinly sliced onion and cumin seeds, picking up the fond and charred marinade on the pan.</li>
+			<li>Once sweated, add turmeric, minced garlic, ground ginger, and diced bell pepper.</li>
+			<li>When onion cooks through, add finely diced tomato, ground coriander, and ground cumin.</li>
+			<li>Mash tomato as it cooks, and when spices cook through, add water.</li>
+			<li>Wait until sauce reaches a simmer to add cayenne pepper and paprika.</li>
+			<li>Add chicken and simmer covered for 10-15 minutes.</li>
+			<li>In the meantime, separate cilantro leaves from stems and chop up the stems.</li>
+			<li>Add cilantro stems, then add salt and pepper to taste.</li>
+			<li>Stir in leftover marinade (or a couple spoons of yogurt) one spoonful at a time.</li>
+			<li>Serve topped with cilantro leaves beside naan or rice.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+			<p>For the Chicken Marinade:</p>
+			<ul>
+				<li>2 chicken thighs</li>
+				<li>Lemon</li>
+				<li>Salt</li>
+				<li>Pepper</li>
+				<li><b>Cinnamon</b></li>
+				<li><b>Cloves</b></li>
+				<li><b>Allspice</b></li>
+				<li><b>Ground coriander</b></li>
+				<li><b>Ground cumin</b></li>
+				<li><b>Ground fennel</b></li>
+				<li>Cayenne pepper</li>
+				<li>Paprika</li>
+				<li>Ground ginger</li>
+				<li>Garlic powder</li>
+				<li>Yogurt</li>
+			</ul>
+			<p>For the Gravy:</p>
+			<ul>
+				<li>1 tomato</li>
+				<li>0.5 onions</li>
+				<li>3 cloves garlic</li>
+				<li>0.25 green bell pepper</li>
+				<li>Turmeric</li>
+				<li>Cumin seeds</li>
+				<li>Vegetable oil</li>
+				<li>Cilantro</li>
+			</ul>
+		</div>
+		<p><u>NOTE:</u> Ingredients that are in <b>bold</b> can ALL be replaced by just using a heavy amount of garam masala.</p>
+		</div>
+	</div>
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	People think of chicken tikka masala as a stereotypical Indian food, but really it’s thought to have originated from Indian immigrants living in Scotland. 
 	It has become a fan favorite all across the UK, and some even consider it their national dish. Despite the complexity of flavors, the dish itself is quite simple, 
@@ -651,46 +695,54 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Rajma recipe -->
-<div id="rajma" class="recipe tabcontent">
+<div id="rajma" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>My personal favorite food. I wish I could make it as well as my mom.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>1.5 cup dry kidney beans (2 cups canned)</li>
-		<li>1 yellow onion</li>
-		<li>2 bay leaves</li>
-		<li>0.5 tbsp cumin seeds</li>
-		<li>3 tbsp vegetable oil</li>
-		<li>0.5 inch fresh ginger (or 1 tbsp ground ginger)</li>
-		<li>2 tomatoes</li>
-		<li>3 tbsp coriander powder</li>
-		<li>1 tbsp ground cumin</li>
-		<li>1 tsp fennel powder</li>
-		<li>1 tbsp tomato paste (optional)</li>
-		<li>0.5 tsp cayenne</li>
-		<li>0.5 tsp turmeric</li>
-		<li>Cilantro</li>
-	</ul>
+	<p class="mb-5">My personal favorite food. I wish I could make it as well as my mom.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Soak the kidney beans in water for 10 hours. Skip this step if using canned beans.</li>
-		<li>Put bay leaves and cumin seeds in hot oil.</li>
-		<li>Finely dice onion and add it to the pot, then add ginger (grate it if using fresh ginger).</li>
-		<li>Finely dice 2 tomatoes.</li>
-		<li>When onion is sweated, add tomato, 3 tbsp coriander powder, 1 tbsp cumin powder, 1 tsp fennel, and salt.</li>
-		<li>Add 1 tbsp tomato paste (optional), turmeric, and cayenne once flavors are combined.</li>
-		<li>Cook down until paste-like and shiny, making sure to break down the tomato.</li>
-		<li>Add beans and half as much water. Add more water if necessary. Beans should be fully submerged.</li>
-		<li>Put on the lid and cook until everything comes together, about 5-10 minutes.</li>
-		<li>Chop up cilantro and stir it in.</li>
-		<li>Serve over rice with ghee.</li>
-	</ol>
-	
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Soak the kidney beans in water for 10 hours. Skip this step if using canned beans.</li>
+			<li>Put bay leaves and cumin seeds in hot oil.</li>
+			<li>Finely dice onion and add it to the pot, then add ginger (grate it if using fresh ginger).</li>
+			<li>Finely dice 2 tomatoes.</li>
+			<li>When onion is sweated, add tomato, 3 tbsp coriander powder, 1 tbsp cumin powder, 1 tsp fennel, and salt.</li>
+			<li>Add 1 tbsp tomato paste (optional), turmeric, and cayenne once flavors are combined.</li>
+			<li>Cook down until paste-like and shiny, making sure to break down the tomato.</li>
+			<li>Add beans and half as much water. Add more water if necessary. Beans should be fully submerged.</li>
+			<li>Put on the lid and cook until everything comes together, about 5-10 minutes.</li>
+			<li>Chop up cilantro and stir it in.</li>
+			<li>Serve over rice with ghee.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>1.5 cup dry kidney beans (2 cups canned)</li>
+			<li>1 yellow onion</li>
+			<li>2 bay leaves</li>
+			<li>0.5 tbsp cumin seeds</li>
+			<li>3 tbsp vegetable oil</li>
+			<li>0.5 inch fresh ginger (or 1 tbsp ground ginger)</li>
+			<li>2 tomatoes</li>
+			<li>3 tbsp coriander powder</li>
+			<li>1 tbsp ground cumin</li>
+			<li>1 tsp fennel powder</li>
+			<li>1 tbsp tomato paste (optional)</li>
+			<li>0.5 tsp cayenne</li>
+			<li>0.5 tsp turmeric</li>
+			<li>Cilantro</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	If you could choose your last meal, what would you have? I know mine would be my mom’s rajma, no contest. Rich, spicy gravy with ruby-red kidney beans poured lovingly over a bed 
 	of basmati rice. That’s the good stuff. It’s nutritious, delicious, and incredibly filling. If my mom makes it, I just know I’m going to be eating rajma and rice for lunch for 
@@ -733,57 +785,64 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Noodle Soup recipe -->
-<div id="noodlesoup" class="recipe tabcontent">
+<div id="noodlesoup" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Here's a good starting point for a basic noodle soup you can make from scratch right at home.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>For the Noodles:</li>
-		<ul>
-			<li>2 eggs</li>
-			<li>Flour</li>
-			<li>Olive oil</li>
-			<li>Salt</li>
-		</ul>
-		<li>For the Soup:</li>
-		<ul>
-			<li>1 tbsp flour</li>
-			<li>2 tbsp butter</li>
-			<li>0.5 onions</li>
-			<li>2 carrots</li>
-			<li>2 stalks celery</li>
-			<li>2 cloves garlic</li>
-			<li>Pepper</li>
-			<li>Salt</li>
-			<li>Cayenne</li>
-			<li>Thyme</li>
-			<li>Olive oil</li>
-		</ul>
-	</ul>
+	<p class="mb-5">Here's a good starting point for a basic noodle soup you can make from scratch right at home.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Create a well of flour and add beaten eggs and oil. Season lightly with salt.</li>
-		<li>Stir flour into eggs with a fork until it becomes kneadable.</li>
-		<li>Knead dough for 7-10 mins until smooth and elastic.</li>
-		<li>Let rest 30 mins at room temp covered in plastic wrap.</li>
-		<li>Cut into manageable pieces and roll out.</li>
-		<li>Laminate the dough and roll it out into a translucent rectangle.</li>
-		<li>Cut into preferred pasta shape.</li>
-		<li>Dice mirepoix (onion, garlic, celery), mince garlic. Cut any other vegetables you might want to add.</li>
-		<li>Melt butter in pot and add mirepoix over medium heat.</li>
-		<li>Once the vegetables become fragrant, sprinkle in flour and season with cayenne and thyme.</li>
-		<li>Cook down the flour until blond in color, about 5 mins.</li>
-		<li>Stream in cold water slowly in batches, constantly stirring to make sure the roux dissolves. Fill to desired level.</li>
-		<li>Bring to a boil, turn down heat, cover, and let simmer for 10-15 mins.</li>
-		<li>Add pasta and garlic and boil for about 1-2 minutes until pasta is cooked.</li>
-		<li>Season to taste with salt and pepper. Serve and finish with a glug of olive oil.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Create a well of flour and add beaten eggs and oil. Season lightly with salt.</li>
+			<li>Stir flour into eggs with a fork until it becomes kneadable.</li>
+			<li>Knead dough for 7-10 mins until smooth and elastic.</li>
+			<li>Let rest 30 mins at room temp covered in plastic wrap.</li>
+			<li>Cut into manageable pieces and roll out.</li>
+			<li>Laminate the dough and roll it out into a translucent rectangle.</li>
+			<li>Cut into preferred pasta shape.</li>
+			<li>Dice mirepoix (onion, garlic, celery), mince garlic. Cut any other vegetables you might want to add.</li>
+			<li>Melt butter in pot and add mirepoix over medium heat.</li>
+			<li>Once the vegetables become fragrant, sprinkle in flour and season with cayenne and thyme.</li>
+			<li>Cook down the flour until blond in color, about 5 mins.</li>
+			<li>Stream in cold water slowly in batches, constantly stirring to make sure the roux dissolves. Fill to desired level.</li>
+			<li>Bring to a boil, turn down heat, cover, and let simmer for 10-15 mins.</li>
+			<li>Add pasta and garlic and boil for about 1-2 minutes until pasta is cooked.</li>
+			<li>Season to taste with salt and pepper. Serve and finish with a glug of olive oil.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+			<p>For the Noodles:</p>
+			<ul>
+				<li>2 eggs</li>
+				<li>Flour</li>
+				<li>Olive oil</li>
+				<li>Salt</li>
+			</ul>
+			<p>For the Soup:</p>
+			<ul>
+				<li>1 tbsp flour</li>
+				<li>2 tbsp butter</li>
+				<li>0.5 onions</li>
+				<li>2 carrots</li>
+				<li>2 stalks celery</li>
+				<li>2 cloves garlic</li>
+				<li>Pepper</li>
+				<li>Salt</li>
+				<li>Cayenne</li>
+				<li>Thyme</li>
+				<li>Olive oil</li>
+			</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	Sometimes I have trouble falling asleep at night. When that happens, I get bored. Usually I just watch YouTube until I get tired, but one night, for whatever reason, 
 	I stayed up and wrote a recipe for vegetable noodle soup from scratch. I just wrote it for kicks, it wasn’t until months later that I found it in my notes and decided to make it. 
@@ -863,28 +922,37 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Cane's Sauce recipe -->
-<div id="canes" class="recipe tabcontent">
+<div id="canes" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>The sauce from Raising Cane's. It's not their exact recipe, but it circulated on the internet a little while ago.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>0.5 cups mayo</li>
-		<li>0.25 cup ketchup</li>
-		<li>0.5 tsp garlic salt</li>
-		<li>0.25 tsp worcestershire sauce</li>
-		<li>0.5 tsp black pepper</li>
-	</ul>
+	<p class="mb-5">The sauce from Raising Cane's. It's not their exact recipe, but it circulated on the internet a little while ago.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Mix ingredients and adjust ingredients as necessary.</li>
-		<li>Let rest refrigerated and covered for 24 hours for best results (optional).</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Mix ingredients and adjust to taste.</li>
+			<li>Let rest refrigerated and covered for 24 hours for best results (optional).</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>0.5 cups mayo</li>
+			<li>0.25 cup ketchup</li>
+			<li>0.5 tsp garlic salt</li>
+			<li>0.25 tsp worcestershire sauce</li>
+			<li>0.5 tsp black pepper</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	Despite how much I love to cook, I sometimes give in to the easy way of making dinner by throwing a tray of chicken nuggets in the oven. But even a simple comfort meal can be 
 	enhanced greatly through something like making your own version of Raising Cane’s signature sauce right at home. I found this recipe online, and while it isn’t an exact match, 
@@ -898,29 +966,38 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Green Chutney recipe -->
-<div id="chutney" class="recipe tabcontent">
+<div id="chutney" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>A spicy sauce that goes with pretty much anything.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>6-8 bird's eye chilis</li>
-		<li>Big handful of cilantro</li>
-		<li>1/4 yellow onion</li>
-		<li>4 cloves garlic</li>
-		<li>2 tsp salt</li>
-		<li>Water</li>
-	</ul>
+	<p class="mb-5">A spicy sauce that goes with pretty much anything.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Add ingredients to a blender with just enough water to blend it all together.</li>
-		<li>Blend it until smooth.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Add ingredients to a blender with just enough water to blend it all together.</li>
+			<li>Blend it until smooth.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>6-8 bird's eye chilis</li>
+			<li>Big handful of cilantro</li>
+			<li>1/4 yellow onion</li>
+			<li>4 cloves garlic</li>
+			<li>2 tsp salt</li>
+			<li>Water</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	This is my mom’s green chutney recipe. If you are unfamiliar with chutney, just think of it like salsa or pesto, but Indian. There are hundreds of different chutneys, 
 	but this one is very easy, versatile, and is packed with flavor.
@@ -933,33 +1010,42 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Apple Cider Gastrique recipe -->
-<div id="gastrique" class="recipe tabcontent">
+<div id="gastrique" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>A sweet and sour sauce. Sounds fancy. And it is.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>0.5 cup sugar</li>
-		<li>0.25 cup water</li>
-		<li>0.5 cup apple cider vinegar</li>
-		<li>Coarsely crushed black peppercorns (optional)</li>
-		<li>Cinnamon stick (optional)</li>
-		<li>Pinch salt</li>
-	</ul>
+	<p class="mb-5">A sweet and sour sauce. Sounds fancy. And it is.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Pour sugar and water in a small saucepan and bring to a simmer. Do not agitate it.</li>
-		<li>Warm up apple cider vinegar while you wait for the sugar to caramelize.</li>
-		<li>Once the caramel reaches the desired color (I prefer darker), take it off the heat and pour in the vinegar.</li>
-		<li>Put it back onto medium-high heat and stir until the sugar is fully dissolved in the vinegar.</li>
-		<li>Throw in pepper and cinnamon and continue to cook until the gastrique reduces and slightly thickens (should have a syrupy consistency).</li>
-		<li>Turn off the heat, stir in a pinch of salt, and let cool for a few minutes before straining into a container of your choice.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Pour sugar and water in a small saucepan and bring to a simmer. Do not agitate it.</li>
+			<li>Warm up apple cider vinegar while you wait for the sugar to caramelize.</li>
+			<li>Once the caramel reaches the desired color (I prefer darker), take it off the heat and pour in the vinegar.</li>
+			<li>Put it back onto medium-high heat and stir until the sugar is fully dissolved in the vinegar.</li>
+			<li>Throw in pepper and cinnamon and continue to cook until the gastrique reduces and slightly thickens (should have a syrupy consistency).</li>
+			<li>Turn off the heat, stir in a pinch of salt, and let cool for a few minutes before straining into a container of your choice.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>0.5 cup sugar</li>
+			<li>0.25 cup water</li>
+			<li>0.5 cup apple cider vinegar</li>
+			<li>Coarsely crushed black peppercorns (optional)</li>
+			<li>Cinnamon stick (optional)</li>
+			<li>Pinch salt</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	I’m one of the best cooks my friends know, but I’m the worst cook in my family. That’s why it’s a delight when they let me help out in the kitchen. I remember once, during 
 	Thanksgiving, we split up different tasks. I was in charge of roasted brussels sprouts and cranberry sauce. Of course, I wasn’t planning on serving brussels sprouts alone, 
@@ -983,30 +1069,39 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Cranberry Sauce recipe -->
-<div id="cranberry" class="recipe tabcontent">
+<div id="cranberry" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Perfect for Thanksgiving, but still good anywhere else.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>12 oz cranberries</li>
-		<li>1 cup sugar</li>
-		<li>1/2 cup water</li>
-		<li>1 orange</li>
-		<li>Cinnamon stick</li>
-	</ul>
+	<p class="mb-5">Perfect for Thanksgiving, but still good anywhere else.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Put the cranberries, sugar, cinnamon, and the zest and juice of the orange into a saucepan.</li>
-		<li>Add the water and stir occasionally over medium-high heat until it comes to a boil.</li>
-		<li>Simmer on low heat for 15 minutes or until thickened. Make sure to burst the cooked cranberries.</li>
-		<li>Let cool and serve.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Put the cranberries, sugar, cinnamon, and the zest and juice of the orange into a saucepan.</li>
+			<li>Add the water and stir occasionally over medium-high heat until it comes to a boil.</li>
+			<li>Simmer on low heat for 15 minutes or until thickened. Make sure to burst the cooked cranberries.</li>
+			<li>Let cool and serve.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>12 oz cranberries</li>
+			<li>1 cup sugar</li>
+			<li>1/2 cup water</li>
+			<li>1 orange</li>
+			<li>Cinnamon stick</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	My family has tried to make cranberry sauce on Thanksgiving many times, and I always found it too sour or too spicy. When I was put in charge of making it, I made sure it was 
 	the perfect recipe. Full disclosure, I don’t remember where I got this recipe from, but I definitely stole it off the internet somewhere for your enjoyment.
@@ -1023,41 +1118,129 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 	</p>
 </div>
 
-<!-- Sandwiches -->
-<!-- Tomato Melt recipe -->
-<div id="tomatomelt" class="recipe tabcontent">
+<!-- Chana Masala recipe -->
+<div id="chana" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>So good it made my friend cry.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>2 slices bread</li>
-		<li>1 Roma tomato</li>
-		<li>Cheddar cheese</li>
-		<li>Monterey jack cheese *</li>
-		<li>Mayo</li>
-		<li>Salt</li>
-		<li>Pepper</li>
-	</ul>
-	<p style="margin-left: 24px">* Any good melting cheese will work here.</p>
+	<p class="mb-5">My mom's recipe for chana masala.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Slice tomato and grate copious amounts of cheese on the side (equal parts cheddar and Monterey jack).</li>
-		<li>Spread a thin layer of mayo on one side of each bread slice.</li>
-		<li>Toast mayo-side-down on a skillet over medium-high heat.</li>
-		<li>Toast until golden-brown.</li>
-		<li>Flip and add grated cheese on both slices.</li>
-		<li>Lower the heat to medium-low and wait for cheese to melt. Make sure to move the bread around to pick up those burnt bits of cheese on the sides.</li>
-		<li>Add the tomato slices and season with salt and pepper.</li>
-		<li>Close the sandwich and press down slightly.</li>
-		<li>Continue to toast either side of the sandwich until bread is fully toasted and tomato is warmed through.</li>
-		<li>Cut as desired and serve.</li>
-	</ol>
+	<div class="columns is-8 is-variable has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Add cumin seeds and bay leaf to hot oil.</li>
+			<li>Sautee finely diced onion until fully cooked.</li>
+			<li>Add grated ginger with minced garlic, diced tomato, and a pinch of salt to release moisture.</li>
+			<li>Mix until flavors come together, then add cinnamon, cloves, coriander powder, cumin powder, paprika, and cayenne.</li>
+			<li>Cook down until paste-like and shiny.</li>
+			<li>Add chickpeas and half as much water.</li>
+			<li>Bring to a simmer, then leave the lid on for 5-10 minutes.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>2 cups chickpeas, soaked</li>
+			<li>1 onion</li>
+			<li>1 tomato</li>
+			<li>2 tbsp vegetable oil</li>
+			<li>0.5 inches ginger (1 tbsp)</li>
+			<li>2 cloves garlic</li>
+			<li>1 bay leaf</li>
+			<li>0.25 tsp cloves</li>
+			<li>0.25 tsp cinnamon</li>
+			<li>1 tbsp coriander powder</li>
+			<li>1 tsp cumin seed</li>
+			<li>1 tsp cumin powder</li>
+			<li>0.5 tsp paprika</li>
+			<li>Cayenne</li>
+			<li>Salt</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
+	<p class="story">
+	You may have heard this recipe called by the name <em>chole</em>, usually served with a side of fried bread called <em>bhatura</em>. Whatever you call it, this North Indian 
+	classic is packed with energy, flavor, and nutrition that is a guaranteed knockout for a simple yet filling weeknight meal.
+	</p>
+	<p class="story">
+	Start by adding cumin seeds and a bay leaf to a pot with hot oil. This will wake up the flavor compounds in these ingredients. Of course, if you leave your spices frying too 
+	long, you risk burning them, so make sure to add some finely diced onion when the cumin becomes fragrant and slightly toasted.
+	</p>
+	<p class="story">
+	The onion is going to need to cook for a little while so you can mince your garlic, peel your ginger, and dice your tomato in the meantime. Make sure the onion doesn’t burn by 
+	stirring the pot occasionally. You’ll know the onion is fully cooked when it becomes translucent and shrinks a bit due to water loss. You don’t want to caramelize or sear the 
+	onion, just make sure they’re fully cooked. Once they’re at that stage, grate in some ginger, add the minced garlic with the tomatoes, then sprinkle in a pinch of salt. The 
+	salt will help release moisture and break down the vegetables faster. Once all the ingredients are well-mixed, Add all the rest of the spices. The coriander, cumin, cinnamon, 
+	and cloves are common ingredients in garam masala that will give a lot of flavor and warmth to the chana. Then add a bit of paprika for color and cayenne powder to taste.
+	</p>
+	<p class="story">
+	Mix the ingredients together well, making sure to mash the tomato up as much as possible. The spices will combine with the tomato and create a paste-like substance that will act 
+	as the base for our gravy. Let the paste continue to reduce so that it deepens in flavor and the spices have a chance to cook properly. You’ll be able to tell that the spices 
+	are done cooking when the oil begins to leak out. The paste will have a noticeable sheen and you’ll be able to see a little oil sizzling out at the edges of the paste. This 
+	stage is critical, so don’t try to rush it. If you read my recipes for rajma and chicken tikka masala, you’ll notice a similar trend. Cooking down onion, tomato, and spices into 
+	a paste and getting to this leaking-oil stage before adding water. Congratulations, you just discovered the quintessential technique for making a good curry. By mastering this 
+	technique, you’ll unlock the ability to make a plethora of Indian dishes and even make your own curry recipe if you want.
+	</p>
+	<p class="story">
+	Add 2 cups of chickpeas and half as much water once the spices are done cooking. I like using drained, canned chickpeas for this recipe, despite the reduction in flavor. I find 
+	that it’s far easier than soaking the chickpeas overnight and having to cook them for longer. Plus, the can is a great way to measure out the amount of water you need as well. 
+	Mix and bring up to a simmer. Continue to simmer with the lid on for 5-10 minutes. You want the chickpeas to soften and absorb as much flavor as possible. Take off the lid and 
+	mash some of the chickpeas against the sides of the pot to help thicken the gravy. Adjust for seasoning, then serve with bhature, naan, or rice. Top with chopped cilantro 
+	leaves, raw red onion slices, or both.
+	</p>
+</div>
+
+<!-- Sandwiches -->
+<!-- Tomato Melt recipe -->
+<div id="tomatomelt" class="section recipe tabcontent pt-4">
+	<!-- Introduction -->
+	<p class="mb-5">So good it made my friend cry.</p>
+	
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Slice tomato and grate copious amounts of cheese on the side (equal parts cheddar and Monterey jack).</li>
+			<li>Spread a thin layer of mayo on one side of each bread slice.</li>
+			<li>Toast mayo-side-down on a skillet over medium-high heat.</li>
+			<li>Toast until golden-brown.</li>
+			<li>Flip and add grated cheese on both slices.</li>
+			<li>Lower the heat to medium-low and wait for cheese to melt. Make sure to move the bread around to pick up those burnt bits of cheese on the sides.</li>
+			<li>Add the tomato slices and season with salt and pepper.</li>
+			<li>Close the sandwich and press down slightly.</li>
+			<li>Continue to toast either side of the sandwich until bread is fully toasted and tomato is warmed through.</li>
+			<li>Cut as desired and serve.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>2 slices bread</li>
+			<li>1 Roma tomato</li>
+			<li>Cheddar cheese</li>
+			<li>Monterey jack cheese *</li>
+			<li>Mayo</li>
+			<li>Salt</li>
+			<li>Pepper</li>
+		</ul>
+		</div>
+		<p>* Any good melting cheese will work here.</p>
+		</div>
+	</div>
+	
+	<!-- About the recipe -->
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	Perhaps one of the simplest dishes, but a certified crowd-pleaser nonetheless. There’s some little tips and tricks here that will revolutionize your sandwich making skills, 
 	so pay attention and don’t skip a single step.
@@ -1085,8 +1268,8 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 	Put a layer of tomatoes on one of the slices, and try to cover as much surface area as possible. You might have to cut up a slice or two of the tomatoes to get it to fit. 
 	Now for the most important part: SEASON YOUR TOMATOES! Nothing crazy, just some salt and pepper, but this makes such a big difference. That’s most likely why so many people 
 	are averse to tomatoes in sandwiches. Without seasoning, they’re bland, moist pucks that take up space in your sandwich. But with just a sprinkle of salt, all the natural 
-	flavors in the tomato are brought to the surface: sweet, sour, and umami, all from one simple ingredient. Don’t ever let me catch you making a sandwich using unseasoned 
-	tomatoes ever again.
+	flavors in the tomato are brought to the surface: a surge of sweet, sour, and umami, all from one simple ingredient. Don’t ever let me catch you making a sandwich using 
+	unseasoned tomatoes ever again.
 	</p>
 	<p class="story">
 	Close the sandwich and press gently to glue the cheese onto the tomato. Continue to toast either side of the sandwich until the bread is fully toasted. Also, a hot cheese 
@@ -1098,43 +1281,53 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Fried Egg Sandwich recipe -->
-<div id="eggsandwich" class="recipe tabcontent">
+<div id="eggsandwich" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>According to my mom, the best sandwich I've made for her.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>2 slices sourdough bread</li>
-		<li>1 egg</li>
-		<li>Baby spinach</li>
-		<li>1 avocado</li>
-		<li>1 lime (lemon works too)</li>
-		<li>Mexican 4-cheese blend *</li>
-		<li>Salt</li>
-		<li>Pepper</li>
-		<li>Garlic powder</li>
-		<li>Red pepper flakes</li>
-		<li>Olive oil</li>
-	</ul>
-	<p style="margin-left: 24px">* Grated low-moisture mozzarella works here as well.</p>
+	<p class="mb-5">According to my mom, the best sandwich I've made for her.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Oil pan and toast bread.</li>
-		<li>Let pan cool while you mash avocado in a bowl.</li>
-		<li>Mix salt, pepper, and a squeeze of lime juice into avocado.</li>
-		<li>Spread onto both slices of bread.</li>
-		<li>Crack egg into pan over medium heat with olive oil.</li>
-		<li>Add salt to the whites and garlic powder over the yolk.</li>
-		<li>Flip over without breaking the yolk. Immediately add cheese over it.</li>
-		<li>Cover with lid until cheese melts and add red pepper flakes.</li>
-		<li>Place egg on one slice of bread and place baby spinach on top.</li>
-		<li>Close the sandwich, slice as desired, and serve.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Oil pan and toast bread.</li>
+			<li>Let pan cool while you mash avocado in a bowl.</li>
+			<li>Mix salt, pepper, and a squeeze of lime juice into avocado.</li>
+			<li>Spread onto both slices of bread.</li>
+			<li>Crack egg into pan over medium heat with olive oil.</li>
+			<li>Add salt to the whites and garlic powder over the yolk.</li>
+			<li>Flip over without breaking the yolk. Immediately add cheese over it.</li>
+			<li>Cover with lid until cheese melts and add red pepper flakes.</li>
+			<li>Place egg on one slice of bread and place baby spinach on top.</li>
+			<li>Close the sandwich, slice as desired, and serve.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>2 slices sourdough bread</li>
+			<li>1 egg</li>
+			<li>Baby spinach</li>
+			<li>1 avocado</li>
+			<li>1 lime (lemon works too)</li>
+			<li>Mexican 4-cheese blend *</li>
+			<li>Salt</li>
+			<li>Pepper</li>
+			<li>Garlic powder</li>
+			<li>Red pepper flakes</li>
+			<li>Olive oil</li>
+		</ul>
+		</div>
+		<p>* Grated low-moisture mozzarella works here as well.</p>
+		</div>
+	</div>
+	
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	My mom was too tired to make dinner one night, so she asked me to do it. I asked if a sandwich was okay and she agreed. I looked in the fridge and improvised. The result was 
 	so good, my mom said it was the best sandwich I ever made.
@@ -1156,44 +1349,53 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 
 <!-- Rice & Pasta -->
 <!-- Sausagepeppers&onions over Rice recipe -->
-<div id="sporice" class="recipe tabcontent">
+<div id="sporice" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Sausage. Peppers. Onions. SausagePeppers&amp;Onions.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>1 cup white rice, dry</li>
-		<li>2 sausages</li>
-		<li>0.5 red bell pepper</li>
-		<li>0.25 yellow onion</li>
-		<li>2 cloves garlic</li>
-		<li>Salt</li>
-		<li>Pepper</li>
-		<li>Paprika</li>
-		<li>Oregano</li>
-		<li>Red pepper flakes</li>
-		<li>2 tbsp bacon grease or olive oil</li>
-		<li>Soy sauce</li>
-		<li>2 scallions</li>
-	</ul>
+	<p class="mb-5">Sausage. Peppers. Onions. SausagePeppers&amp;Onions.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Start by cooking the rice.</li>
-		<li>In the meantime, cut onion into thin slices and stir fry in fat of choice over high heat with red pepper flakes.</li>
-		<li>Cut bell pepper into thin slices as well and mince garlic.</li>
-		<li>Once onion is translucent, add in peppers and garlic. Season with salt and paprika.</li>
-		<li>Cut sausages into coins and add them to the pan once the peppers are cooked through and some browning occurs on the vegetables.</li>
-		<li>Stir fry for 1-2 minutes and then cover with a lid. Cook on low heat for 5 minutes.</li>
-		<li>Uncover and stir in oregano and black pepper, then cook again with lid on for an additional 5 minutes.</li>
-		<li>Stir a splash of soy sauce in the rice. Every grain of rice should have some color on it.</li>
-		<li>When the soy sauce is fully incorporated, turn off the heat and pour the sausagepeppers&onions with all the flavored oil onto the rice.</li>
-		<li>Mix thoroughly and serve with sliced scallions as a garnish.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Start by cooking the rice.</li>
+			<li>In the meantime, cut onion into thin slices and stir fry in fat of choice over high heat with red pepper flakes.</li>
+			<li>Cut bell pepper into thin slices as well and mince garlic.</li>
+			<li>Once onion is translucent, add in peppers and garlic. Season with salt and paprika.</li>
+			<li>Cut sausages into coins and add them to the pan once the peppers are cooked through and some browning occurs on the vegetables.</li>
+			<li>Stir fry for 1-2 minutes and then cover with a lid. Cook on low heat for 5 minutes.</li>
+			<li>Uncover and stir in oregano and black pepper, then cook again with lid on for an additional 5 minutes.</li>
+			<li>Stir a splash of soy sauce in the rice. Every grain of rice should have some color on it.</li>
+			<li>When the soy sauce is fully incorporated, turn off the heat and pour the sausagepeppers&onions with all the flavored oil onto the rice.</li>
+			<li>Mix thoroughly and serve with sliced scallions as a garnish.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>1 cup white rice, dry</li>
+			<li>2 sausages</li>
+			<li>0.5 red bell pepper</li>
+			<li>0.25 yellow onion</li>
+			<li>2 cloves garlic</li>
+			<li>Salt</li>
+			<li>Pepper</li>
+			<li>Paprika</li>
+			<li>Oregano</li>
+			<li>Red pepper flakes</li>
+			<li>2 tbsp bacon grease or olive oil</li>
+			<li>Soy sauce</li>
+			<li>2 scallions</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	Sausage, peppers, and onions. A classic combination in Italian cooking, and for good reason. But stir fried with bacon grease and soy sauce, then served over rice? 
 	A game changer for sure.
@@ -1217,52 +1419,59 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Gnocchi recipe -->
-<div id="gnocchi" class="recipe tabcontent">
+<div id="gnocchi" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Potato dumplings that go great with brown butter and sage or tomato sauce.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>For the Gnocchi:</li>
-		<ul>
-			<li>2 lbs russet potatoes (abt 4-6)</li>
-			<li>1 egg</li>
-			<li>1 cup flour</li>
-		</ul>
-		<li>For the Brown Butter Sage Sauce:</li>
-		<ul>
-			<li>4 tbsp butter</li>
-			<li>Fresh sage leaves</li>
-			<li>Parmesan cheese</li>
-		</ul>
-	</ul>
-	<p style="margin-left: 24px"></p>
+	<p class="mb-5">Potato dumplings that go great with brown butter and sage or tomato sauce.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Preheat oven to 350F</li>
-		<li>Stab and salt potatoes</li>
-		<li>Bake for 90 mins or until no resistance is met with a knife.</li>
-		<li>Peel potatoes and grate them (best while hot).</li>
-		<li>Fold in beaten egg and a most of the flour.</li>
-		<li>Taking care not to knead it, continue adding flour and gently mixing until a smooth ball forms (soft not sticky).</li>
-		<li>Roll out small portions at a time, spreading your fingers to help stretch the dough until the dough looks like a snake the width of your finger.</li>
-		<li>Cut the rolls into inch-long pieces, then roll into balls.</li>
-		<li>Roll balls over back of a fork to form ridges.</li>
-		<li>Cook butter in a pan on medium-high until toasty, but not burnt.</li>
-		<li>Add sage leaves and turn heat to medium-low. Cook until sage is slightly crispy and turn off heat.</li>
-		<li>Boil gnocchi for a few minutes. They are cooked when they begin to float.</li>
-		<li>Add gnocchi to butter and sage sauce with a splash of the starchy water from the gnocchi pot.</li>
-		<li>Cook gnocchi in sauce on medium-high until sauce reduces and thickens slightly and gnocchi develops a slight browning.</li>
-		<li>Serve topped with grated parmesan.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">	
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Preheat oven to 350F</li>
+			<li>Stab and salt potatoes</li>
+			<li>Bake for 90 mins or until no resistance is met with a knife.</li>
+			<li>Peel potatoes and grate them (best while hot).</li>
+			<li>Fold in beaten egg and a most of the flour.</li>
+			<li>Taking care not to knead it, continue adding flour and gently mixing until a smooth ball forms (soft not sticky).</li>
+			<li>Roll out small portions at a time, spreading your fingers to help stretch the dough until the dough looks like a snake the width of your finger.</li>
+			<li>Cut the rolls into inch-long pieces, then roll into balls.</li>
+			<li>Roll balls over back of a fork to form ridges.</li>
+			<li>Cook butter in a pan on medium-high until toasty, but not burnt.</li>
+			<li>Add sage leaves and turn heat to medium-low. Cook until sage is slightly crispy and turn off heat.</li>
+			<li>Boil gnocchi for a few minutes. They are cooked when they begin to float.</li>
+			<li>Add gnocchi to butter and sage sauce with a splash of the starchy water from the gnocchi pot.</li>
+			<li>Cook gnocchi in sauce on medium-high until sauce reduces and thickens slightly and gnocchi develops a slight browning.</li>
+			<li>Serve topped with grated parmesan.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+			<p>For the Gnocchi:</p>
+			<ul>
+				<li>2 lbs russet potatoes (abt 4-6)</p>
+				<li>1 egg</li>
+				<li>1 cup flour</li>
+			</ul>
+			<p>For the Brown Butter Sage Sauce:</p>
+			<ul>
+				<li>4 tbsp butter</li>
+				<li>Fresh sage leaves</li>
+				<li>Parmesan cheese</li>
+			</ul>
+		</div>
+		<p><u>NOTE:</u> You can substitute the brown butter sage sauce for tomato sauce if desired</p>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	There’s only 2 foods I’ve ever cooked that made it impossible for me to stop smiling while eating them. Gumbo and gnocchi. These tender potato dumplings are excellent with 
-	tomato sauce, but the recipe I have here is for a traditional sage and brown butter sauce. This recipe is brought to you by Stephen Cusato of Not Another Cooking Show.
+	tomato sauce, but the recipe I have here is for a traditional sage and brown butter sauce. This recipe is by Stephen Cusato of Not Another Cooking Show.
 	</p>
 	<p class="story">
 	First, preheat the oven to 350F. We’re using baked potatoes rather than boiled to avoid excess moisture. Moisture + flour = gluten = chewy. We want soft and tender, not tough 
@@ -1288,127 +1497,248 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Turkey Rice recipe -->
-<div id="turkeyrice" class="recipe tabcontent">
+<div id="turkeyrice" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Very nutritious, flavorful, and high in protein. I ate this a lot while working out.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>1 cup dry rice</li>
-		<li>0.25 yellow onion</li>
-		<li>1 clove garlic</li>
-		<li>0.25 lb ground turkey breast</li>
-		<li>3 crimini mushrooms</li>
-		<li>1 Roma tomato</li>
-		<li>3 eggs</li>
-		<li>Salt</li>
-		<li>Pepper</li>
-		<li>Cayenne</li>
-		<li>Cumin seeds</li>
-		<li>Turmeric</li>
-		<li>Mustard seeds</li>
-		<li>Olive oil</li>
-	</ul>
-	<p style="margin-left: 24px"></p>
+	<p class="mb-5">Very nutritious, flavorful, and high in macros. I ate this a lot while working out.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Start by cooking the rice.</li>
-		<li>Put olive oil, cayenne, turmeric, cumin, and mustard seed into a pan on medium heat.</li>
-		<li>Mince garlic and dice onion.</li>
-		<li>When mustard seeds begin to pop, turn heat to medium low and add onions and garlic.</li>
-		<li>Add ground turkey when the onions begin to sweat and break turkey into small pieces, mixing with the vegetables.</li>
-		<li>Season with a bit of salt and continue mixing meat and vegetables. Make sure there are no large chunks of turkey.</li>
-		<li>Dice mushrooms and tomato, and add them to the pan.</li>
-		<li>Season with salt and pepper.</li>
-		<li>Let cook until mushrooms shrink and then cover with lid for 2 minutes.</li>
-		<li>Take off lid and mix. Then form 3 empty spaces in pan.</li>
-		<li>Add eggs into the spaces and scramble them into the mix</li>
-		<li>Once the eggs are cooked but a lot of moisture is still left, turn off the heat.</li>
-		<li>Fold everything in the pan into the rice until turmeric has stained the whole dish yellow. You should not see a single grain of rice that is left white.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Start by cooking the rice.</li>
+			<li>Put olive oil, cayenne, turmeric, cumin, and mustard seed into a pan on medium heat.</li>
+			<li>Mince garlic and dice onion.</li>
+			<li>When mustard seeds begin to pop, turn heat to medium low and add onions and garlic.</li>
+			<li>Add ground turkey when the onions begin to sweat and break turkey into small pieces, mixing with the vegetables.</li>
+			<li>Season with a bit of salt and continue mixing meat and vegetables. Make sure there are no large chunks of turkey.</li>
+			<li>Dice mushrooms and tomato, and add them to the pan.</li>
+			<li>Season with salt and pepper.</li>
+			<li>Let cook until mushrooms shrink and then cover with lid for 2 minutes.</li>
+			<li>Take off lid and mix. Then form 3 empty spaces in pan.</li>
+			<li>Add eggs into the spaces and scramble them into the mix</li>
+			<li>Once the eggs are cooked but a lot of moisture is still left, turn off the heat.</li>
+			<li>Fold everything in the pan into the rice until turmeric has stained the whole dish yellow. You should not see a single grain of rice that is left white.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>1 cup dry rice</li>
+			<li>0.25 yellow onion</li>
+			<li>1 clove garlic</li>
+			<li>0.25 lb ground turkey breast</li>
+			<li>3 crimini mushrooms</li>
+			<li>1 Roma tomato</li>
+			<li>3 eggs</li>
+			<li>Salt</li>
+			<li>Pepper</li>
+			<li>Cayenne</li>
+			<li>Cumin seeds</li>
+			<li>Turmeric</li>
+			<li>Mustard seeds</li>
+			<li>Olive oil</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
-	I created this dish when I used to work out regularly to help me put on muscle. Heavy on protein, carbs, and fat to help you meet your macros. Heavy on flavor so you could eat 
-	it every day and never tire of it.
+	I created this dish when I used to work out regularly to help me bulk. Heavy on protein, carbs, and fat to help you meet your macros. Heavy on flavor so you could eat 
+	it every day and never tire of it. Of course, feel free to omit the eggs if you don't care for the taste or don't need the extra protein and fat. Don't be afraid to make it 
+	your own. I sometimes add things like green bell pepper, carrots, or celery, depending on what's in the fridge.
 	</p>
 	<p class="story">
 	While you wait for your rice to cook, put some olive oil, cayenne, turmeric, cumin seed, and mustard seed into a pan over medium heat. These are traditional Indian flavors, 
 	and although this dish is not at all Indian, I’m glad I was able to use my knowledge of Indian cuisine to help me in inventing new dishes. Next, mince the garlic and dice the 
 	onion. When the mustard seeds begin popping, that’s when you know the spices are properly toasted. Add the onions and garlic, then turn the heat to medium-low. Once the onions
 	begin to sweat, Add the ground turkey. Break up the turkey as much as possible and season with salt. Most people complain that turkey is too dry, but the little juicy nuggets 
-	of meat in this dish do everything except disappoint. Next, dice up mushroom and tomato, then add them to the mix with some salt and pepper. Once the mushrooms lose some of 
-	their water, cover with a lid for 2 minutes. This will allow the tomatoes to release all their moisture without it all evaporating away. Take off the lid and stir. 
+	of meat in this dish do everything except disappoint. Next, dice up mushroom and tomato, then add them to the mix with some salt and pepper. Because these ingredients contain a 
+	lot of water, they are key in preventing the turkey from drying out. Once the mushrooms lose some of their water, cover with a lid for 2 minutes. This will allow the tomatoes to 
+	release all their moisture without it all evaporating away. Take off the lid and stir. 
 	</p>
 	<p class="story">
 	Make 3 spaces in the pan and crack eggs into them. Scramble the eggs, mix everything together, and turn off the heat. The eggs should be fully cooked, but there should still 
 	be a lot of liquid in the pan from the tomato. Fold the contents of the pan into the rice until the turmeric stains every grain of rice yellow. I call this process reverse 
-	colonization, because we want to get rid of as much white as possible. Scoop into a plate or bowl and serve. This dish has over 44 grams of protein, making it a great option 
-	for people trying to gain muscle without eating just bland chicken and plain rice. This dish has nutrients. This dish has spices. This dish nourishes. This dish satisfies.
+	colonization, because we don't want any white remaining. Scoop into a plate or bowl and serve. This dish is very heavy in protein and carbs, making it a great 
+	option for people trying to gain muscle without eating just bland chicken and plain rice. This dish has nutrients. This dish has spices. This dish nourishes. This dish satisfies.
+	</p>
+</div>
+
+<!-- Chicken and Cola Stir-Fry recipe -->
+<div id="chickencola" class="section recipe tabcontent pt-4">
+	<!-- Introduction -->
+	<p class="mb-5">The best chicken and rice I've ever had.</p>
+	
+	<div class="columns is-8 is-variable has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Salt chicken thighs on both sides.</li>
+			<li>Mix mayo with minced garlic, herbs, and spices in a bowl.</li>
+			<li>Smear mayo all over chicken and lay out on foil-lined baking sheet.</li>
+			<li>Add excess mayo marinade on top.</li>
+			<li>Bake at 400F for 30 mins.</li>
+			<li>Start cooking rice.</li>
+			<li>Thinly slice onions and fry in hot oil with red pepper flakes on a pan over high heat.</li>
+			<li>Thinly slice bell pepper and mince garlic, then add to the pan with a pinch of salt.</li>
+			<li>Stir-fry and allow a slight char to develop on the onion and bell pepper.</li>
+			<li>Add ginger, oregano, and paprika. Mix well.</li>
+			<li>When the spices release their aroma, add the soy sauce.</li>
+			<li>Continue to stir-fry for another 1-2 mins and add cola.</li>
+			<li>Reduce until the sauce coats the back of a spoon.</li>
+			<li>Add to the rice and mix well.</li>
+			<li>Once chicken is done cooking and has an internal temp of 160F, serve with the rice.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<p>For the Chicken:</p>
+		<ul>
+			<li>2 boneless, skinless chicken thighs</li>
+			<li>0.33 cup mayo</li>
+			<li>2 cloves garlic</li>
+			<li>Paprika</li>
+			<li>Thyme</li>
+			<li>Rosemary</li>
+			<li>Oregano</li>
+			<li>Cayenne</li>
+			<li>Salt</li>
+			<li>Pepper</li>
+		</ul>
+		<p>For the Cola Stir-Fry:</p>
+		<ul>
+			<li>1 cup white rice, uncoooked</li>
+			<li>0.5 large yellow onion</li>
+			<li>0.5 large green bell pepper</li>
+			<li>2 cloves garlic</li>
+			<li>2 tbsp vegetable oil</li>
+			<li>2 tbsp soy sauce</li>
+			<li>.33 cup cola</li>
+			<li>1 tbsp ground ginger</li>
+			<li>1 tbsp paprika</li>
+			<li>1 tsp oregano</li>
+			<li>1 tsp red pepper flakes</li>
+			<li>Salt</li>
+			<li>Pepper</li>
+		</ul>
+		</div>
+		</div>
+	</div>
+	
+	<!-- About the recipe -->
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
+	<p class="story">
+	I found this recipe for chicken on TikTok. The person who made the video put mayo, salt, pepper, parmesan, and minced garlic on some chicken breasts and baked them in the oven. 
+	I tried out the recipe and although it tasted great, it was missing something. A lot of things, actually. First of all, where’s the spices? You think salt and pepper count as 
+	spices? That’s the bare minimum. Second, this is all just protein covered in fat. There’s not a vegetable or complex carbohydrate in sight. No, if I were to make this recipe 
+	again, I’d have to do better.
+	</p>
+	<p class="story">
+	I opted to use boneless and skinless chicken thighs instead of breasts for their flavor and texture. I made sure to salt them well on both sides first, and mixed the mayo with 
+	the garlic and some herbs and spices in a separate bowl. The herbs and spices consisted of a heavy shake each of paprika, freshly ground black pepper, thyme, and rosemary 
+	followed a small shake each of oregano and cayenne. Now <em>that’s</em> what I call seasoning. I also opted out of using the parmesan since I had recently run out, but feel 
+	free to add it if you want. When making the mayo marinade, only use enough mayo to fully coat the chicken, so as to avoid waste or drowning the chicken mayo.
+	</p>
+	<p class="story">
+	Preheat your oven to 400F and prepare a foil-lined baking sheet. Smear the marinade all over the thighs (the chicken’s, not yours) and make sure all the little crevices are 
+	completely covered. Once every inch of the chicken is properly dressed, lay them flat onto the baking sheet and add any leftover marinade on top. Bake for 30 minutes.
+	</p>
+	<p class="story">
+	While waiting for that, now is the perfect time to make your cola stir-fry and rice. You read that right, we’re using cola in the stir-fry. Start by cooking a pot of rice. In 
+	the meantime, slice the onion and bell pepper thinly. Cook the onions in a pan with vegetable oil and red pepper flakes over high heat. Once they become slightly fragrant, add 
+	the minced garlic and bell pepper with a pinch of salt. Keep the vegetables moving so they don’t burn. Once you get a bit of a char on the onion and bell peppers, add ground 
+	ginger, oregano, and paprika. Mix well to wake up the spices, then throw in a splash of soy sauce.
+	</p>
+	<p class="story">
+	Reduce and cook down for 1-2 minutes until the vegetables absorb the flavor, then add the coke along with some black pepper. You might find it strange, but I think it works 
+	very well. Coke is high in sugar and acidity, so by reducing it, you can easily make your own sweet and sour sauce. And it’s not too overwhelming either, most of the cola 
+	flavor dissipates as it cooks, so it actually blends in quite nicely. I got the idea when I saw some recipes for steak with a cola-based marinade that had soy sauce in it. 
+	The cola will reduce to the point where it coats the back of a spoon and a line can be drawn through it. That means it’s good to go. Add it over your rice and mix well to 
+	distribute the flavor. Adjust seasoning as necessary.
+	</p>
+	<p class="story">
+	Chances are, your stir-fry will be done before the chicken. That’s okay, just put a lid on the rice and wait for the chicken to be done. To be safe, check if the thighs are hot 
+	enough (the chicken’s not yours) by inserting a meat thermometer into the thickest part of the chicken. It should clock in at 160F for safe consumption. If it’s too low, let it 
+	keep cooking until it reaches the target temp. I find that the marinade and the short cooking time keep the chicken relatively moist even when fully cooked. Serve the chicken 
+	beside the rice on a plate and enjoy. I personally like using a fork to shred up one bite of chicken at a time and eat it with a forkful of rice and vegetables. Now, is this 
+	recipe healthy? Goodness no, I hope you gave up on that the second I told you to rub chicken thighs with mayonnaise. But is it good? Oh you bet.
 	</p>
 </div>
 
 <!-- Desserts -->
 <!-- Lemon Meringue Pie recipe -->
-<div id="lemonmeringue" class="recipe tabcontent">
+<div id="lemonmeringue" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>The first dessert I learned to make.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>For the Crust:</li>
-		<ul>
-			<li>2.5 cups all-purpose flour</li>
-			<li>1 tsp salt</li>
-			<li>1 cup butter, cold, cubed</li>
-			<li>0.33 cups ice-cold water</li>
-		</ul>
-		<li>For the Lemon Curd:</li>
-		<ul>
-			<li>3 eggs</li>
-			<li>2-3 lemons</li>
-			<li>0.5 cups sugar</li>
-			<li>3 oz butter, cubed</li>
-			<li>1 heaped tsp cornstarch</li>
-		</ul>
-		<li>For the Meringue:</li>
-		<ul>
-			<li>.5 cups sugar</li>
-			<li>White vinegar</li>
-		</ul>
-	</ul>
-	<p style="margin-left: 24px"></p>
+	<p class="mb-5">The first dessert I learned to make.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Mix salt and flour in a large bowl and refrigerate</li>
-		<li>Cut butter into flour until butter is in pea-sized, flour-coated chunks.</li>
-		<li>Add water little by little until the mixture can be clumped. Use as little water as possible.</li>
-		<li>Form into a ball of dough, wrap, and freeze overnight.</li>
-		<li>Take half of dough, roll out 2 inches wider than pie dish.</li>
-		<li>Butter and flour the pie dish and put in dough. Trim, crimp, dock, and refrigerate for at least 30 minutes.</li>
-		<li>Preheat oven to 350F.</li>
-		<li>Place in pie weights (you can use nuts or dry beans in aluminum foil instead).</li>
-		<li>Bake at 350F for 20 minutes, remove pie weights, then put it back in oven until golden brown.</li>
-		<li>Juice and zest lemons into a bowl.</li>
-		<li>Add 2 yolks and 1 whole egg, store 2 remaining whites at room temperature in a clean, dry, cool, glass or metal bowl.</li>
-		<li>Add cornstarch and sugar to lemon mixture, then whisk over double boiler until smooth.</li>
-		<li>Melt in butter piece by piece. Whisk curd constantly to avoid scrambling the eggs.</li>
-		<li>Keep whisking until the butter is fully incorporated and the curd coats the back of a spoon and a line can be drawn through it.</li>
-		<li>Pour curd onto cooled crust, cover with plastic wrap, let set in fridge for at least 30 mins.</li>
-		<li>Add a tiny splash of vinegar to the egg whites you set aside earlier.</li>
-		<li>Whisk whites until very frothy.</li>
-		<li>Add sugar slowly and keep whisking until stiff peaks form.</li>
-		<li>Gently spread meringue onto pie. Do not disrupt the curd or deflate the meringue.</li>
-		<li>Swirl meringue into preferred pattern and torch until browned. A broiler may be used instead of a pastry torch, but be careful not to burn the meringue.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Mix salt and flour in a large bowl and refrigerate</li>
+			<li>Cut butter into flour until butter is in pea-sized, flour-coated chunks.</li>
+			<li>Add water little by little until the mixture can be clumped. Use as little water as possible.</li>
+			<li>Form into a ball of dough, wrap, and freeze overnight.</li>
+			<li>Take half of dough, roll out 2 inches wider than pie dish.</li>
+			<li>Butter and flour the pie dish and put in dough. Trim, crimp, dock, and refrigerate for at least 30 minutes.</li>
+			<li>Preheat oven to 350F.</li>
+			<li>Place in pie weights (you can use nuts or dry beans in aluminum foil instead).</li>
+			<li>Bake at 350F for 20 minutes, remove pie weights, then put it back in oven until golden brown.</li>
+			<li>Juice and zest lemons into a bowl.</li>
+			<li>Add 2 yolks and 1 whole egg, store 2 remaining whites at room temperature in a clean, dry, cool, glass or metal bowl.</li>
+			<li>Add cornstarch and sugar to lemon mixture, then whisk over double boiler until smooth.</li>
+			<li>Melt in butter piece by piece. Whisk curd constantly to avoid scrambling the eggs.</li>
+			<li>Keep whisking until the butter is fully incorporated and the curd coats the back of a spoon and a line can be drawn through it.</li>
+			<li>Pour curd onto cooled crust, cover with plastic wrap, let set in fridge for at least 30 mins.</li>
+			<li>Add a tiny splash of vinegar to the egg whites you set aside earlier.</li>
+			<li>Whisk whites until very frothy.</li>
+			<li>Add sugar slowly and keep whisking until stiff peaks form.</li>
+			<li>Gently spread meringue onto pie. Do not disrupt the curd or deflate the meringue.</li>
+			<li>Swirl meringue into preferred pattern and torch until browned. A broiler may be used instead of a pastry torch, but be careful not to burn the meringue.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+			<p>For the Crust:</p>
+			<ul>
+				<li>2.5 cups all-purpose flour, chilled</li>
+				<li>1 tsp salt</li>
+				<li>1 cup butter, cold, cubed</li>
+				<li>0.33 cups ice-cold water</li>
+			</ul>
+			<p>For the Lemon Curd:</p>
+			<ul>
+				<li>3 eggs</li>
+				<li>2-3 lemons</li>
+				<li>0.5 cups sugar</li>
+				<li>3 oz butter, cubed</li>
+				<li>1 heaped tsp cornstarch</li>
+			</ul>
+			<p>For the Meringue:</p>
+			<ul>
+				<li>.5 cups sugar</li>
+				<li>White vinegar</li>
+			</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	I’m not really a baking guy, I’m a cooking guy. Baking requires precision, while cooking is more forgiving with improvisation. Because I tend to favor flexibility in the 
 	kitchen, I’m a decent cook, but a terrible baker. That being said, I wanted to try baking a dessert when I had just started cooking, and I’m the type of person to go big 
@@ -1495,40 +1825,49 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Apple Filling recipe -->
-<div id="applefilling" class="recipe tabcontent">
+<div id="applefilling" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Apple pie filling without the pie.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>2 apples</li>
-		<li>2-3 spoonfuls of sugar</li>
-		<li>2-3 tbsp butter</li>
-		<li>1 tbsp lemon juice</li>
-		<li>0.25 cup water</li>
-		<li>0.25 tsp vanilla extract</li>
-		<li>1 tsp cinnamon</li>
-		<li>0.5 tsp nutmeg</li>
-		<li>0.5 tsp allspice</li>
-		<li>1 tsp ground ginger</li>
-		<li>Pinch salt</li>
-	</ul>
+	<p class="mb-5">Apple pie filling without the pie.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Peel and cut apples into half-inch pieces.</li>
-		<li>Melt butter in pan over medium heat.</li>
-		<li>Add apples, sugar, and salt.</li>
-		<li>Stir until sugar dissolves.</li>
-		<li>Cook until butter and sugar caramelize.</li>
-		<li>Add water and lemon juice.</li>
-		<li>Cook until slightly thickened, then add vanilla and spices.</li>
-		<li>Continue cooking until reduced to syrupy consistency and apples are soft.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Peel and cut apples into half-inch pieces.</li>
+			<li>Melt butter in pan over medium heat.</li>
+			<li>Add apples, sugar, and salt.</li>
+			<li>Stir until sugar dissolves.</li>
+			<li>Cook until butter and sugar caramelize.</li>
+			<li>Add water and lemon juice.</li>
+			<li>Cook until slightly thickened, then add vanilla and spices.</li>
+			<li>Continue cooking until reduced to syrupy consistency and apples are soft.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>2 apples</li>
+			<li>2-3 spoonfuls of sugar</li>
+			<li>2-3 tbsp butter</li>
+			<li>1 tbsp lemon juice</li>
+			<li>0.25 cup water</li>
+			<li>0.25 tsp vanilla extract</li>
+			<li>1 tsp cinnamon</li>
+			<li>0.5 tsp nutmeg</li>
+			<li>0.5 tsp allspice</li>
+			<li>1 tsp ground ginger</li>
+			<li>Pinch salt</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	I originally created this recipe as part of a recipe for apple turnovers, but those turned out horrible. The filling was still good though, so I reworked it to be a stovetop 
 	apple filling that would go great with vanilla ice cream, French toast, etc.
@@ -1549,33 +1888,42 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Banana Caramel recipe -->
-<div id="bananacaramel" class="recipe tabcontent">
+<div id="bananacaramel" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Goes great on toast, French or otherwise.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>1 banana (preferably firm)</li>
-		<li>2 tbsp sugar</li>
-		<li>1 tbsp butter</li>
-		<li>0.5 tsp vanilla extract</li>
-		<li>2 tbsp water</li>
-		<li>Pinch salt</li>
-	</ul>
+	<p class="mb-5">Goes great on toast, French or otherwise.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Peel and slice banana on a bias.</li>
-		<li>Put sugar in pan over medium high heat with half a tbsp of water around the outside until caramelized. Do not stir.</li>
-		<li>Right before sugar reaches desired color, turn down heat to low and add the rest of the water.</li>
-		<li>Melt in the butter and combine with the caramel along with a pinch of salt.</li>
-		<li>Add vanilla extract and banana.</li>
-		<li>Turn heat back up to medium high and cook until sauce reduces slightly.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Peel and slice banana on a bias.</li>
+			<li>Put sugar in pan over medium high heat with half a tbsp of water around the outside until caramelized. Do not stir.</li>
+			<li>Right before sugar reaches desired color, turn down heat to low and add the rest of the water.</li>
+			<li>Melt in the butter and combine with the caramel along with a pinch of salt.</li>
+			<li>Add vanilla extract and banana.</li>
+			<li>Turn heat back up to medium high and cook until sauce reduces slightly.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>1 banana (preferably firm)</li>
+			<li>2 tbsp sugar</li>
+			<li>1 tbsp butter</li>
+			<li>0.5 tsp vanilla extract</li>
+			<li>2 tbsp water</li>
+			<li>Pinch salt</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	I originally made this recipe to act as a topping for French toast, but you can use it however you like. This recipe starts with a banana, preferably on the slightly green side, 
 	so that it doesn’t become too mushy. Peel the banana and slice it on a bias. You could slice it straight, but it looks so much cooler when you’ve cut it at an angle.
@@ -1596,39 +1944,48 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Gajar Halwa recipe -->
-<div id="gajarhalwa" class="recipe tabcontent">
+<div id="gajarhalwa" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>My mom's recipe for gajar halwa. An Indian dessert made with carrots.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>4 cups coarsely shredded carrots</li>
-		<li>4 spoonfuls of ghee</li>
-		<li>7-8 cashews halved</li>
-		<li>1 handful golden raisins</li>
-		<li>1.5 cup whole milk</li>
-		<li>1.5 cups sugar</li>
-		<li>4 tbsp milk powder</li>
-		<li>5 cardamom pods</li>
-	</ul>
+	<p class="mb-5">My mom's recipe for gajar halwa. An Indian dessert made with carrots.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Heat up ghee in pot until melted.</li>
-		<li>Add cashews and raisins into pot until raisins are plumped up and cashews have a little color on them.</li>
-		<li>Remove cashews and raisins, leaving the ghee in the pot.</li>
-		<li>Add carrots to the hot ghee and sauté until they're all coated in ghee, cooking for 4-5 mins on medium heat.</li>
-		<li>Add a cup and a half of whole milk.</li>
-		<li>Let the carrots cook in the milk, stirring occasionally so as not to let the milk burn (don't put a lid on it either).</li>
-		<li>Once all the milk is absorbed by the carrots and the carrots are fully cooked (may take 15-20 mins), stir in the sugar and continue cooking for about another 15 minutes.</li>
-		<li>Stir in milk powder and turn off flame.</li>
-		<li>Crush cardamom pods into a powder and stir it in along with the fried cashews and raisins from before.</li>
-		<li>Refrigerate until you're ready to serve. This recipe is best made the night before you eat it. Serve at room temp.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Heat up ghee in pot until melted.</li>
+			<li>Add cashews and raisins into pot until raisins are plumped up and cashews have a little color on them.</li>
+			<li>Remove cashews and raisins, leaving the ghee in the pot.</li>
+			<li>Add carrots to the hot ghee and sauté until they're all coated in ghee, cooking for 4-5 mins on medium heat.</li>
+			<li>Add a cup and a half of whole milk.</li>
+			<li>Let the carrots cook in the milk, stirring occasionally so as not to let the milk burn (don't put a lid on it either).</li>
+			<li>Once all the milk is absorbed by the carrots and the carrots are fully cooked (may take 15-20 mins), stir in the sugar and continue cooking for about another 15 minutes.</li>
+			<li>Stir in milk powder and turn off flame.</li>
+			<li>Crush cardamom pods into a powder and stir it in along with the fried cashews and raisins from before.</li>
+			<li>Refrigerate until you're ready to serve. This recipe is best made the night before you eat it. Serve at room temp.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>4 cups coarsely shredded carrots</li>
+			<li>4 spoonfuls of ghee</li>
+			<li>7-8 cashews halved</li>
+			<li>1 handful golden raisins</li>
+			<li>1.5 cup whole milk</li>
+			<li>1.5 cups sugar</li>
+			<li>4 tbsp milk powder</li>
+			<li>5 cardamom pods</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	This is kind of like an Indian version of carrot cake. I’m not the biggest fan of it, but my friend wanted to know how to make it so I wrote down my mom’s recipe. As you can 
 	see, a lot of the recipe is based on feel rather than exact timings, so without experience, it’s difficult to gauge. I’ve never even made this recipe myself, but it would 
@@ -1654,32 +2011,41 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Orange Zabaglione recipe -->
-<div id="zabaglione" class="recipe tabcontent">
+<div id="zabaglione" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>A non-alcoholic, citrusy take on this custardy Italian dish. Recipe adapted from Food Wishes.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>3 egg yolks</li>
-		<li>2 tbsp sugar</li>
-		<li>1 large orange</li>
-		<li>2 strawberries</li>
-		<li>0.25 tsp vanilla extract (optional)</li>
-	</ul>
-	<p style="margin-left: 24px">You can replace the orange with 0.25 cups of marsala wine or moscato.</p>
+	<p class="mb-5">A non-alcoholic, citrusy take on this custardy Italian dish. Recipe adapted from Food Wishes.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Dice strawberries and toss with .5tbsp of sugar. Let sit for 1 hour covered, tossing occasionally.</li>
-		<li>Zest and juice the orange.</li>
-		<li>Whisk yolk, sugar, and juice in a bowl.</li>
-		<li>Set over double boiler and keep whisking until ribbony.</li>
-		<li>Put fruit into a glass, then a bit of zest, then the custard, and more zest on top as a garnish.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Dice strawberries and toss with .5tbsp of sugar. Let sit for 1 hour covered, tossing occasionally.</li>
+			<li>Zest and juice the orange.</li>
+			<li>Whisk yolk, sugar, and juice in a bowl.</li>
+			<li>Set over double boiler and keep whisking until ribbony.</li>
+			<li>Put fruit into a glass, then a bit of zest, then the custard, and more zest on top as a garnish.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>3 egg yolks</li>
+			<li>2 tbsp sugar</li>
+			<li>1 large orange *</li>
+			<li>2 strawberries</li>
+			<li>0.25 tsp vanilla extract (optional)</li>
+		</ul>
+		</div>
+		<p>* You can replace the orange with 0.25 cups of marsala wine or moscato.</p>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	I got this recipe while binging a bunch of Food Wishes videos on YouTube. I decided to make it, since it looked fancy, but I didn’t have any marsala wine. At the time, I was 
 	underage, so I had no way to buy a bottle anyway. Determined to make the dish regardless, I found that citrus juice could be an acceptable substitute. So I made this 
@@ -1703,53 +2069,60 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Crepes Suzette recipe -->
-<div id="suzette" class="recipe tabcontent">
+<div id="suzette" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Recipe from Binging with Babish. Eat as dessert. Or as breakfast. I don't care.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>For the Crepes:</li>
-		<ul>	
-			<li>2 eggs</li>
-			<li>0.5 cups water</li>
-			<li>0.75 cups milk</li>
-			<li>3 tbsp melted butter</li>
-			<li>1 cup flour</li>
-			<li>Salt</li>
-		</ul>	
-		<li>For the Sauce:</li>
-		<ul>
-			<li>3 tbsp butter</li>
-			<li>2 tbsp sugar</li>
-			<li>1 orange</li>
-			<li>Grand Marnier</li>
-			<li>1 scoop vanilla ice cream</li>
-		</ul>
-	</ul>
+	<p class="mb-5">Recipe from Binging with Babish. Eat as dessert. Or as breakfast. I don't care.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Combine eggs, water, milk, butter, and salt.</li>
-		<li>Whisk in flour until smooth.</li>
-		<li>Let rest for 30 mins.</li>
-		<li>Ladle batter onto a skillet on medium heat and spread thin.</li>
-		<li>Cook until slightly browned. Then flip and cook again until slightly browned on other side.</li>
-		<li>Set aside 4 crepes for this recipe, do what you want with the rest.</li>
-		<li>Melt butter and dissolve sugar in pan.</li>
-		<li>Add in zest and juice of orange.</li>
-		<li>Combine and bring to a simmer.</li>
-		<li>Dip half of crepe into the liquid and fold into quarters.</li>
-		<li>Repeat for 3 other crepes until four quarters form a circle, cooking them in the sauce.</li>
-		<li>Flip after 1 min.</li>
-		<li>Cook until bottoms become caramelized.</li>
-		<li>Flambé with Grand Marinier.</li>
-		<li>Once alcohol is cooked off, serve with vanilla ice cream.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Combine eggs, water, milk, butter, and salt.</li>
+			<li>Whisk in flour until smooth.</li>
+			<li>Let rest for 30 mins.</li>
+			<li>Ladle batter onto a skillet on medium heat and spread thin.</li>
+			<li>Cook until slightly browned. Then flip and cook again until slightly browned on other side.</li>
+			<li>Set aside 4 crepes for this recipe, do what you want with the rest.</li>
+			<li>Melt butter and dissolve sugar in pan.</li>
+			<li>Add in zest and juice of orange.</li>
+			<li>Combine and bring to a simmer.</li>
+			<li>Dip half of crepe into the liquid and fold into quarters.</li>
+			<li>Repeat for 3 other crepes until four quarters form a circle, cooking them in the sauce.</li>
+			<li>Flip after 1 min.</li>
+			<li>Cook until bottoms become caramelized.</li>
+			<li>Flambé with Grand Marinier.</li>
+			<li>Once alcohol is cooked off, serve with vanilla ice cream.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+			<p>For the Crepes:</p>
+			<ul>	
+				<li>2 eggs</li>
+				<li>0.5 cups water</li>
+				<li>0.75 cups milk</li>
+				<li>3 tbsp melted butter</li>
+				<li>1 cup flour</li>
+				<li>Salt</li>
+			</ul>	
+			<p>For the Sauce:</p>
+			<ul>
+				<li>3 tbsp butter</li>
+				<li>2 tbsp sugar</li>
+				<li>1 orange</li>
+				<li>Grand Marnier</li>
+				<li>1 scoop vanilla ice cream</li>
+			</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	This recipe is directly taken from Binging with Babish. I like making this whenever I have leftover crepes after a big breakfast or brunch. Start by whisking eggs, water, milk, 
 	butter, and salt. Whisk flour into the wet mixture until smooth. Let the batter rest for 30 minutes. This will relax the gluten and allow the flour to finish hydrating properly. 
@@ -1772,36 +2145,45 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Sweet Potato Pie recipe -->
-<div id="potatopie" class="recipe tabcontent">
+<div id="potatopie" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Recipe courtesy of my friend's mom.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>1 pound sweet potato</li>
-		<li>0.5 cup butter, softened</li>
-		<li>1 cup sugar</li>
-		<li>0.5 cup milk</li>
-		<li>2 eggs</li>
-		<li>0.5 tsp nutmeg</li>
-		<li>.5 tsp cinnamon</li>
-		<li>1 tsp vanilla extract</li>
-	</ul>
+	<p class="mb-5">Recipe courtesy of my friend's mom.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Boil sweet potato until tender and remove skin.</li>
-		<li>Add sweet potato to a bowl and mash slightly.</li>
-		<li>Add butter and mix well.</li>
-		<li>Stir in sugar, eggs, milk, nutmeg, cinnamon, and vanilla.</li>
-		<li>Beat on medium speed until smooth.</li>
-		<li>Pour into pie crust.</li>
-		<li>Bake at 350F for an hour or until set.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Boil sweet potato until tender and remove skin.</li>
+			<li>Add sweet potato to a bowl and mash slightly.</li>
+			<li>Add butter and mix well.</li>
+			<li>Stir in sugar, eggs, milk, nutmeg, cinnamon, and vanilla.</li>
+			<li>Beat on medium speed until smooth.</li>
+			<li>Pour into pie crust.</li>
+			<li>Bake at 350F for an hour or until set.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>1 pound sweet potato</li>
+			<li>0.5 cup butter, softened</li>
+			<li>1 cup sugar</li>
+			<li>0.5 cup milk</li>
+			<li>2 eggs</li>
+			<li>0.5 tsp nutmeg</li>
+			<li>.5 tsp cinnamon</li>
+			<li>1 tsp vanilla extract</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	I remember telling my friend about how I made a recipe for lemon meringue pie. He wanted to learn to make it, and in exchange for my recipe, he told me his mom’s special recipe 
 	for sweet potato pie. Thank you George, and many thanks to your mom as well.
@@ -1818,72 +2200,90 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Mug Cake recipe -->
-<div id="mugcake" class="recipe tabcontent">
+<div id="mugcake" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Is it fast? Yes. Is it easy? Yes. Is it good? Not really.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>3 tbsp flour</li>
-		<li>2 tbsp sugar</li>
-		<li>2 tbsp vegetable oil</li>
-		<li>3 tbsp milk</li>
-		<li>2 tbsp cocoa powder</li>
-		<li>0.25 tsp baking powder</li>
-		<li>1/2 tsp vanilla extract</li>
-		<li>Pinch salt</li>
-		<li>1 scoop ice cream (your choice of flavor)</li>
-	</ul>
+	<p class="mb-5">Is it fast? Yes. Is it easy? Yes. Is it good? Not really.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Combine flour, sugar, salt, cocoa powder, and baking powder in a microwave-safe mug.</li>
-		<li>Combine with all the other ingrediends and mix until smooth.</li>
-		<li>Microwave for 1 minute.</li>
-		<li>Serve with a scoop of ice cream</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Combine flour, sugar, salt, cocoa powder, and baking powder in a microwave-safe mug.</li>
+			<li>Combine with all the other ingrediends and mix until smooth.</li>
+			<li>Microwave for 1 minute.</li>
+			<li>Serve with a scoop of ice cream</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>3 tbsp flour</li>
+			<li>2 tbsp sugar</li>
+			<li>2 tbsp vegetable oil</li>
+			<li>3 tbsp milk</li>
+			<li>2 tbsp cocoa powder</li>
+			<li>0.25 tsp baking powder</li>
+			<li>1/2 tsp vanilla extract</li>
+			<li>Pinch salt</li>
+			<li>1 scoop ice cream (your choice of flavor)</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
-	I’m gonna be completely honest. This recipe is garbage. If you want a chocolate cake, make a chocolate cake. This is far more dry, lacking in flavor and texture. 
+	I’m gonna be completely honest. This recipe is garbage. If you want a chocolate cake, make a chocolate cake. This is far more dry, lacking in both flavor and texture. 
 	It needs a scoop of ice cream to even be palatable. Someday I will make this recipe better, I just need to figure it out. But for now, I’m stuck with this. In any case, 
 	nobody makes mug cakes for taste, it’s all for convenience.
 	</p>
 	<p class="story">
 	Combine flour, sugar, salt, cocoa powder, and baking powder in a microwave-safe mug. Once all your dry ingredients are together, add the milk, oil, and vanilla. 
-	Mix well until smooth, then microwave for a minute. Serve with a scoop of your ice cream of choice. I can promise it’ll be fast, but as of right now, I can’t promise 
-	it’ll be any good.
+	Mix well until smooth, then microwave for a minute. Serve with a scoop of your ice cream of choice. I like mint chocolate chip or vanilla with this recipe. I can promise it’ll be 
+	fast, but as of right now, I can’t promise it’ll be any good.
 	</p>
 </div>
 
 <!-- The Laboratory -->
 <!-- Cursed Sandwich recipe -->
-<div id="cursed" class="recipe tabcontent">
+<div id="cursed" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>I am so sorry.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>2 slices bread</li>
-		<li>Hummus (pref. roasted garlic hummus)</li>
-		<li>Nutella</li>
-		<li>Yellow mustard</li>
-		<li>Strawberry</li>
-	</ul>
+	<p class="mb-5">I am so sorry.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Spread hummus on one slice of bread and Nutella on the other slice.</li>
-		<li>Spread a thin layer of mustard over the hummus. Yellow mustard is strong, so use it sparingly.</li>
-		<li>Slice up strawberries and put them on the Nutella.</li>
-		<li>Close the sandwich, cut as desired, and serve.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Spread hummus on one slice of bread and Nutella on the other slice.</li>
+			<li>Spread a thin layer of mustard over the hummus. Yellow mustard is strong, so use it sparingly.</li>
+			<li>Slice up strawberries and put them on the Nutella.</li>
+			<li>Close the sandwich, cut as desired, and serve.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>2 slices bread</li>
+			<li>Hummus (pref. roasted garlic hummus)</li>
+			<li>Nutella</li>
+			<li>Yellow mustard</li>
+			<li>Strawberry</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	Don’t make that face. I know you read the ingredients. I know how you’re feeling. You think I’m crazy. You think I’ve lost it. You may be right. 
 	All I ask is that you let me explain myself.
@@ -1905,57 +2305,66 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Thanksgiving Cottage Pie recipe -->
-<div id="thanksgivingpie" class="recipe tabcontent">
+<div id="thanksgivingpie" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Your favorite Thanksgiving meals in one dish.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>For the Mince:</li>
-		<ul>
-			<li>1 lb ground turkey</li>
-			<li>2 cups chicken stock</li>
-			<li>0.5 onions</li>
-			<li>4 stalks celery</li>
-			<li>1 spoon tomato paste</li>
-			<li>4 cloves garlic</li>
-			<li>4 tbsp butter</li>
-			<li>Salt</li>
-			<li>Pepper</li>
-			<li>Sage</li>
-			<li>Thyme</li>
-			<li>Cayenne</li>
-			<li>1 spoon flour</li>
-			<li>Handful frozen peas</li>
-		</ul>
-		<li>For the Potatoes:</li>
-			<li>2 potatoes</li>
-			<li>2 tbsp butter</li>
-			<li>0.25 cup Milk</li>
-			<li>Cheddar cheese, grated</li>
-			<li>Salt</li>
-			<li>Pepper</li>
-	</ul>
+	<p class="mb-5">Your favorite Thanksgiving meals in one dish.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Cook the turkey on high until a sear forms, set aside.</li>
-		<li>Cook onion, garlic, and celery in the fond with 4 tbsp butter.</li>
-		<li>While you let it cook, start boiling the potatoes.</li>
-		<li>Add in a pinch of flour to the vegetables, then put the turkey back in, along with a spoon of tomato paste.</li>
-		<li>Once flour cooks a bit, add in chicken stock, herbs, and cayenne. Let the mixture thicken.</li>
-		<li>Once thickened, take off heat and stir in peas.</li>
-		<li>Remove, peel, and dry the potatoes. In the meantime, let milk and cheese heat up slowly over a double boiler</li>
-		<li>Push potatoes through a strainer or run across a fine grater.</li>
-		<li>Fold and mash potatoes gently into the dairy mixture over the double boiler until appropriate consistency is achieved.</li>
-		<li>Add salt and melt in 2 tbsp cold cubed butter to mashed potatoes.</li>
-		<li>Pour mince into a casserole dish and layer the potato over the top. Create a craggly surface on the top.</li>
-		<li>Add extra cheese on top and bake at 375F on the highest rack until top is browned.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Cook the turkey on high until a sear forms, set aside.</li>
+			<li>Cook onion, garlic, and celery in the fond with 4 tbsp butter.</li>
+			<li>While you let it cook, start boiling the potatoes.</li>
+			<li>Add in a pinch of flour to the vegetables, then put the turkey back in, along with a spoon of tomato paste.</li>
+			<li>Once flour cooks a bit, add in chicken stock, herbs, and cayenne. Let the mixture thicken.</li>
+			<li>Once thickened, take off heat and stir in peas.</li>
+			<li>Remove, peel, and dry the potatoes. In the meantime, let milk and cheese heat up slowly over a double boiler</li>
+			<li>Push potatoes through a strainer or run across a fine grater.</li>
+			<li>Fold and mash potatoes gently into the dairy mixture over the double boiler until appropriate consistency is achieved.</li>
+			<li>Add salt and melt in 2 tbsp cold cubed butter to mashed potatoes.</li>
+			<li>Pour mince into a casserole dish and layer the potato over the top. Create a craggly surface on the top.</li>
+			<li>Add extra cheese on top and bake at 375F on the highest rack until top is browned.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+			<p>For the Mince:</p>
+			<ul>
+				<li>1 lb ground turkey</li>
+				<li>2 cups chicken stock</li>
+				<li>0.5 onions</li>
+				<li>4 stalks celery</li>
+				<li>1 spoon tomato paste</li>
+				<li>4 cloves garlic</li>
+				<li>4 tbsp butter</li>
+				<li>Salt</li>
+				<li>Pepper</li>
+				<li>Sage</li>
+				<li>Thyme</li>
+				<li>Cayenne</li>
+				<li>1 spoon flour</li>
+				<li>Handful frozen peas</li>
+			</ul>
+			<p>For the Potatoes:</p>
+			<ul>
+				<li>2 potatoes</li>
+				<li>2 tbsp butter</li>
+				<li>0.25 cup Milk</li>
+				<li>Cheddar cheese, grated</li>
+				<li>Salt</li>
+				<li>Pepper</li>
+			</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	Are you tired of making a gigantic feast at Thanksgiving? Wouldn’t you rather encapsulate the spirit of Thanksgiving all in one simple dish? What if I told you there was a way 
 	to combine turkey, stuffing, gravy, peas, and mashed potatoes all in one dish? Well, let’s say you used ground turkey instead of whole turkey. Let’s say you cooked it with 
@@ -1994,60 +2403,67 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Pineapple Upside-Down Deep-Dish Pizza recipe -->
-<div id="pineapplepizza" class="recipe tabcontent">
+<div id="pineapplepizza" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Don’t let Italy find out about this one.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>For the Crust:</li>
-		<ul>
-			<li>250g bread flour (or AP)</li>
-			<li>25g cornmeal</li>
-			<li>75g olive oil</li>
-			<li>100g warm water</li>
-			<li>3g instant yeast</li>
-			<li>5g salt</li>
-		</ul>
-		<li>For the Rest:</li>
-		<ul>
-			<li>Tomato sauce</li>
-			<li>Provolone cheese slices</li>
-			<li>Shredded low-moisture mozzarella</li>
-			<li>Parmesan</li>
-			<li>0.25 cups unsalted butter (melted)</li>
-			<li>Pineapple rings</li>
-			<li>Italian sausage *</li>
-		</ul>
-	</ul>
-	<p style="margin-left: 24px">* Can substitute with whole black olives.</p>
+	<p class="mb-5">Don’t let Italy find out about this one.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Mix flour, cornmeal, yeast, and salt in a large bowl.</li>
-		<li>Mix in olive oil until crumbly texture forms.</li>
-		<li>Add warm water until shaggy dough forms.</li>
-		<li>Cover w plastic wrap in bowl and let rest for 20 mins.</li>
-		<li>Knead until a smoother dough forms in 4 min intervals, resting between each interval for 4 mins (should take about 2 intervals, i.e. 12 mins).</li>
-		<li>Turn into a ball, return to bowl and cover. Let rest for 2 hrs.</li>
-		<li>Chop up any vegetables you want to add as toppings and set aside.</li>
-		<li>Grease pie dish liberally with butter and sprinkle parmesan on the bottom and sides.</li>
-		<li>Add melted butter to the bottom with pineapple rings, making sure the distribution of butter and parmesan is even on the bottom.</li>
-		<li>Slice sausage into coins and fit them in the pineapple rings to mimic the maraschino cherries on a pineapple upside-down cake. If using olives instead, leave them whole.</li>
-		<li>Once dough is done resting and has doubled in volume, press out on a countertop until about 2 in wider than the top of the pie dish.</li>
-		<li>Cut off any excess dough outside the pie dish and use the excess dough to form a ring around the inner wall of the pie dish.</li>
-		<li>Fill with sauce until you can't see the pineapple or sausage anymore, and then add the toppings.</li>
-		<li>Add at least 0.5 lb mozzarella and top with slices of provolone cheese, taking care to make sure the final product is relatively flat (not domed) on top.</li>
-		<li>Put remaining circle of crust dough on top of the cheese and pinch it to the dough on the walls to properly attach it.</li>
-		<li>Sprinkle some extra parmesan on top and cut a few slits to vent steam.</li>
-		<li>Bake at 425F for 30-45 mins.</li>
-		<li>Let rest outside of the oven for 10 minutes.</li>
-		<li>Invert onto a cutting board, cake stand, or whatever heat-safe platform you want.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Mix flour, cornmeal, yeast, and salt in a large bowl.</li>
+			<li>Mix in olive oil until crumbly texture forms.</li>
+			<li>Add warm water until shaggy dough forms.</li>
+			<li>Cover w plastic wrap in bowl and let rest for 20 mins.</li>
+			<li>Knead until a smoother dough forms in 4 min intervals, resting between each interval for 4 mins (should take about 2 intervals, i.e. 12 mins).</li>
+			<li>Turn into a ball, return to bowl and cover. Let rest for 2 hrs.</li>
+			<li>Chop up any vegetables you want to add as toppings and set aside.</li>
+			<li>Grease pie dish liberally with butter and sprinkle parmesan on the bottom and sides.</li>
+			<li>Add melted butter to the bottom with pineapple rings, making sure the distribution of butter and parmesan is even on the bottom.</li>
+			<li>Slice sausage into coins and fit them in the pineapple rings to mimic the maraschino cherries on a pineapple upside-down cake. If using olives instead, leave them whole.</li>
+			<li>Once dough is done resting and has doubled in volume, press out on a countertop until about 2 in wider than the top of the pie dish.</li>
+			<li>Cut off any excess dough outside the pie dish and use the excess dough to form a ring around the inner wall of the pie dish.</li>
+			<li>Fill with sauce until you can't see the pineapple or sausage anymore, and then add the toppings.</li>
+			<li>Add at least 0.5 lb mozzarella and top with slices of provolone cheese, taking care to make sure the final product is relatively flat (not domed) on top.</li>
+			<li>Put remaining circle of crust dough on top of the cheese and pinch it to the dough on the walls to properly attach it.</li>
+			<li>Sprinkle some extra parmesan on top and cut a few slits to vent steam.</li>
+			<li>Bake at 425F for 30-45 mins.</li>
+			<li>Let rest outside of the oven for 10 minutes.</li>
+			<li>Invert onto a cutting board, cake stand, or whatever heat-safe platform you want.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+			<p>For the Crust:</p>
+			<ul>
+				<li>250g bread flour (or AP)</li>
+				<li>25g cornmeal</li>
+				<li>75g olive oil</li>
+				<li>100g warm water</li>
+				<li>3g instant yeast</li>
+				<li>5g salt</li>
+			</ul>
+			<p>For the Rest:</p>
+			<ul>
+				<li>Tomato sauce</li>
+				<li>Provolone cheese slices</li>
+				<li>Shredded low-moisture mozzarella</li>
+				<li>Parmesan</li>
+				<li>0.25 cups unsalted butter (melted)</li>
+				<li>Pineapple rings</li>
+				<li>Italian sausage *</li>
+			</ul>
+		</div>
+		<p>* Can substitute with whole black olives or cherry tomatoes</p>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	One time, I was asking my friends their opinion about pineapple on pizza. But in a weird game of word association, my brain combined the words “pineapple upside-down cake” with 
 	“pineapple on pizza” and I ended up saying, “What do you think about pineapple upside-down pizza?” My friends were confused by this, but it got me thinking. What is an 
@@ -2103,46 +2519,55 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 
 <!-- Miscellaneous -->
 <!-- Makeshift Popcorn Chicken recipe -->
-<div id="popcornchicken" class="recipe tabcontent">
+<div id="popcornchicken" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>The best way to eat chicken nuggets.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>Chicken nuggets</li>
-		<li>Whole basil leaves *</li>
-		<li>Garlic cloves **</li>
-		<li>Soy sauce</li>
-		<li>Paprika</li>
-		<li>Salt</li>
-		<li>Pepper</li>
-		<li>Onion powder</li>
-		<li>Red pepper flakes</li>
-		<li>Ginger powder</li>
-		<li>Vegetable oil ***</li>
-	</ul>
-	<p style="margin-left: 24px">* number of basil leaves = number of nuggets divided by 5 times 3 rounded up to nearest whole number.</p>
-	<p style="margin-left: 24px">** number of garlic cloves = number of nuggets divided by 5 rounded up to nearest whole number.</p>
-	<p style="margin-left: 24px">*** tablespoons of oil = number of nuggets divided by 10 rounded up to nearest whole number.</p>
+	<p class="mb-5">The best way to eat chicken nuggets.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Count chicken nuggets and begin baking on a foil-lined tray following specified directions. Counting them will help proportion other ingredients.</li>
-		<li>When about 5 minutes from being done, heat up oil in pan on high until shimmering (use about 1 tbsp for every 10 nuggets).</li>
-		<li>While oil heats up, roughly dice garlic into large chunks (about 1 clove for every 5 nuggets)</li>
-		<li>Once oil is hot, add red pepper flakes and a hefty pinch of ginger powder.</li>
-		<li>Add the basil immediately (about 3 leaves for every 5 nuggets). Take it off the heat after no more than 10 seconds.</li>
-	<p style="line-height: 0"><u>NOTE:</u> This will flash-fry the basil, so be wary of oil spluttering.</p>
-		<li>Add the garlic followed by a heavy shake of paprika and onion powder, then add pepper to taste.</li>
-		<li>Once the flavors come together after a few seconds, cool down the pan with a splash of soy sauce and mix until homogenous.</li>
-		<li>Take nuggets out of oven and put in a mixing bowl, toss with a sprinkle of salt.</li>
-		<li>Pour oil over the nuggets, making sure to get all the little powdery bits out of the pan with a spatula.</li>
-		<li>Toss together and make sure all the nuggets get covered in the oil and serve.</li>
-	</ol>
+	<div class="columns is-8 is-variable has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Count chicken nuggets and begin baking on a foil-lined tray following specified directions. Counting them will help proportion other ingredients.</li>
+			<li>When about 5 minutes from being done, heat up oil in pan on high until shimmering (use about 1 tbsp for every 10 nuggets).</li>
+			<li>While oil heats up, roughly dice garlic into large chunks (about 1 clove for every 5 nuggets)</li>
+			<li>Once oil is hot, add red pepper flakes and a hefty pinch of ginger powder.</li>
+			<li>Add the basil immediately (about 3 leaves for every 5 nuggets). Take it off the heat after no more than 10 seconds.</li>
+			<p><u>NOTE:</u> This will flash-fry the basil, so be wary of oil spluttering.</p>
+			<li>Add the garlic followed by a heavy shake of paprika and onion powder, then add pepper to taste.</li>
+			<li>Once the flavors come together after a few seconds, cool down the pan with a splash of soy sauce and mix until homogenous.</li>
+			<li>Take nuggets out of oven and put in a mixing bowl, toss with a sprinkle of salt.</li>
+			<li>Pour oil over the nuggets, making sure to get all the little powdery bits out of the pan with a spatula.</li>
+			<li>Toss together and make sure all the nuggets get covered in the oil and serve.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>Chicken nuggets</li>
+			<li>Whole basil leaves *</li>
+			<li>Garlic cloves **</li>
+			<li>Soy sauce</li>
+			<li>Paprika</li>
+			<li>Salt</li>
+			<li>Pepper</li>
+			<li>Onion powder</li>
+			<li>Red pepper flakes</li>
+			<li>Ginger powder</li>
+			<li>Vegetable oil ***</li>
+		</ul>
+		</div>
+		<p>* basil leaves = (3 &times; nuggets) / 5 rounded up to nearest whole number.</p>
+		<p>** garlic cloves = nuggets / 5 rounded up to nearest whole number.</p>
+		<p>*** tablespoons of oil = nuggets / 10 rounded up to nearest whole number.</p>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	I love the popcorn chicken a nearby boba place in town. I wanted to know if I could make this Taiwanese street food classic in my own kitchen with less effort than it would 
 	take to go to the shop and buy some. By making chicken nuggets and tossing them in seasoned oil, you can get something that may not be quite as good, but it’s still absolutely 
@@ -2172,34 +2597,43 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Meatballs recipe -->
-<div id="meatballs" class="recipe tabcontent">
+<div id="meatballs" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Adapted from Joshua Weissman's recipe.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>1 lb ground beef</li>
-		<li>0.25 cups grated parmesan</li>
-		<li>3 cloves garlic, minced</li>
-		<li>1 egg</li>
-		<li>0.5 cups Italian breadcrumbs</li>
-		<li>1.5 tsp salt</li>
-		<li>Pepper</li>
-	</ul>
+	<p class="mb-5">Adapted from Joshua Weissman's recipe.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Mix it in a bowl until homogenous and shape into balls (approx 15 of equal weight).</li>
-		<li>Fry in hot olive oil until crust forms on outside.</li>
-		<li>Finish by simmering in tomato sauce with lid on for 10 minutes or cooking on low for a similar amount of time until cooked through.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Mix it in a bowl until homogenous and shape into balls (approx 15 of equal weight).</li>
+			<li>Fry in hot olive oil until crust forms on outside.</li>
+			<li>Finish by simmering in tomato sauce with lid on for 10 minutes or cooking on low for a similar amount of time until cooked through.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>1 lb ground beef</li>
+			<li>0.25 cups grated parmesan</li>
+			<li>3 cloves garlic, minced</li>
+			<li>1 egg</li>
+			<li>0.5 cups Italian breadcrumbs</li>
+			<li>1.5 tsp salt</li>
+			<li>Pepper</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
-	This recipe is literally just Joshua Weissman’s recipe but missing a few ingredients that I don’t have in my kitchen. They still taste fantastic and go great with spaghetti, 
-	meatball subs, or even just by themselves.
+	This recipe is literally just Joshua Weissman’s recipe but missing a few ingredients that I don’t have in my kitchen. The meatballs still taste fantastic and go great with 
+	spaghetti, meatball subs, or even just by themselves.
 	</p>
 	<p class="story">
 	Mix 1 pound of ground beef with some parmesan, breadcrumbs, an egg, salt, minced garlic, and pepper in a bowl. The reason we add so much other stuff to the meat is for both 
@@ -2217,89 +2651,108 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Deviled Eggs recipe -->
-<div id="deviledeggs" class="recipe tabcontent">
+<div id="deviledeggs" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Credit to AllRecipes for this recipe.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>6 large eggs</li>
-		<li>0.25 cups mayo</li>
-		<li>2 tsp yellow mustard</li>
-		<li>Salt</li>
-		<li>Pepper</li>
-		<li>Cayenne</li>
-		<li>Parsley</li>
-		<li>Hot sauce (optional)</li>
-	</ul>
+	<p class="mb-5">Credit to AllRecipes for this recipe.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Put 6 eggs in a pot of water.</li>
-		<li>Bring up to a boil and turn off the heat.</li>
-		<li>Leave for 10-12 minutes.</li>
-		<li>Remove eggs and cool in ice water.</li>
-		<li>Peel eggs and cut lengthwise.</li>
-		<li>Remove and mash the yolks in a bowl.</li>
-		<li>Add mayo, mustard, salt, pepper, hot sauce, and stir until smooth.</li>
-		<li>Adjust seasoning as necessary.</li>
-		<li>Pipe yolk mixture back into egg whites.</li>
-		<li>Garnish each egg with cayenne and a sprig of parsley.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Put 6 eggs in a pot of water.</li>
+			<li>Bring up to a boil and turn off the heat.</li>
+			<li>Leave for 10-12 minutes.</li>
+			<li>Remove eggs and cool in ice water.</li>
+			<li>Peel eggs and cut lengthwise.</li>
+			<li>Remove and mash the yolks in a bowl.</li>
+			<li>Add mayo, mustard, salt, pepper, hot sauce, and stir until smooth.</li>
+			<li>Adjust seasoning as necessary.</li>
+			<li>Pipe yolk mixture back into egg whites.</li>
+			<li>Garnish each egg with cayenne and a sprig of parsley.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>6 large eggs</li>
+			<li>0.25 cups mayo</li>
+			<li>2 tsp yellow mustard</li>
+			<li>Salt</li>
+			<li>Pepper</li>
+			<li>Cayenne</li>
+			<li>Parsley</li>
+			<li>Hot sauce (optional)</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
-	I got this recipe from AllRecipes. I made it one time when I was alone in my apartment for Thanksgiving break. Normally, spending Thanksgiving alone is sad, but for me, I got the 
-	chance to make myself a six course feast. Deviled eggs, pasta aglio e olio, turkey and mashed potato sandwiches, fruit salad, tomato soup, and lemon meringue pie. The whole thing 
-	took me 24 hours and I ate it all by myself in 3 days. The dishes were all good, but it all began with those delicious, bite-sized pockets of goodness: deviled eggs.
+	I remember when I was alone in my apartment one time for Thanksgiving break. Normally, spending Thanksgiving alone is sad, but for me, I got the chance to make a six course feast 
+	all to myself. Deviled eggs, pasta aglio e olio, turkey and mashed potato sandwiches, fruit salad, tomato soup, and lemon meringue pie. The whole thing took me 24 hours and I 
+	ate it all by myself in 3 days. The appetizers for this feast, deviled eggs, were something I'd never tried before. I got this recipe from AllRecipes and tried it out. In short, 
+	I ended up wolfing down half a dozen eggs because these little bites of pure richness were too good to put down.
 	</p>
 	<p class="story">
-	Put 6 eggs in a pot of water, then bring up to a boil. Once it begins boiling, turn off the heat. Let sit for 10-12 minutes. Remove the eggs and put them in a bowl of ice water 
-	to prevent them from overcooking. Peel the eggs and cut lengthwise. If you want to call it quits here and eat hardboiled eggs, I don’t blame you. But if you want to finish the 
-	recipe, the next step is to remove the yolks and mash them in a bowl with a fork. Add mayo, mustard, salt, pepper, and a dash or two of hot sauce. Stir until smooth and creamy. 
-	Taste for seasoning and adjust as necessary. Pipe the yolk mixture back into the egg whites. I like putting the mixture in a plastic baggie, then cutting off a corner and using 
-	that as a makeshift piping bag. Garnish each egg with cayenne pepper and a sprig of parsley. This appetizer is perfect for any party or feast of your choosing. The hardest part 
-	of this recipe is resisting the urge to eat them all before someone else gets a chance to try.
+	Start by putting 6 eggs in a pot of water, then bring up to a boil. Once it begins boiling, turn off the heat. Let sit for 10-12 minutes. Remove the eggs and put them in a bowl 
+	of ice water to prevent them from overcooking. Peel the eggs and cut lengthwise. If you want to call it quits here and just eat hardboiled eggs, I don’t blame you. But if you 
+	want to finish the recipe, the next step is to remove the yolks and mash them in a bowl with a fork. Add mayo, mustard, salt, pepper, and a dash or two of hot sauce. Stir until 
+	smooth and creamy. Taste for seasoning and adjust as necessary. Pipe the yolk mixture back into the egg whites. I like putting the mixture in a plastic baggie, then cutting off 
+	a corner and using that as a makeshift piping bag. Garnish each egg with cayenne pepper and a sprig of parsley. This appetizer is perfect for any party or feast of your choosing. 
+	I'd have to say the hardest part of this recipe is resisting the urge to eat them all before someone else gets a chance to try.
 	</p>
 </div>
 
 <!-- Pizza recipe -->
-<div id="pizza" class="recipe tabcontent">
+<div id="pizza" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Ethan Chlebowski's recipe for quick, weeknight pizza.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>320 mL water (at 105 deg F)
-		<li>8g yeast</li>
-		<li>400g flour</li>
-		<li>8g salt</li></li>
-	</ul>
+	<p class="mb-5">Ethan Chlebowski's recipe for quick, weeknight pizza.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Put yeast and a spoonful of flour in the warm water. Stir and let sit for 5 mins until it begins foaming. If the yeast doesn't react, start over with new yeast.</li>
-		<li>Combine salt and flour in a large bowl.</li>
-		<li>Add wet mixture to the bowl and combine by hand until cohesive (about 2 mins).</li>
-		<li>Cover and rest for 15 mins.</li>
-		<li>Dip fingers in cold water and pull one side of dough, folding it over onto itself, repeating around the circumference of the dough.</li>
-		<li>Turn out onto a clean counter and slap and fold dough for 5 mins or until it can hold a translucent window pane.</li>
-		<li>Cover and let rest for 40 mins in a bowl.</li>
-		<li>Drizzle olive oil on it and fold edges onto the top like in step 5.</li>
-		<li>Divide in half and round out on table.</li>
-		<li>Oil up bowl and let dough balls rest for another 30 mins.</li>
-		<li>Make pizza, bake at 450F.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Put yeast and a spoonful of flour in the warm water. Stir and let sit for 5 mins until it begins foaming. If the yeast doesn't react, start over with new yeast.</li>
+			<li>Combine salt and flour in a large bowl.</li>
+			<li>Add wet mixture to the bowl and combine by hand until cohesive (about 2 mins).</li>
+			<li>Cover and rest for 15 mins.</li>
+			<li>Dip fingers in cold water and pull one side of dough, folding it over onto itself, repeating around the circumference of the dough.</li>
+			<li>Turn out onto a clean counter and slap and fold dough for 5 mins or until it can hold a translucent window pane.</li>
+			<li>Cover and let rest for 40 mins in a bowl.</li>
+			<li>Drizzle olive oil on it and fold edges onto the top like in step 5.</li>
+			<li>Divide in half and round out on table.</li>
+			<li>Oil up bowl and let dough balls rest for another 30 mins.</li>
+			<li>Make pizza, bake at 450F.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>320 mL water (at 105 deg F)
+			<li>8g yeast</li>
+			<li>400g flour</li>
+			<li>8g salt</li></li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	This recipe is from Ethan Chlebowski’s recipe for spicy garlicky weeknight pizza. I’ve tried making pizza from scratch in the past and it never worked (except for pineapple 
 	upside-down deep-dish pizza, but that’s another story). I have yet to try this one out, but it looks easy to do, and with the right patience, I think I can finally make myself 
-	some good za.
+	some good pizza.
 	</p>
 	<p class="story">
 	Start by putting the yeast in warm water with a spoonful of flour. Stir and let sit for 5 minutes. The warm water will activate the yeast and they will begin feeding on the 
@@ -2321,26 +2774,35 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Cold Brew Coffee recipe -->
-<div id="coffee" class="recipe tabcontent">
+<div id="coffee" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Recipe for cold brew from NYT Cooking.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>0.33 cups coarse ground coffee</li>
-		<li>2 cups water</li>
-	</ul>
+	<p class="mb-5">Recipe for cold brew from NYT Cooking.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Combine coffee and water.</li>
-		<li>Cover and let rest for 12 hours at room temperature.</li>
-		<li>Filter and serve with ice cubes.</li>
-	</ol>
+	<div class="columns is-8 is-variable mb-6 has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Combine coffee and water.</li>
+			<li>Cover and let rest for 12 hours at room temperature.</li>
+			<li>Filter and serve with ice cubes.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>0.33 cups coarse ground coffee</li>
+			<li>2 cups water</li>
+		</ul>
+		</div>
+		</div>
+	</div>
 	
 	<!-- About the recipe -->
-	<u><h4>Story Time</h4></u>
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
 	<p class="story">
 	This recipe comes from NYT Cooking. I used to make this every night and drink it first thing the next morning, 30 minutes before my workout, and it really energized me quite a 
 	bit. As someone who hates the taste of coffee, this is as palatable as black coffee gets. If you twist my arm, I might even admit that I enjoy it. When you filter the coffee, 
@@ -2349,26 +2811,43 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Ricotta Cheese recipe -->
-<div id="ricotta" class="recipe tabcontent">
+<div id="ricotta" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p>Recipe from Bon Apetit. Never attempted this recipe, but I saved it just in case I ever needed it.</p>
-	<u><h4>Ingredients</h4></u>
-	<!-- Ingredients -->
-	<ul>
-		<li>7 cups whole milk</li>
-		<li>1 cup heavy cream</li>
-		<li>2 tsp salt</li>
-		<li>5 tbsp white vinegar</li>
-	</ul>
+	<p class="mb-5">Recipe from Bon Apetit. I've never attempted this recipe, but I saved it just in case I ever needed it.</p>
 	
-	<!-- Instructions -->
-	<u><h4>Instructions</h4></u>
-	<ol>
-		<li>Heat the cream and milk until at 200°F, stirring occasionally.</li>
-		<li>Stir in salt and vinegar when the liquid comes up to temp.</li>
-		<li>Allow the curds to form off the heat for 15-20 mins then strain through a cheese cloth.</li>
-		<li>Let it drain without squeezing through the cheese cloth for 30 mins.</li>
-	</ol>
+	<div class="columns is-8 is-variable has-background-light">
+		<!-- Instructions -->
+		<div class="column">
+		<h4 class="subtitle">Instructions</h4>
+		<ol>
+			<li>Heat the cream and milk until at 200°F, stirring occasionally.</li>
+			<li>Stir in salt and vinegar when the liquid comes up to temp.</li>
+			<li>Allow the curds to form off the heat for 15-20 mins then strain through a cheese cloth.</li>
+			<li>Let it drain without squeezing through the cheese cloth for 30 mins.</li>
+		</ol>
+		</div>
+		
+		<!-- Ingredients -->
+		<div class="column is-4-desktop has-background-grey-lighter">
+		<h4 class="subtitle">Ingredients</h4>
+		<div class="content">
+		<ul>
+			<li>7 cups whole milk</li>
+			<li>1 cup heavy cream</li>
+			<li>2 tsp salt</li>
+			<li>5 tbsp white vinegar</li>
+		</ul>
+		</div>
+		</div>
+	</div>
+	
+	<!-- About the recipe -->
+	<h4 class="subtitle has-text-centered is-4">Story Time</h4>
+	<p class="story">
+	I've always thought it would be cool to make my own cheese. Usually you need some kind of enzyme like rennet to make cheese, but ricotta is a little different. As long as you 
+	have a pot, some everyday ingredients, a food thermometer, and a cheesecloth, you can make this versatile cheese any time you want. Top fresh ricotta with some salt, pepper,
+	and olive oil, and you have a simple, delicious dip. Spread it on toast. Eat it with peaches. Make a lasagna. The possibilities are endless.
+	</p>
 </div>
 
 <!-- Here comes the JS. Oh boy -->
