@@ -1,4 +1,14 @@
-Recipes Project v1.2 - Collection of recipes curated by Mihir Lele
+Recipes Project v1.3 - Collection of recipes curated by Mihir Lele
+
+===== v1.3 =====
+New Additions:
+- bulma.css
+- 2 new recipes
+Changes:
+- Created responsive layout using Bulma framework
+- Removed most of recipes_style.css in favor of Bulma's built-in aesthetic
+- Placed ingredients to the right of instructions instead of above
+- Revised recipe descriptions
 
 ===== v1.2 =====
 New Additions:
