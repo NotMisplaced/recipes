@@ -1,34 +1,28 @@
 /*
-Mihir Lele, 8/8/2022
+Mihir Lele, 8/26/2022
 
-CSS file for recipes.html
+CSS file for recipes/index.html
 */
 
 
 /* if tab is active, change color */
-.tab button.active {background-color: #aaa;}
+.tab a.active {background-color: #eaeaea;}
 
-.recipe ol {line-height: 24px;}
 .story {
 	text-indent: 24px;
 	margin-bottom: 8px;
 }
 
-.recipetab {
-	display: grid;
-	grid: auto / auto auto auto;
-	justify-content: center;
-}
-
-.recipetab button {
-	margin: 8px
-}
-
-/* keep header and category tabs stuck to top of page */
-.sticky {
+/* keep navbar stuck to top of page */
+.navbar {
 	position: sticky;
 	top: 0;
-	background-color: var(--bkg-color);
+	z-index: 2;
+}
+
+.card.recipelink:hover {
+	cursor: pointer;
+	background-color: #eaeaea;
 }
 
 /* keep tabs hidden except home. */
