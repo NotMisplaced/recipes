@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- 
-Mihir Lele, 8/8/2022
+Mihir Lele, 8/26/2022
 
 This is meant to be an online cookbook of sorts for all the recipes I have
 -->
@@ -9,32 +9,41 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Put Mihir's Recipes as the title, both in the tab and on the page -->
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<!-- External CSS goes here. This makes it easier to link to other recipes -->
-	<link rel="stylesheet" href="bulma.css">
-	<link rel="stylesheet" href="recipes_style.css">
+	<!-- External CSS goes here -->
+	<link rel="stylesheet" type="text/css" href="bulma.css">
+	<link rel="stylesheet" type="text/css" href="recipes_style.css">
 	
 	<!-- Website title -->
 	<title>Mihir's Recipes</title>
 </head>
 
 <body>
-<div class = "sticky has-background-white pb-4">
-<!-- Heading -->
-	<h1 class="title my-4 pt-4 has-text-centered">Mihir's Recipes</h1>
-<!-- Tabs for recipe categories -->
-<div class="tab has-text-centered">
-	<button class="button is-primary tablinks active" onclick="openTab(event, 'home')">Home</button>
-	<button class="button is-primary tablinks" onclick="openTab(event, 'breakfast')">Breakfast</button>
-	<button class="button is-primary tablinks" onclick="openTab(event, 'soup')">Soups, Stews, & Sauces</button>
-	<button class="button is-primary tablinks" onclick="openTab(event, 'sandwiches')">Sandwiches</button>
-	<button class="button is-primary tablinks" onclick="openTab(event, 'rice')">Rice & Pasta</button>
-	<button class="button is-primary tablinks" onclick="openTab(event, 'desserts')">Desserts</button>
-	<button class="button is-primary tablinks" onclick="openTab(event, 'lab')">The Laboratory</button>
-	<button class="button is-primary tablinks" onclick="openTab(event, 'misc')">Misc.</button>
-</div>
-</div>
+<nav class = "navbar has-background-white-ter mb-4">
+	<!-- Heading -->
+	<div class="navbar-brand">
+		<h1 class="title navbar-item py-3 mb-0">Mihir's Recipes</h1>
+		
+		<a class="navbar-burger mt-2" onclick="burger()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</a>
+	</div>
+	
+	<!-- Tabs for recipe categories -->
+	<div class="navbar-menu has-background-white-ter tab">
+		<a class="navbar-item px-4 active" onclick="openTab(event, 'home')">Home</a>
+		<a class="navbar-item px-4" onclick="openTab(event, 'breakfast')">Breakfast</a>
+		<a class="navbar-item px-4" onclick="openTab(event, 'soup')">Soups, Stews, & Sauces</a>
+		<a class="navbar-item px-4" onclick="openTab(event, 'sandwiches')">Sandwiches</a>
+		<a class="navbar-item px-4" onclick="openTab(event, 'rice')">Rice &amp; Pasta</a>
+		<a class="navbar-item px-4" onclick="openTab(event, 'desserts')">Desserts</a>
+		<a class="navbar-item px-4" onclick="openTab(event, 'lab')">The Laboratory</a>
+		<a class="navbar-item px-4" onclick="openTab(event, 'misc')">Misc.</a>
+	</div>
+</nav>
 
 <!-- Homepage message -->
 <div id="home" class="tabcontent recipe section pt-4"> 
@@ -51,7 +60,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 	<p class="story">
 	The recipes are split under 7 categories which you can see on the bar at the top. The names are mostly self-explanatory, but you may be confused by The Laboratory. That’s the 
 	section for highly experimental recipes that I’ve created. Things that make you stop and think if such foods should ever have been created. But I had fun making them, so I’m sure 
-	you will too.
+	you will too. Please note that the food does not actually look like Mt. Rainier, I'm just using that as a placeholder image until I get actual pictures of my food.
 	</p>
 	<p class="story">
 	You might notice that sometimes (a lot of times) I don’t include ingredient amounts. In these cases, you have to rely on your taste, your instincts, and/or learn the right 
@@ -62,86 +71,391 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 </div>
 
 <!-- Display of things under each tab -->
-<div id = "breakfast" class="section tabcontent has-text-centered">
-	<div class="recipetab">
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'pancakes')">Pancakes</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'frenchtoast')">French Toast</button>
+
+<div id = "breakfast" class="section has-text-centered tabcontent">
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'pancakes')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Pancakes</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'frenchtoast')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">French Toast</p>
+			</div>
+		</div>
 	</div>
 </div>
 
-<div id = "soup" class="section tabcontent has-text-centered">
-	<div class="recipetab content">
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'tomatosauce')">Tomato Sauce</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'gumbo')">Gumbo</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'tikka')">Chicken Tikka Masala</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'rajma')">Rajma</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'noodlesoup')">Noodle Soup</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'canes')">Cane's Sauce</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'chutney')">Green Chutney</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'gastrique')">Apple Cider Gastrique</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'cranberry')">Cranberry Sauce</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'chana')">Chana Masala</button>
+<div id = "soup" class="section has-text-centered tabcontent">
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'tomatosauce')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Tomato Sauce</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'gumbo')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Chicken &amp; Sausage Gumbo</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'tikka')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Chicken Tikka Masala</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'rajma')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Rajma</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'noodlesoup')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Noodle Soup</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'canes')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Cane's Sauce</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'chutney')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Green Chutney</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'gastrique')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Apple Cider Gastrique</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'cranberry')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Cranberry Sauce</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'chana')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Chana Masala</p>
+			</div>
+		</div>
 	</div>
 </div>
 
-<div id = "sandwiches" class="section tabcontent has-text-centered">
-	<div class="recipetab">
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'tomatomelt')">Tomato Melt</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'eggsandwich')">Fried Egg Sandwich</button>
+<div id = "sandwiches" class="section has-text-centered tabcontent">
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'tomatomelt')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Tomato Melt</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'eggsandwich')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Fried Egg Sandwich</p>
+			</div>
+		</div>
 	</div>
 </div>
 
-<div id = "rice" class="section tabcontent has-text-centered">
-	<div class="recipetab">
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'sporice')">SausagePeppers&amp;Onions</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'gnocchi')">Gnocchi</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'turkeyrice')">Turkey Rice</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'chickencola')">Chicken and Cola Stir-Fry</button>
+<div id = "rice" class="section has-text-centered tabcontent">
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'sporice')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">SausagePeppers&amp;Onions</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'gnocchi')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Gnocchi</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'turkeyrice')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Turkey Rice</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'chickencola')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Chicken and Cola Stir-Fry</p>
+			</div>
+		</div>
 	</div>
 </div>
 
-<div id = "desserts" class="section tabcontent has-text-centered">
-	<div class="recipetab">
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'lemonmeringue')">Lemon Meringue Pie</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'applefilling')">Apple Filling</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'bananacaramel')">Banana Caramel</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'gajarhalwa')">Gajar Halwa</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'zabaglione')">Orange Zabaglione</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'suzette')">Crepes Suzette</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'potatopie')">Sweet Potato Pie</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'mugcake')">Mug Cake</button>
+<div id = "desserts" class="section has-text-centered tabcontent">
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'lemonmeringue')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Lemon Meringue Pie</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'applefilling')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Apple Filling</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'bananacaramel')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Banana Caramel</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'gajarhalwa')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Gajar Halwa</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'zabaglione')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Orange Zabaglione</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'suzette')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Crepes Suzette</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'potatopie')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Sweet Potato Pie</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'mugcake')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Mug Cake</p>
+			</div>
+		</div>	
 	</div>
 </div>
 
-<div id = "lab" class="section tabcontent has-text-centered">
-	<div class="recipetab">
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'cursed')">Cursed Sandwich</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'thanksgivingpie')">Thanksgiving Cottage Pie</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'pineapplepizza')">Pineapple Upside-Down Deep-Dish Pizza</button>
+<div id = "lab" class="section has-text-centered tabcontent">
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'cursed')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Cursed Sandwich</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'thanksgivingpie')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Thanksgiving Cottage Pie</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'pineapplepizza')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Pineapple Upside-Down Deep-Dish Pizza</p>
+			</div>
+		</div>
 	</div>
 </div>
 
-<div id = "misc" class="section tabcontent has-text-centered">
-	<div class="recipetab">
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'popcornchicken')">Makeshift Popcorn Chicken</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'meatballs')">Meatballs</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'deviledeggs')">Deviled Eggs</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'pizza')">Pizza</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'coffee')">Cold Brew Coffee</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="dominos()">No-Bake Pizza</button>
-		<button class="button is-link is-light is-medium tablinks" onclick="openTab(event, 'ricotta')">Ricotta</button>
+<div id = "misc" class="section has-text-centered tabcontent">
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'popcornchicken')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Makeshift Popcorn Chicken</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'meatballs')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Meatballs</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'deviledeggs')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Deviled Eggs</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'pizza')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Pizza</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'coffee')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Cold Brew Coffee</p>
+			</div>
+		</div>
+		
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="dominos()">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">No-Bake Pizza</p>
+			</div>
+		</div>
+	</div>
+	<div class = "columns is-centered">
+		<div class="card column is-one-quarter recipelink mx-2 mb-4" onclick="openTab(event, 'ricotta')">
+			<div class="card-image">
+				<img src="./assets/placeholder.jpg">
+			</div>
+			<div class="card-content">
+				<p class="is-4">Ricotta</p>
+			</div>
+		</div>	
 	</div>
 </div>
+
 <!-- Breakfast -->
 <!-- Pancakes -->
 <div id="pancakes" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'breakfast')">Breakfast</a></li>
+			<li class="is-active"><a>Pancakes</a></li>
+		</ul>
+	</nav>
+
 	<p class="mb-5">Here's my recipe for pancakes. And when I say pancakes, I mean pan CAKES. These are some thicc boys.</p>
 	<div class="columns is-8 is-variable mb-6 has-background-light">	
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Sift and combine dry ingredients in large bowl.</li>
 			<li>Separate egg whites and yolk into separate bowls.</li>
 			<li>Whisk egg whites until they form soft peaks. It is not necessary to go quite this far, but it does make a difference.</li>
@@ -160,7 +474,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 			<p>Dry Ingredients</p>
 			<ul>
@@ -247,13 +561,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- French Toast recipe -->
 <div id="frenchtoast" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'breakfast')">Breakfast</a></li>
+			<li class="is-active"><a>French Toast</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Nothing particularly French about it, but it tastes good so who cares?</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Leave bread on wire rack overnight to let it become stale.</li>
 			<li>Crack eggs into casserole dish or any dish deep enough to hold the dipping liquid but wide enough to fit a slice of the bread.</li>
 			<li>Whisk cinnamon, sugar, and salt until fully and evenly combined.</li>
@@ -270,7 +590,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 	
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>3 thick slices brioche *</li>
@@ -331,14 +651,20 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Tomato Sauce recipe -->
 <div id="tomatosauce" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'soup')">Soups, Stews, &amp; Sauces</a></li>
+			<li class="is-active"><a>Tomato Sauce</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Goes great with pasta, gnocchi, or even works as a dipping sauce.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
 		<p><u>NOTE:</u> If using San Marzano tomatoes, ignore steps 1-3.</p>
-		<ol>
+		<ol class="ml-1">
 			<li>Score an X on the end of the tomatoes.</li>
 			<li>Blanch for 30-60 seconds and place them in cold water.</li>
 			<li>Peel tomatoes and dice them (or blend them after peeling).</li>
@@ -353,7 +679,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 	
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>2 cloves garlic</li>
@@ -429,13 +755,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Gumbo recipe -->
 <div id="gumbo" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'soup')">Soups, Stews, &amp; Sauces</a></li>
+			<li class="is-active"><a>Chicken &amp; Sausage Gumbo</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">I got this recipe for Chicken and Sausage Gumbo from Binging With Babish. Credits are owed to Isaac Toups and Andrew Rea.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>First you make a roux: heat the oil on medium until shimmering and add the flour.</li>
 			<li>Constantly whisk roux over medium to medium high heat, taking care not to burn it until it becomes the color of dark chocolate.</li>
 			<li>Add the onion, celery, bell pepper, a pinch of salt, and bay leaves and cook until fragrant, then add the garlic.</li>
@@ -450,7 +782,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>1 lb boneless, skinless chicken thighs</li>
@@ -549,13 +881,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Chicken Tikka Masala recipe -->
 <div id="tikka" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'soup')">Soups, Stews, &amp; Sauces</a></li>
+			<li class="is-active"><a>Chicken Tikka Masala</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">The national dish of England, created by South Asian immigrants. You love to see it.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Cut chicken into 1 inch cubes.</li>
 			<li>Let sit in lemon juice and salt marinade for 20 mins.</li>
 			<li>Add ground spices to chicken (spices in each bullet point are listed from most used to least)</li>
@@ -584,7 +922,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 			<p>For the Chicken Marinade:</p>
 			<ul>
@@ -697,13 +1035,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Rajma recipe -->
 <div id="rajma" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'soup')">Soups, Stews, &amp; Sauces</a></li>
+			<li class="is-active"><a>Rajma</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">My personal favorite food. I wish I could make it as well as my mom.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Soak the kidney beans in water for 10 hours. Skip this step if using canned beans.</li>
 			<li>Put bay leaves and cumin seeds in hot oil.</li>
 			<li>Finely dice onion and add it to the pot, then add ginger (grate it if using fresh ginger).</li>
@@ -720,7 +1064,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>1.5 cup dry kidney beans (2 cups canned)</li>
@@ -737,6 +1081,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 			<li>0.5 tsp cayenne</li>
 			<li>0.5 tsp turmeric</li>
 			<li>Cilantro</li>
+			<li>Salt</li>
 		</ul>
 		</div>
 		</div>
@@ -787,13 +1132,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Noodle Soup recipe -->
 <div id="noodlesoup" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'soup')">Soups, Stews, &amp; Sauces</a></li>
+			<li class="is-active"><a>Noodle Soup</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Here's a good starting point for a basic noodle soup you can make from scratch right at home.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Create a well of flour and add beaten eggs and oil. Season lightly with salt.</li>
 			<li>Stir flour into eggs with a fork until it becomes kneadable.</li>
 			<li>Knead dough for 7-10 mins until smooth and elastic.</li>
@@ -814,7 +1165,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 			<p>For the Noodles:</p>
 			<ul>
@@ -924,13 +1275,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Cane's Sauce recipe -->
 <div id="canes" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p class="mb-5">The sauce from Raising Cane's. It's not their exact recipe, but it circulated on the internet a little while ago.</p>
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'soup')">Soups, Stews, &amp; Sauces</a></li>
+			<li class="is-active"><a>Cane’s Sauce</a></li>
+		</ul>
+	</nav>
+	<p class="mb-5">The sauce from Raising Cane's. I don't think it's the exact recipe, but this circulated on the internet a little while ago.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Mix ingredients and adjust to taste.</li>
 			<li>Let rest refrigerated and covered for 24 hours for best results (optional).</li>
 		</ol>
@@ -938,7 +1295,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>0.5 cups mayo</li>
@@ -968,13 +1325,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Green Chutney recipe -->
 <div id="chutney" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'soup')">Soups, Stews, &amp; Sauces</a></li>
+			<li class="is-active"><a>Green Chutney</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">A spicy sauce that goes with pretty much anything.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Add ingredients to a blender with just enough water to blend it all together.</li>
 			<li>Blend it until smooth.</li>
 		</ol>
@@ -982,7 +1345,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>6-8 bird's eye chilis</li>
@@ -1012,13 +1375,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Apple Cider Gastrique recipe -->
 <div id="gastrique" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'soup')">Soups, Stews, &amp; Sauces</a></li>
+			<li class="is-active"><a>Apple Cider Gastrique</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">A sweet and sour sauce. Sounds fancy. And it is.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Pour sugar and water in a small saucepan and bring to a simmer. Do not agitate it.</li>
 			<li>Warm up apple cider vinegar while you wait for the sugar to caramelize.</li>
 			<li>Once the caramel reaches the desired color (I prefer darker), take it off the heat and pour in the vinegar.</li>
@@ -1030,7 +1399,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>0.5 cup sugar</li>
@@ -1071,13 +1440,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Cranberry Sauce recipe -->
 <div id="cranberry" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'soup')">Soups, Stews, &amp; Sauces</a></li>
+			<li class="is-active"><a>Cranberry Sauce</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Perfect for Thanksgiving, but still good anywhere else.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Put the cranberries, sugar, cinnamon, and the zest and juice of the orange into a saucepan.</li>
 			<li>Add the water and stir occasionally over medium-high heat until it comes to a boil.</li>
 			<li>Simmer on low heat for 15 minutes or until thickened. Make sure to burst the cooked cranberries.</li>
@@ -1087,7 +1462,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>12 oz cranberries</li>
@@ -1121,13 +1496,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Chana Masala recipe -->
 <div id="chana" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'soup')">Soups, Stews, &amp; Sauces</a></li>
+			<li class="is-active"><a>Chana Masala</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">My mom's recipe for chana masala.</p>
 	
 	<div class="columns is-8 is-variable has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Add cumin seeds and bay leaf to hot oil.</li>
 			<li>Sautee finely diced onion until fully cooked.</li>
 			<li>Add grated ginger with minced garlic, diced tomato, and a pinch of salt to release moisture.</li>
@@ -1140,7 +1521,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>2 cups chickpeas, soaked</li>
@@ -1201,13 +1582,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Tomato Melt recipe -->
 <div id="tomatomelt" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'sandwiches')">Sandwiches</a></li>
+			<li class="is-active"><a>Tomato Melt</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">So good it made my friend cry.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Slice tomato and grate copious amounts of cheese on the side (equal parts cheddar and Monterey jack).</li>
 			<li>Spread a thin layer of mayo on one side of each bread slice.</li>
 			<li>Toast mayo-side-down on a skillet over medium-high heat.</li>
@@ -1223,7 +1610,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>2 slices bread</li>
@@ -1283,13 +1670,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Fried Egg Sandwich recipe -->
 <div id="eggsandwich" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'sandwiches')">Sandwiches</a></li>
+			<li class="is-active"><a>Fried Egg Sandwich</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">According to my mom, the best sandwich I've made for her.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Oil pan and toast bread.</li>
 			<li>Let pan cool while you mash avocado in a bowl.</li>
 			<li>Mix salt, pepper, and a squeeze of lime juice into avocado.</li>
@@ -1305,7 +1698,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>2 slices sourdough bread</li>
@@ -1351,13 +1744,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Sausagepeppers&onions over Rice recipe -->
 <div id="sporice" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'rice')">Rice &amp; Pasta</a></li>
+			<li class="is-active"><a>SausagePeppers&amp;Onions</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Sausage. Peppers. Onions. SausagePeppers&amp;Onions.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Start by cooking the rice.</li>
 			<li>In the meantime, cut onion into thin slices and stir fry in fat of choice over high heat with red pepper flakes.</li>
 			<li>Cut bell pepper into thin slices as well and mince garlic.</li>
@@ -1373,7 +1772,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>1 cup white rice, dry</li>
@@ -1421,13 +1820,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Gnocchi recipe -->
 <div id="gnocchi" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'rice')">Rice &amp; Pasta</a></li>
+			<li class="is-active"><a>Gnocchi</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Potato dumplings that go great with brown butter and sage or tomato sauce.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">	
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Preheat oven to 350F</li>
 			<li>Stab and salt potatoes</li>
 			<li>Bake for 90 mins or until no resistance is met with a knife.</li>
@@ -1448,7 +1853,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 			<p>For the Gnocchi:</p>
 			<ul>
@@ -1499,13 +1904,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Turkey Rice recipe -->
 <div id="turkeyrice" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'rice')">Rice &amp; Pasta</a></li>
+			<li class="is-active"><a>Turkey Rice</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Very nutritious, flavorful, and high in macros. I ate this a lot while working out.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Start by cooking the rice.</li>
 			<li>Put olive oil, cayenne, turmeric, cumin, and mustard seed into a pan on medium heat.</li>
 			<li>Mince garlic and dice onion.</li>
@@ -1524,7 +1935,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>1 cup dry rice</li>
@@ -1573,13 +1984,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Chicken and Cola Stir-Fry recipe -->
 <div id="chickencola" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'rice')">Rice &amp; Pasta</a></li>
+			<li class="is-active"><a>Chicken and Cola Stir-Fry</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">The best chicken and rice I've ever had.</p>
 	
 	<div class="columns is-8 is-variable has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Salt chicken thighs on both sides.</li>
 			<li>Mix mayo with minced garlic, herbs, and spices in a bowl.</li>
 			<li>Smear mayo all over chicken and lay out on foil-lined baking sheet.</li>
@@ -1600,7 +2017,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<p>For the Chicken:</p>
 		<ul>
@@ -1679,13 +2096,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Lemon Meringue Pie recipe -->
 <div id="lemonmeringue" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
-	<p class="mb-5">The first dessert I learned to make.</p>
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'desserts')">Desserts</a></li>
+			<li class="is-active"><a>Lemon Meringue Pie</a></li>
+		</ul>
+	</nav>
+	<p class="mb-5">The first and hardest dessert I learned to make.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Mix salt and flour in a large bowl and refrigerate</li>
 			<li>Cut butter into flour until butter is in pea-sized, flour-coated chunks.</li>
 			<li>Add water little by little until the mixture can be clumped. Use as little water as possible.</li>
@@ -1711,7 +2134,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 			<p>For the Crust:</p>
 			<ul>
@@ -1743,10 +2166,10 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 	I’m not really a baking guy, I’m a cooking guy. Baking requires precision, while cooking is more forgiving with improvisation. Because I tend to favor flexibility in the 
 	kitchen, I’m a decent cook, but a terrible baker. That being said, I wanted to try baking a dessert when I had just started cooking, and I’m the type of person to go big 
 	or go home. So I settled on lemon meringue pie. The first time I made it was horrible. Our springform pan was too big, so I had to triple the recipe, and I ended up forgetting 
-	to triple some of the ingredients. As a result, the meringue wasn’t stiff, the curd hadn’t set, and the graham cracker crust just tasted all wrong. I learned my lesson. 
+	to triple some of the ingredients. As a result, the meringue wasn’t stiff, the curd hadn’t set, and the graham cracker crust just tasted all wrong. But I learned my lesson. 
 	I started by learning to make a pate brisee, none of this graham cracker business. If you’re making a pie, at least use a pie dish and a proper pie crust. Second, people 
 	complained that there was too much meringue, so I had to reduce that. In doing research, I found that the recipe I used called for whole eggs in the curd, while some opted 
-	for just yolks. That’s where I had an idea: Create the perfect lemon meringue pie recipe with no leftover whites or yolks. And that’s exactly what I did. This is one of the 
+	for just the yolks. That’s where I had an idea: Create the perfect lemon meringue pie recipe with no leftover whites or yolks. And that’s exactly what I did. This is one of the 
 	first recipes I engineered on my own and I must say, I’m quite proud of it.
 	</p>
 	<p class="story">
@@ -1827,13 +2250,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Apple Filling recipe -->
 <div id="applefilling" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'desserts')">Desserts</a></li>
+			<li class="is-active"><a>Apple Filling</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Apple pie filling without the pie.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Peel and cut apples into half-inch pieces.</li>
 			<li>Melt butter in pan over medium heat.</li>
 			<li>Add apples, sugar, and salt.</li>
@@ -1847,7 +2276,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>2 apples</li>
@@ -1890,13 +2319,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Banana Caramel recipe -->
 <div id="bananacaramel" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'desserts')">Desserts</a></li>
+			<li class="is-active"><a>Banana Caramel</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Goes great on toast, French or otherwise.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Peel and slice banana on a bias.</li>
 			<li>Put sugar in pan over medium high heat with half a tbsp of water around the outside until caramelized. Do not stir.</li>
 			<li>Right before sugar reaches desired color, turn down heat to low and add the rest of the water.</li>
@@ -1908,7 +2343,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>1 banana (preferably firm)</li>
@@ -1946,13 +2381,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Gajar Halwa recipe -->
 <div id="gajarhalwa" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'desserts')">Desserts</a></li>
+			<li class="is-active"><a>Gajar Halwa</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">My mom's recipe for gajar halwa. An Indian dessert made with carrots.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Heat up ghee in pot until melted.</li>
 			<li>Add cashews and raisins into pot until raisins are plumped up and cashews have a little color on them.</li>
 			<li>Remove cashews and raisins, leaving the ghee in the pot.</li>
@@ -1968,7 +2409,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>4 cups coarsely shredded carrots</li>
@@ -2013,13 +2454,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Orange Zabaglione recipe -->
 <div id="zabaglione" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'desserts')">Desserts</a></li>
+			<li class="is-active"><a>Orange Zabaglione</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">A non-alcoholic, citrusy take on this custardy Italian dish. Recipe adapted from Food Wishes.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Dice strawberries and toss with .5tbsp of sugar. Let sit for 1 hour covered, tossing occasionally.</li>
 			<li>Zest and juice the orange.</li>
 			<li>Whisk yolk, sugar, and juice in a bowl.</li>
@@ -2030,7 +2477,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>3 egg yolks</li>
@@ -2071,13 +2518,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Crepes Suzette recipe -->
 <div id="suzette" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'desserts')">Desserts</a></li>
+			<li class="is-active"><a>Crepes Suzette</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Recipe from Binging with Babish. Eat as dessert. Or as breakfast. I don't care.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Combine eggs, water, milk, butter, and salt.</li>
 			<li>Whisk in flour until smooth.</li>
 			<li>Let rest for 30 mins.</li>
@@ -2098,7 +2551,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 			<p>For the Crepes:</p>
 			<ul>	
@@ -2147,13 +2600,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Sweet Potato Pie recipe -->
 <div id="potatopie" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'desserts')">Desserts</a></li>
+			<li class="is-active"><a>Sweet Potato Pie</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Recipe courtesy of my friend's mom.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Boil sweet potato until tender and remove skin.</li>
 			<li>Add sweet potato to a bowl and mash slightly.</li>
 			<li>Add butter and mix well.</li>
@@ -2166,7 +2625,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>1 pound sweet potato</li>
@@ -2202,13 +2661,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Mug Cake recipe -->
 <div id="mugcake" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'desserts')">Desserts</a></li>
+			<li class="is-active"><a>Mug Cake</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Is it fast? Yes. Is it easy? Yes. Is it good? Not really.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Combine flour, sugar, salt, cocoa powder, and baking powder in a microwave-safe mug.</li>
 			<li>Combine with all the other ingrediends and mix until smooth.</li>
 			<li>Microwave for 1 minute.</li>
@@ -2218,7 +2683,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>3 tbsp flour</li>
@@ -2253,13 +2718,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Cursed Sandwich recipe -->
 <div id="cursed" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'lab')">The Laboratory</a></li>
+			<li class="is-active"><a>Cursed Sandwich</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">I am so sorry.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Spread hummus on one slice of bread and Nutella on the other slice.</li>
 			<li>Spread a thin layer of mustard over the hummus. Yellow mustard is strong, so use it sparingly.</li>
 			<li>Slice up strawberries and put them on the Nutella.</li>
@@ -2269,7 +2740,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>2 slices bread</li>
@@ -2307,13 +2778,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Thanksgiving Cottage Pie recipe -->
 <div id="thanksgivingpie" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'lab')">The Laboratory</a></li>
+			<li class="is-active"><a>Thanksgiving Cottage Pie</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Your favorite Thanksgiving meals in one dish.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Cook the turkey on high until a sear forms, set aside.</li>
 			<li>Cook onion, garlic, and celery in the fond with 4 tbsp butter.</li>
 			<li>While you let it cook, start boiling the potatoes.</li>
@@ -2331,7 +2808,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 			<p>For the Mince:</p>
 			<ul>
@@ -2405,13 +2882,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Pineapple Upside-Down Deep-Dish Pizza recipe -->
 <div id="pineapplepizza" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'lab')">The Laboratory</a></li>
+			<li class="is-active"><a>Pineapple Upside-Down Deep-Dish Pizza</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Don’t let Italy find out about this one.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Mix flour, cornmeal, yeast, and salt in a large bowl.</li>
 			<li>Mix in olive oil until crumbly texture forms.</li>
 			<li>Add warm water until shaggy dough forms.</li>
@@ -2436,7 +2919,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 			<p>For the Crust:</p>
 			<ul>
@@ -2521,13 +3004,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Makeshift Popcorn Chicken recipe -->
 <div id="popcornchicken" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'misc')">Misc.</a></li>
+			<li class="is-active"><a>Makeshift Popcorn Chicken</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">The best way to eat chicken nuggets.</p>
 	
 	<div class="columns is-8 is-variable has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Count chicken nuggets and begin baking on a foil-lined tray following specified directions. Counting them will help proportion other ingredients.</li>
 			<li>When about 5 minutes from being done, heat up oil in pan on high until shimmering (use about 1 tbsp for every 10 nuggets).</li>
 			<li>While oil heats up, roughly dice garlic into large chunks (about 1 clove for every 5 nuggets)</li>
@@ -2544,7 +3033,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>Chicken nuggets</li>
@@ -2599,13 +3088,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Meatballs recipe -->
 <div id="meatballs" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'misc')">Misc.</a></li>
+			<li class="is-active"><a>Meatballs</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Adapted from Joshua Weissman's recipe.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Mix it in a bowl until homogenous and shape into balls (approx 15 of equal weight).</li>
 			<li>Fry in hot olive oil until crust forms on outside.</li>
 			<li>Finish by simmering in tomato sauce with lid on for 10 minutes or cooking on low for a similar amount of time until cooked through.</li>
@@ -2614,7 +3109,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>1 lb ground beef</li>
@@ -2653,13 +3148,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Deviled Eggs recipe -->
 <div id="deviledeggs" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'misc')">Misc.</a></li>
+			<li class="is-active"><a>Deviled Eggs</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Credit to AllRecipes for this recipe.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Put 6 eggs in a pot of water.</li>
 			<li>Bring up to a boil and turn off the heat.</li>
 			<li>Leave for 10-12 minutes.</li>
@@ -2675,7 +3176,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>6 large eggs</li>
@@ -2712,13 +3213,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Pizza recipe -->
 <div id="pizza" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'misc')">Misc.</a></li>
+			<li class="is-active"><a>Pizza</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Ethan Chlebowski's recipe for quick, weeknight pizza.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Put yeast and a spoonful of flour in the warm water. Stir and let sit for 5 mins until it begins foaming. If the yeast doesn't react, start over with new yeast.</li>
 			<li>Combine salt and flour in a large bowl.</li>
 			<li>Add wet mixture to the bowl and combine by hand until cohesive (about 2 mins).</li>
@@ -2735,7 +3242,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>320 mL water (at 105 deg F)
@@ -2776,13 +3283,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Cold Brew Coffee recipe -->
 <div id="coffee" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'misc')">Misc.</a></li>
+			<li class="is-active"><a>Cold Brew Coffee</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Recipe for cold brew from NYT Cooking.</p>
 	
 	<div class="columns is-8 is-variable mb-6 has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Combine coffee and water.</li>
 			<li>Cover and let rest for 12 hours at room temperature.</li>
 			<li>Filter and serve with ice cubes.</li>
@@ -2791,7 +3304,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>0.33 cups coarse ground coffee</li>
@@ -2813,13 +3326,19 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 <!-- Ricotta Cheese recipe -->
 <div id="ricotta" class="section recipe tabcontent pt-4">
 	<!-- Introduction -->
+	<nav class="breadcrumb has-succeeds-separator is-medium">
+		<ul>
+			<li><a onclick="openTab(event, 'misc')">Misc.</a></li>
+			<li class="is-active"><a>Ricotta</a></li>
+		</ul>
+	</nav>
 	<p class="mb-5">Recipe from Bon Apetit. I've never attempted this recipe, but I saved it just in case I ever needed it.</p>
 	
 	<div class="columns is-8 is-variable has-background-light">
 		<!-- Instructions -->
 		<div class="column">
-		<h4 class="subtitle">Instructions</h4>
-		<ol>
+		<h4 class="subtitle has-text-centered-mobile">Instructions</h4>
+		<ol class="ml-1">
 			<li>Heat the cream and milk until at 200°F, stirring occasionally.</li>
 			<li>Stir in salt and vinegar when the liquid comes up to temp.</li>
 			<li>Allow the curds to form off the heat for 15-20 mins then strain through a cheese cloth.</li>
@@ -2829,7 +3348,7 @@ This is meant to be an online cookbook of sorts for all the recipes I have
 		
 		<!-- Ingredients -->
 		<div class="column is-4-desktop has-background-grey-lighter">
-		<h4 class="subtitle">Ingredients</h4>
+		<h4 class="subtitle has-text-centered-mobile">Ingredients</h4>
 		<div class="content">
 		<ul>
 			<li>7 cups whole milk</li>
