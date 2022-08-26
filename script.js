@@ -1,7 +1,7 @@
 /*
-Mihir Lele, 7/29/2022
+Mihir Lele, 8/26/2022
 
-JS file for recipes.html
+JS file for recipes/index.html
 */
 
 // opens a new tab and closes the content from the active tab
@@ -23,9 +23,21 @@ function openTab(evt, name) {
 	document.getElementById(name).style.display = "block";
 	// add active status to the current target of the event
 	evt.currentTarget.classList.add("active");
+	
+	// scroll back up to top
+	window.scrollTo(0, 0);
 }
 
 // opens a link to the Dominos website as the recipe for No-Bake Pizza
 function dominos() {
 	window.open("https://www.dominos.com", "_blank");
+}
+
+// adds functionality to burger menu feature on mobile
+function burger() {
+	// find the navbar menu
+	burger_content = document.getElementsByClassName("tab")[0];
+	
+	// toggle active state of menu
+	burger_content.classList.toggle("is-active");
 }
