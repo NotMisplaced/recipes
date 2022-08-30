@@ -1,4 +1,4 @@
-export default {
+const RecipeData = {
     recipes: [
         {
             id:1,
@@ -279,4 +279,5 @@ export default {
             source:"Internet"
         }
     ]
-};
+}
+export default RecipeData;
