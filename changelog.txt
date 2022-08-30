@@ -1,4 +1,12 @@
-Recipes Project v1.4 - Collection of recipes curated by Mihir Lele
+Recipes Project v1.5 - Collection of recipes curated by Mihir Lele
+
+===== v1.5 =====
+New Additions:
+- Website Icon
+- Search page
+- Titles and descriptions on pages
+Changes:
+- Website now written in React instead of vanilla HTML/CSS/JS
 
 ===== v1.4 =====
 New Additions:
