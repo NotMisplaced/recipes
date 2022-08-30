@@ -1,4 +1,4 @@
-const RecipeData = () => {
+export default {
     recipes: [
         {
             id:1,
@@ -279,5 +279,4 @@ const RecipeData = () => {
             source:"Internet"
         }
     ]
-}
-export default RecipeData;
+};
