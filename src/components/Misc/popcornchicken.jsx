@@ -39,8 +39,8 @@ const PopcornChicken = () => {
                 <div className="content">
                 <ul>
                     <li>10 Chicken nuggets</li>
-                    <li>7 Whole basil leaves *</li>
-                    <li>3 Garlic cloves **</li>
+                    <li>7 Whole basil leaves</li>
+                    <li>3 Garlic cloves</li>
                     <li>Soy sauce</li>
                     <li>Paprika</li>
                     <li>Salt</li>
@@ -48,7 +48,7 @@ const PopcornChicken = () => {
                     <li>Onion powder</li>
                     <li>Red pepper flakes</li>
                     <li>Ginger powder</li>
-                    <li>1 tbsp Vegetable oil ***</li>
+                    <li>1 tbsp Vegetable oil</li>
                 </ul>
                 </div>
                 </div>
