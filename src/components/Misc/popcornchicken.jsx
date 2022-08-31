@@ -19,7 +19,7 @@ const PopcornChicken = () => {
                 <div className="column">
                 <h4 className="subtitle has-text-centered-mobile">Instructions</h4>
                 <ol className="ml-1">
-                    <li>Count chicken nuggets and begin baking on a foil-lined tray following specified directions. Counting them will help proportion other ingredients.</li>
+                    <li>Begin baking chicken nuggets on a foil-lined tray following specified directions.</li>
                     <li>When about 5 minutes from being done, heat up oil in pan on high until shimmering (use about 1 tbsp for every 10 nuggets).</li>
                     <li>While oil heats up, roughly dice garlic into large chunks (about 1 clove for every 5 nuggets)</li>
                     <li>Once oil is hot, add red pepper flakes and a hefty pinch of ginger powder.</li>
@@ -38,9 +38,9 @@ const PopcornChicken = () => {
                 <h4 className="subtitle has-text-centered-mobile">Ingredients</h4>
                 <div className="content">
                 <ul>
-                    <li>Chicken nuggets</li>
-                    <li>Whole basil leaves *</li>
-                    <li>Garlic cloves **</li>
+                    <li>10 Chicken nuggets</li>
+                    <li>7 Whole basil leaves *</li>
+                    <li>3 Garlic cloves **</li>
                     <li>Soy sauce</li>
                     <li>Paprika</li>
                     <li>Salt</li>
@@ -48,12 +48,9 @@ const PopcornChicken = () => {
                     <li>Onion powder</li>
                     <li>Red pepper flakes</li>
                     <li>Ginger powder</li>
-                    <li>Vegetable oil ***</li>
+                    <li>1 tbsp Vegetable oil ***</li>
                 </ul>
                 </div>
-                <p>* basil leaves = (3 &times; nuggets) / 5 rounded up to nearest whole number.</p>
-                <p>** garlic cloves = nuggets / 5 rounded up to nearest whole number.</p>
-                <p>*** tablespoons of oil = nuggets / 10 rounded up to nearest whole number.</p>
                 </div>
             </div>
             
@@ -66,24 +63,22 @@ const PopcornChicken = () => {
             you. So here's my take on a makeshift popcorn chicken.
             </p>
             <p className="story">
-            The ingredient amounts are mostly in direct proportion to the number of nuggets you have. Follow the instructions for making the nuggets in the oven and count them before they 
-            go in. I'm sorry in advance about all the math you'll have to do, but I have no idea how else to describe the proportions of these ingredients. When they are about 5 minutes 
-            away from being done, heat up some vegetable oil in a pan on high. Divide the number of nuggets by 10 and round up to get the amount of oil in tablespoons (i.e. for 21 nuggets, 
-            use 3 tbsp oil because 21/10 = 2.1 gets rounded up to 3). While the oil heats up, roughly dice the garlic. Divide the number of nuggets by 5 and round up to get the number of 
-            garlic cloves (i.e. for 21 nuggets, use 5 cloves because 21/5 = 4.1 gets rounded up to 5).
+            Follow the box instructions for making the nuggets and bake them in the oven. When they are about 5 minutes away from being done, heat up some vegetable oil in a pan on high heat. 
+            While the oil heats up, roughly dice the garlic. Gather your basil leaves and make sure they're dry. If you must wash them, pat them with a paper towel to remove any surface moisture. 
+            We're going to be adding these to hot oil, and adding water tends to make the oil splutter and splash and burn you when frying something. Also make sure to use fresh, whole basil 
+            leaves. I'm usually not a stickler for dry vs fresh herbs, but the difference really matters here. The flavor and texture of fried basil leaves is inimitable and is an absolute 
+            must with this recipe.
             </p>
             <p className="story">
-            Once the oil is hot, add red pepper flakes for some heat along with a hefty amount of ginger powder. Add the basil right away, and be sure to use fresh basil leaves only. 
-            The flavor and texture of fresh, whole basil leaves when fried is inimitable. Divide the number of nuggets by 5, multiply by 3, and round up to get the number of basil leaves 
-            (i.e. for 21 nuggets, use 13 basil leaves because (21/5)*3 = 12.3 rounded up to 13). Be careful when adding in the basil, as it will flash fry and splutter oil everywhere. 
-            Take off the heat after 10 seconds (not a second more) and add the garlic, a heavy shake of paprika, onion powder, and black pepper. If you happen to have white pepper and 
-            ground Szechuan peppercorns, you should use those instead of the black pepper. Once the flavors have a chance to assimilate, cool them off with a glug of soy sauce and mix 
-            until homogenous.
+            Once the oil is hot, add red pepper flakes for some heat along with a hefty amount of ginger powder. Add the basil right away. Be careful when adding in the basil, as it will 
+            fry extremely fast and splutter oil everywhere. Take off the heat after 10 seconds (not a second more) and add the garlic, a heavy shake of paprika, onion powder, and black pepper. 
+            If you happen to have white pepper and ground Szechuan peppercorns, you should use those instead of the black pepper. Once the flavors have a chance to assimilate, cool them off 
+            with a glug of soy sauce and mix until homogenous.
             </p>
             <p className="story">
             By now the nuggets should be done, so take them out of the oven, put them in a large bowl, sprinkle with a bit of salt, and give them a little toss. Pour the seasoned oil over 
-            the nuggets, making sure to use a spatula to get out all the powdery bits and every last drop of oil. Toss together, making sure all the nuggets get covered in oil, and then 
-            serve hot. This may not be the best popcorn chicken you'll ever have, but I guarantee it'll be the best chicken nuggets of your life.
+            the nuggets, making sure to use a spatula to get out all the powdery bits and every last drop of oil out of the pan. Toss together, making sure all the nuggets get covered in oil, 
+            and then serve hot. This may not be the best popcorn chicken you'll ever have, but I guarantee it'll be the best chicken nuggets of your life.
             </p>
         </div>    
     );
